@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <script src="https://cdn.tailwindcss.com"></script>
-          <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.png">
-        <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
-      </head>
 
-<body>
-    <header class="bg-white dark:bg-gray-900">
-          <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
-              <div class="flex items-center justify-between">
-                  <a href="#">
-                      <img class="w-auto h-12 sm:h-12" src="/resources/Beaver-Icon.png" alt="">
-                  </a> 
-              </div>
-          </div>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+  <title>Newsletter Signup</title>
+</head>
+
+<body class="bg-white">
+  <header class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+      <div class="flex items-center">
+        <a href="/">
+          <img class="w-auto h-12 sm:h-12" src="../resources/Beaver-Icon.png" alt="">
+        </a>
+      </div>
+    </div>
   </header>
 
-  <main class="container mx-auto px-6 py-16">
-    <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
-      <h1 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-6 text-center">Stay in the Loop - Sign up for the Beaver Notes Newsletter</h1>
-      <p class="text-gray-800 mb-8 text-center">Don't miss out on the latest updates, feature releases, and exclusive offers from Beaver Notes. Sign up for our newsletter to stay connected and informed about all things note-taking.</p>
-      <form>
-        <div class="mb-4">
-          <label for="name" class="block text-gray-800 mb-1">Name</label>
-          <input type="text" id="name" name="name" class="w-full bg-gray-100 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+  <div class="container mx-auto p-8">
+    <section class="row mt-5 text-center">
+      <div class="col-md-6 m-auto">
+        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+          <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+            <img class="mx-auto h-10 w-auto"
+              src="../resources/Beaver-Icon.png" alt="Your Company">
+          </div>
+
+          <h1 class="mt-10 text-4xl font-bold leading-tight text-center">Never Miss a New Release</h1>
+          <p class="mt-3 text-gray-600 text-gray-800 sm:mx-auto sm:w-full sm:max-w-sm text-center">Subscribe to our newsletter for timely updates on new releases. Be in the know about the latest features and enhancements in Beaver Notes. Join now to stay informed and never miss out on exciting updates.</p>
+          <form action="/signup" method="POST" class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <div class="mt-4">
+              <input type="text" name="firstName" id="first-name"
+                class="form-input block w-full rounded-md border-gray-400 py-2 px-3 text-gray-900 placeholder-gray-400 ring-1 ring-gray-300 focus:ring-2 focus:ring-amber-500 focus:outline-none sm:text-sm sm:leading-6"
+                placeholder="First Name" required />
+            </div>
+            <div class="mt-4">
+              <input type="text" name="lastName" id="last-name"
+                class="form-input block w-full rounded-md border-gray-400 py-2 px-3 text-gray-900 placeholder-gray-400 ring-1 ring-gray-300 focus:ring-2 focus:ring-amber-500 focus:outline-none sm:text-sm sm:leading-6"
+                placeholder="Last Name" required />
+            </div>
+            <div class="mt-4">
+              <input type="email" name="email" id="email"
+                class="form-input block w-full rounded-md border-gray-400 py-2 px-3 text-gray-900 placeholder-gray-400 ring-1 ring-gray-300 focus:ring-2 focus:ring-amber-500 focus:outline-none sm:text-sm sm:leading-6"
+                placeholder="Email" required />
+            </div>
+            <button type="submit"
+              class="mt-6 w-full px-4 py-2 text-sm font-medium text-white bg-amber-500 rounded-md hover:bg-amber-400 focus:outline-none focus:bg-amber-400">Sign
+              Up</button>
+          </form>
         </div>
-        <div class="mb-4">
-          <label for="email" class="block text-gray-800 mb-1">Email</label>
-          <input type="email" id="email" name="email" class="w-full bg-gray-100 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
-        </div>
-        <button type="submit" class="w-full bg-amber-500 text-white py
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
+
