@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
@@ -19,9 +19,9 @@
 </head>
 
   <title>Beaver Notes</title>
-<body>
-  <header class="bg-white dark:bg-gray-900">
-    <nav x-data="{ isOpen: false }" class="relative bg-white dark:bg-gray-800">
+<body class="bg-white ">
+  <header class="bg-white ">
+    <nav x-data="{ isOpen: false }" class="relative">
       <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
           <div class="flex items-center justify-between">
               <a href="/">
@@ -30,7 +30,7 @@
   
               <!-- Mobile menu button -->
               <div class="flex lg:hidden">
-                  <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                  <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500  hover:text-gray-600  focus:outline-none focus:text-gray-600" aria-label="toggle menu">
                       <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
                       </svg>
@@ -43,11 +43,11 @@
           </div>
   
           <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-          <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+          <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white  md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
               <div class="flex flex-col md:flex-row md:mx-6">
-                  <a class="my-2 text-gray-800 transition-colors duration-300 transform dark:text-gray-200 hover:text-amber-500 dark:hover:text-amber-400 md:mx-4 md:my-0" href="https://github.com/Daniele-rolli/Beaver-Notes">Resources</a>
-                  <a class="my-2 text-gray-800 transition-colors duration-300 transform dark:text-gray-200 hover:text-amber-500 dark:hover:text-amber-400 md:mx-4 md:my-0" href="https://github.com/Daniele-rolli/Beaver-Notes/wiki">Get involved</a>
-                  <a class="my-2 text-gray-800 transition-colors duration-300 transform dark:text-gray-200 hover:text-amber-500 dark:hover:text-amber-400 md:mx-4 md:my-0" rel="me" href="https://mastodon.social/@Beavernotes">Mastodon</a>
+                  <a class="my-2 text-gray-800 transition-colors duration-300 transform  hover:text-amber-500  md:mx-4 md:my-0" href="https://github.com/Daniele-rolli/Beaver-Notes">Resources</a>
+                  <a class="my-2 text-gray-800 transition-colors duration-300 transform  hover:text-amber-500  md:mx-4 md:my-0" href="https://github.com/Daniele-rolli/Beaver-Notes/wiki">Get involved</a>
+                  <a class="my-2 text-gray-800 transition-colors duration-300 transform  hover:text-amber-500  md:mx-4 md:my-0" rel="me" href="https://mastodon.social/@Beavernotes">Mastodon</a>
                               </div>
           </div>
       </div>
@@ -71,7 +71,7 @@
         </div>
     </div>
 </header>
-<div class="bg-white dark:bg-gray-900">
+<div class="bg-white ">
 	<div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
 		<div class="max-w-3xl mx-auto text-center">
 			<p class="text-3xl font-extrabold sm:text-4xl text-gray-800 ">What we stand for: Empowering You through Simplicity, Privacy, and Openness</p>
@@ -79,41 +79,41 @@
 		</div>
 		<dl class="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
 			<div class="flex">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6 ">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 				</svg>
 				<div class="ml-3">
-					<dt class="text-lg font-medium text-gray-800 dark:text-white">Simplicity</dt>
-					<dd class="mt-2 text-gray-800 dark:text-white">We believe in keeping things simple. Beaver Notes offers an intuitive and clutter-free interface, allowing you to focus on capturing and organizing your thoughts effortlessly.</dd>
+					<dt class="text-lg font-medium text-gray-800 ">Simplicity</dt>
+					<dd class="mt-2 text-gray-800 ">We believe in keeping things simple. Beaver Notes offers an intuitive and clutter-free interface, allowing you to focus on capturing and organizing your thoughts effortlessly.</dd>
 				</div>
 			</div>
 			<div class="flex">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6 ">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 				</svg>
 				<div class="ml-3">
-					<dt class="text-lg font-medium text-gray-800 dark:text-white">Privacy</dt>
-					<dd class="mt-2 text-gray-800 dark:text-white">Your data is yours and yours alone. We prioritize your privacy by ensuring that Beaver Notes stores all your notes solely on your Mac or PC. Rest easy knowing that your personal information remains secure and protected.
+					<dt class="text-lg font-medium text-gray-800 ">Privacy</dt>
+					<dd class="mt-2 text-gray-800 ">Your data is yours and yours alone. We prioritize your privacy by ensuring that Beaver Notes stores all your notes solely on your Mac or PC. Rest easy knowing that your personal information remains secure and protected.
           </dd>
 				</div>
 			</div>
 			<div class="flex">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6 ">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 				</svg>
 				<div class="ml-3">
-					<dt class="text-lg font-medium text-gray-800 dark:text-white">Openness</dt>
-					<dd class="mt-2 text-gray-800 dark:text-white">We embrace the power of open-source innovation. Beaver Notes is built on open-source principles, fostering transparency, collaboration, and community-driven development. Join us in shaping the future of note-taking together.</dd>
+					<dt class="text-lg font-medium text-gray-800 ">Openness</dt>
+					<dd class="mt-2 text-gray-800 ">We embrace the power of open-source innovation. Beaver Notes is built on open-source principles, fostering transparency, collaboration, and community-driven development. Join us in shaping the future of note-taking together.</dd>
 				</div>
 			</div>
 			<div class="flex">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6 h-6 ">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 				</svg>
 				<div class="ml-3">
-					<dt class="text-lg font-medium text-gray-800 dark:text-white">Tailored to Your Note-Taking Journey
+					<dt class="text-lg font-medium text-gray-800 ">Tailored to Your Note-Taking Journey
           </dt>
-					<dd class="mt-2 text-gray-800 dark:text-white">Beaver Notes offers a seamless note-taking experience tailored to your needs. Capture, organize, and access your thoughts effortlessly with our user-focused design.</dd>
+					<dd class="mt-2 text-gray-800 ">Beaver Notes offers a seamless note-taking experience tailored to your needs. Capture, organize, and access your thoughts effortlessly with our user-focused design.</dd>
 				</div>
 			</div>
 			</div>
