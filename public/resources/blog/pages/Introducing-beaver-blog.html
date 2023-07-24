@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://analytics.umami.is/script.js" data-website-id="b736397b-3031-452b-a433-c6a0e98be237"></script>
+      <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js" integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+<body class="bg-white">
+  <!-- Navigation Bar -->
+  <nav x-data="{ isOpen: false }" class="relative bg-whites">
+    <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+      <div class="flex items-center justify-between">
+        <a href="../" class="flex items-center">
+          <img class="w-auto h-12 sm:h-12" src="../medias/Beaver-Icon.png" alt="">
+          <span class="ml-2 font-bold text-xl text-black"> /Blog</span>
+        </a>
+  
+        <!-- Mobile menu button -->
+        <div class="flex lg:hidden">
+          <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
+            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+            </svg>
+  
+            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+  
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+        <div class="flex flex-col md:flex-row md:mx-6">
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" hrf="https://github.com/Daniele-rolli/Beaver-Notes">Resources</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="../Download.html">Download</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="https://github.com/Daniele-rolli/Beaver-Notes/wiki">Get involved</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" rel="me" href="https://mastodon.social/@Beavernotes">Mastodon</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Article Banner -->
+  <div class="container mx-auto px-6 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="md:col-span-2">
+        <div class="h-64 rounded-lg mb-4">
+            <img class="w-full h-64 object-cover object-top rounded-xl" src="../medias/Beaver-blog.png" alt="Blog Image 1">
+        </div>
+        <p class="text-gray-800">
+              <!-- Title and details -->
+    <div class="text-gray-900 py-12">
+        <div class="container mx-auto">
+        <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">Introducing the Beaver Blog: Your Gateway to Insightful Notes and More!</p>
+        <p class="text-lg mt-2" style="font-family: 'Arimo', sans-serif;">Daniele Rolli | July 24 2023</p>
+        </div>
+    </div>
+          <!-- Article content goes here -->
+           <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Introduction:</p>         
+           <p class="text-base py-4 text-gray-800">We are thrilled to announce the opening of the Beaver Blog, a platform that brings you the latest insights, tips, and updates on all things related to note-taking, productivity, and more. At Beaver Notes, our mission has always been to provide a seamless and enjoyable note-taking experience, and the addition of the Beaver Blog is yet another step towards achieving that goal. Join us on this exciting journey as we explore various topics, share valuable knowledge, and foster a thriving community of note-taking enthusiasts.</p>
+           <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">What to Expect:</p>
+           <p class="text-base py-4 text-gray-800">The Beaver Blog will serve as a knowledge hub, offering a diverse range of content to cater to different interests and needs. Here's what you can expect from our blog:</p>
+            <div class="container mx-auto mt-4">
+              <ol class="list-decimal">
+                <li class="text-base text-gray-800">Productivity Tips: Discover practical tips and strategies to enhance your productivity and efficiency in both personal and professional life. Learn how to make the most out of your note-taking experience and unlock your full potential.</li>
+                <li class="text-base text-gray-800">Note-Taking Techniques: Explore various note-taking methods, including techniques like the Cornell method, mind mapping, and more. We will delve into the benefits of each approach and guide you on choosing the one that suits your unique style.</li>
+                <li class="text-base text-gray-800">App Updates and Feature Highlights: Stay informed about the latest developments in the Beaver Notes app. We will keep you up to date with new features, improvements, and how they can elevate your note-taking journey.</li>
+                <li class="text-base text-gray-800">Community Spotlights: Meet members of the vibrant Beaver Notes community and learn how they utilize our app to boost their productivity. Discover user stories and testimonials that showcase the real impact of note-taking in people's lives.</li>
+                <li class="text-base text-gray-800">Tech Insights: Delve into the technical aspects of Beaver Notes, as we provide behind-the-scenes glimpses of app development, challenges, and solutions. Our tech-related posts will give you a deeper understanding of the work that goes into making Beaver Notes exceptional.</li>
+              </ol>
+            </div> 
+            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Join the Beaver Community:</p>
+            <p class="text-base py-4 text-gray-800">At Beaver Notes, we believe in the power of community, and the Beaver Blog is an extension of that belief. We invite you to actively engage with our blog posts, leave comments, and share your thoughts and experiences. Your feedback and suggestions play a crucial role in shaping the content we create.</p>
+      </div>
+  
+      <!-- Sidebar with Other Articles -->
+      <div class="md:col-span-1">
+        <p class="text-2xl text-amber-500 font-bold mb-4" style="font-family: 'Arimo', sans-serif;">Discover more</p>
+        <!-- Article 1 -->
+        <a href="../pages/embracing-the-penguin.html" class="max-w-md bg-white rounded-lg shadow block">
+            <img class="w-full h-40 object-cover rounded-xl" src="../medias/beaver-on-ubuntu.png" alt="Blog Image 3">
+            <div class="p-6">
+              <p class="text-xl text-gray-900 font-bold mb-3" style="font-family: 'Arimo', sans-serif;">Embracing the Penguin: Introducing Beta Linux Support for Beaver Notes!</p>     
+              <p class="text-gray-800" style="font-family: 'Arimo', sans-serif;">We are thrilled to unveil a remarkable development in the world of note-taking - the beta release of Beaver Notes for Linux!"</p>       
+            </div>
+          </a> 
+
+  
+        <!-- Add more other articles as needed -->
+      </div>
+    </div>
+</div>  
+    </body>

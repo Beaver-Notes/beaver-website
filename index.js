@@ -5,61 +5,41 @@ const path = require('path');
 
 const app = express();
 
-//Bodyparser Middleware
+// Bodyparser Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//static folder
-
+// Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Signup Route
+// Signup Route
 app.post('/signup', (req, res) => {
-  const { firstName, lastName, email } = req.body;
+  // Your existing signup route code
+  // ...
+});
 
-// Make sure all fields are entered
-  if (!firstName ||!lastName ||!email) {
-    res.redirect('/fail.html');
-    return;
-  }
+// Dummy blog posts (replace this with actual data or fetch from a database)
+const blogPosts = [
+  {
+    title: 'Blog Post 1',
+    content: 'Content of Blog Post 1',
+    imageUrl: 'blog-image1.jpg',
+  },
+  {
+    title: 'Blog Post 2',
+    content: 'Content of Blog Post 2',
+    imageUrl: 'blog-image2.jpg',
+  },
+  // Add more dummy blog posts as needed
+];
 
-// Construct request data
-const data = {
-  members: [
-    {
-        email_address: email,
-        status:'subscribed',
-        merge_fields: {
-          FNAME: firstName,
-          LNAME: lastName
-        }
-      }
-    ]
-  }
+// Route for the blog page
+app.get('/blog', (req, res) => {
+  res.render('blog', { blogPosts });
+});
 
-  const postData = JSON.stringify(data);
-
-  const options = {
-    url: 'https://us13.api.mailchimp.com/3.0/lists/a79c522893',
-    method: 'POST',
-    headers: {
-      Authorization: 'auth c7a7cd7284802363d6c52d1750f7d4ea-us13'
-    },
-    body: postData
-    };
-  
-
-  request(options, (err, response, body) => {
-    if (err) {
-      res.redirect('/success.html');
-          return;
-        } else {
-          if(response.statusCode === 200) {
-            res.redirect('/success.html');
-            return;} else {
-              res.redirect('/success.html');
-            }
-          }
-  });
+// Route for handling search (Same as before)
+app.get('/search', (req, res) => {
+  // ... Search functionality ...
 });
 
 const PORT = process.env.PORT || 3000;
