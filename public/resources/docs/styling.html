@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js" integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+<body class="bg-white height: full;
+width: full;" font-family:"'Arimo', sans-serif;">
+  <div class="flex">
+    <!-- Sidebar -->
+    <nav class="w-1/5 bg-[#F1F1F1] p-4 text-gray-800">
+      <div class="flex items-center justify-between mb-4">
+        <a href="/" class="flex items-center">
+          <img class="w-auto h-12 sm:h-12" src="../docs/medias/Beaver-Icon.png" alt="">
+          <span class="ml-2 font-bold text-xl text-black">/Docs</span>
+        </a>
+      </div>
+      <ul class="space-y-2">
+        <li class="group">
+          <a href="/Docs.html" class="group flex items-center justify-between text-gray-800 hover:text-amber-500" onclick="toggleDropdown('home')">
+            <span>Beaver Notes Hub</span>
+          </a>
+        </li>
+        <li class="group">
+          <a href="#" class="group flex items-center justify-between text-gray-800 hover:text-amber-500" onclick="toggleDropdown('user-guides')">
+            <span>User Guides</span>
+            <span class="transition-transform"><i class="fas fa-chevron-down" id="user-guides-icon"></i></span>
+          </a>
+          <ul id="user-guides" class="ml-4 mt-2 hidden">
+            <li><a class="text-gray-800 hover:text-amber-500" href="/resources/docs/install.html">Installation</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="/resources/docs/getting-started.html">Getting around Beaver Notes</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <a href="#" class="group flex items-center justify-between text-gray-800 hover:text-amber-500" onclick="toggleDropdown('developer-guides')">
+            <span>Developer Guides</span>
+            <span class="transition-transform"><i class="fas fa-chevron-down" id="developer-guides-icon"></i></span>
+          </a>
+          <ul id="developer-guides" class="ml-4 mt-2 hidden">
+            <li><a class="text-gray-800 hover:text-amber-500" href="../docs/setup-your-environment.html">Setup Your Environment</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../docs/build-and-test.html">Building and Testing</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../docs/styling.html">Styling the Beaver Notes App</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Navbar -->
+    <header class="w-4/5 bg-[1F1F1F1] ">
+      <nav x-data="{ isOpen: false }" class="relative">
+        <div class="container mx-auto md:flex md:justify-between md:items-center">
+          <div class="flex items-center justify-between">
+        <!-- Mobile menu button -->
+        <div class="flex lg:hidden">
+          <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
+            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+            </svg>
+  
+            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+        <div class="flex flex-col md:flex-row md:mx-6">
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" hrf="https://github.com/Daniele-rolli/Beaver-Notes">Resources</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" hrf="../Blog.html">Blog</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="../Download.html">Download</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="https://github.com/Daniele-rolli/Beaver-Notes/wiki">Get involved</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" rel="me" href="https://mastodon.social/@Beavernotes">Mastodon</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+      
+  <!-- Article Banner -->
+  <div class="container mx-auto px-20 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="md:col-span-2">
+        <div class="h-64 rounded-xl mb-4">
+            <img class="w-full h-64 object-contain object-center rounded-xl" src="../docs/medias/style.png" alt="Blog Image 1">
+        </div>
+        <p class="text-gray-800">
+              <!-- Title and details -->
+    <div class="text-gray-900 py-6 px-6">
+        <div class="container mx-auto">
+        <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">Styling the Beaver Notes App with Tailwind CSS</p>
+        <p class="text-base text-gray-800 py-4">Greetings, Beaver Notes users! In this section, we'll take you on a journey through the styling process of the Beaver Notes app using the dynamic Tailwind CSS framework. Our design philosophy aligns perfectly with Apple's Human Interface Guidelines (HIG), ensuring a delightful and intuitive user experience without overwhelming submenus. Let's delve into how we've embraced the Amber color palette, optimized text colors, and introduced subtle hover effects to elevate your note-taking adventure.</p>
+        </div>
+    </div>
+          <!-- Article content goes here -->
+          <div class="px-6">
+            <p class="text-2xl font-bold text-gray-900">The Amber Color Palette: Warmth and Creativity</p>
+            <p class="text-base py-4 text-gray-800">As you navigate through the Beaver Notes app, you'll be captivated by our delightful Amber color palette, radiating warmth and sparking creativity. With this vibrant shade woven into the app's core, your note-taking experience becomes an enjoyable and engaging endeavor.</p>
+            <div class="grid mt-3 grid-cols-1 sm:grid-cols-11 gap-y-3 gap-x-2 sm:mt-2 2xl:mt-0">
+              <div class="relative flex">
+                <div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5">
+                  <div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#fffbeb">
+                  </div>
+                  <div class="px-0.5">
+                    <div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">50
+                    </div>
+                    <div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#fffbeb
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="relative flex">
+                <div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5">
+                  <div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#fef3c7"></div><div class="px-0.5">
+                    <div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">100
+                    </div>
+                    <div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#fef3c7
+                    </div></div></div></div><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5">
+                      <div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#fde68a">
+                      </div>
+                      <div class="px-0.5">
+                        <div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">200
+                        </div>
+                        <div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#fde68a
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5">
+                    <div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#fcd34d">
+                    </div><div class="px-0.5">
+                      <div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">300
+                      </div>
+                      <div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#fcd34d
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5">
+                  <div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#fbbf24">
+                  </div>
+                  <div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">400
+                  </div>
+                  <div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#fbbf24
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5">
+              <div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#f59e0b">
+              </div>
+              <div class="px-0.5">
+                <div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">500
+                </div>
+                <div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#f59e0b
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5">
+            <div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#d97706">
+            </div>
+            <div class="px-0.5">
+              <div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">600
+              </div>
+              <div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#d97706
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative flex">
+          <div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5">
+            <div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#b45309">
+            </div>
+            <div class="px-0.5">
+              <div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">700
+              </div>
+              <div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#b45309
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative flex">
+          <div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5">
+            <div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#92400e">
+            </div>
+            <div class="px-0.5">
+              <div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">800
+              </div>
+              <div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#92400e
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative flex">
+          <div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5">
+            <div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#78350f">
+            </div>
+            <div class="px-0.5">
+              <div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">900
+              </div>
+              <div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#78350f
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative flex">
+          <div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5">
+            <div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#451a03">
+            </div>
+            <div class="px-0.5">
+              <div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">950
+              </div>
+              <div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#451a03
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <p class="text-2xl font-bold text-gray-900 mt-2">Intuitive Navigation: Simplified Access to Features</p>
+            <p class="text-base py-4 text-gray-800">Following Apple's HIG, we've crafted a user-friendly navigation that grants you direct access to all essential features without any confusing submenus. Our sidebar offers swift links to key sections, ensuring effortless exploration and seamless organization of your notes.</p>
+            <p class="text-2xl font-bold text-gray-900">Optimal Text Colors: Enhancing Readability</p>
+            <p class="text-base py-4 text-gray-800">Clarity is paramount when it comes to note-taking. In light mode, we've chosen text-gray-600 to strike the perfect balance between readability and aesthetics. For dark mode, we've selected text-gray-100, providing an optimal reading experience without straining your eyes during extended usage.
+            </p>
+            <div class="grid mt-3 grid-cols-1 sm:grid-cols-11 gap-y-3 gap-x-2 sm:mt-2 2xl:mt-0"><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5"><div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#f9fafb"></div><div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">50</div><div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#f9fafb</div></div></div></div><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5"><div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#f3f4f6"></div><div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">100</div><div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#f3f4f6</div></div></div></div><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5"><div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#e5e7eb"></div><div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">200</div><div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#e5e7eb</div></div></div></div><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5"><div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#d1d5db"></div><div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">300</div><div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#d1d5db</div></div></div></div><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5"><div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#9ca3af"></div><div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">400</div><div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#9ca3af</div></div></div></div><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5"><div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#6b7280"></div><div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">500</div><div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#6b7280</div></div></div></div><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5"><div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#4b5563"></div><div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">600</div><div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#4b5563</div></div></div></div><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5"><div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#374151"></div><div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">700</div><div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#374151</div></div></div></div><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5"><div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#1f2937"></div><div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">800</div><div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#1f2937</div></div></div></div><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5"><div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#111827"></div><div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">900</div><div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#111827</div></div></div></div><div class="relative flex"><div class="flex items-center gap-x-3 w-full cursor-pointer sm:block sm:space-y-1.5"><div class="h-10 w-10 rounded dark:ring-1 dark:ring-inset dark:ring-white/10 sm:w-full" style="background-color:#030712"></div><div class="px-0.5"><div class="w-6 font-medium text-xs text-slate-900 2xl:w-full dark:text-white">950</div><div class="text-slate-500 text-xs font-mono lowercase dark:text-slate-400 sm:text-[0.625rem] md:text-xs lg:text-[0.625rem] 2xl:text-xs">#030712</div></div></div></div></div>
+            <p class="text-2xl py-4 font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Subtle Hover Effects: Elevating User Interaction</p>
+            <p class="text-base mb-4 text-gray-800">To enhance your interactions with the app, we've thoughtfully introduced subtle hover effects. As you glide over elements, you'll notice a gentle ring-2 effect, adorned with our signature Amber hue. This intuitive feedback informs you when an element is active and ready for interaction, making your journey through Beaver Notes seamless and enjoyable.
+              <br>
+              <p class="text-base mb-4 text-gray-800">For a deeper understanding of these hover effects, you can explore the <a class="text-base mb-4 text-amber-500" href="https://v2.tailwindcss.com/docs/ring-width">Tailwind CSS documentation on ring-width</a>. Tailwind CSS empowers us to implement these delightful interactions, ensuring a visually pleasing and engaging user experience.</p>
+            </p> 
+            <p class="text-2xl py-4 font-bold text-gray-900">Embodying Clarity & Consistency</p>
+            <p class="text-base py-4 text-gray-800">Consistency is the bedrock of a well-crafted app design. At Beaver Notes, we take pride in adhering to Apple's Human Interface Guidelines (HIG), ensuring a clean and cohesive style throughout the app. From carefully chosen typography to harmonious color choices, every element aligns consistently, contributing to an intuitive and delightful note-taking experience.
+            </p> 
+            <p class="text-2xl py-4 font-bold text-gray-900">Conclusion
+            </p>
+            <p class="text-base py-4 text-gray-800">With Tailwind CSS as our trusted tool and Apple's HIG as our guiding star, we've meticulously crafted the Beaver Notes app to be visually appealing and user-friendly. The Amber color palette, intuitive navigation, and optimized text colors create an environment that fosters creativity and enhances your productivity.
+              <br>
+              <p class="text-base py-4 text-gray-800">We highly value your feedback as you embark on your note-taking adventure. Your insights are invaluable to us, empowering our continuous improvement efforts and ensuring that Beaver Notes remains your go-to app for capturing, organizing, and managing your ideas effortlessly.
+              </p>
+              <br>
+              <p class="text-base py-4 text-gray-800">So, let's embark on this journey together, guided by simplicity, clarity, and an unwavering commitment to user-centric design. Happy note-taking with Beaver Notes! 🚀</p>
+            </p> 
+        </div>
+        </div>
+  <!-- JavaScript (jQuery) for handling dropdowns -->
+  <script>
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(id);
+      const icon = document.getElementById(id + '-icon');
+      
+      if (dropdown.classList.contains('hidden')) {
+        dropdown.classList.remove('hidden');
+        icon.classList.add('rotate-up');
+      } else {
+        dropdown.classList.add('hidden');
+        icon.classList.remove('rotate-up');
+      }
+    }
+  </script>
+  
+  <style>
+    .rotate-up {
+      transform: rotate(180deg);
+    }
+  </style>
+</body>
+</html>

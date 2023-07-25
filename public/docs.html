@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js" integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body x-data="{ isMobile: window.innerWidth <= 767 }" x-init="window.addEventListener('resize', () => { isMobile = window.innerWidth <= 767 })" class="bg-white font-family:'Arimo', sans-serif;">
+    <div class="flex">
+    <!-- Sidebar -->
+    <nav class="w-1/5 bg-[#F1F1F1] p-4 text-gray-800">
+      <div class="flex items-center justify-between mb-4">
+        <a href="/" class="flex items-center">
+          <img class="w-auto h-12 sm:h-12" src="../resources/Beaver-Icon.png" alt="">
+          <span class="ml-2 font-bold text-xl text-black">/Docs</span>
+        </a>
+      </div>
+      <ul class="space-y-2">
+        <li class="group">
+          <a href="/Docs.html" class="group flex items-center justify-between text-gray-800 hover:text-amber-500" onclick="toggleDropdown('home')">
+            <span>Beaver Notes Hub</span>
+          </a>
+        </li>
+        <li class="group">
+          <a href="#" class="group flex items-center justify-between text-gray-800 hover:text-amber-500" onclick="toggleDropdown('user-guides')">
+            <span>User Guides</span>
+            <span class="transition-transform"><i class="fas fa-chevron-down" id="user-guides-icon"></i></span>
+          </a>
+          <ul id="user-guides" class="ml-4 mt-2 hidden">
+            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/install.html">Installation</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/getting-started.html">Getting around Beaver Notes</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <a href="#" class="group flex items-center justify-between text-gray-800 hover:text-amber-500" onclick="toggleDropdown('developer-guides')">
+            <span>Developer Guides</span>
+            <span class="transition-transform"><i class="fas fa-chevron-down" id="developer-guides-icon"></i></span>
+          </a>
+          <ul id="developer-guides" class="ml-4 mt-2 hidden">
+            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/setup-your-environment.html">Setup Your Environment</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/build-and-test.html">Building and Testing</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/styling.html">Styling the Beaver Notes App</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Navbar -->
+    <header class="w-4/5 bg-[1F1F1F1] ">
+      <nav x-data="{ isOpen: false }" class="relative">
+        <div class="container mx-auto md:flex md:justify-between md:items-center">
+          <div class="flex items-center justify-between">
+        <!-- Mobile menu button -->
+        <div class="flex lg:hidden">
+          <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
+            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+            </svg>
+  
+            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+        <div class="flex flex-col md:flex-row md:mx-6">
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" hrf="https://github.com/Daniele-rolli/Beaver-Notes">Resources</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" hrf="../Blog.html">Blog</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="../Download.html">Download</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="https://github.com/Daniele-rolli/Beaver-Notes/wiki">Get involved</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" rel="me" href="https://mastodon.social/@Beavernotes">Mastodon</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+      
+  <!-- Article Banner -->
+  <div class="container mx-auto px-20 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="md:col-span-2">
+        <div class="h-64 rounded-xl mb-4">
+            <img class="w-full h-64 object-cover object-top rounded-xl" src="../resources/displays.png" alt="Blog Image 1">
+        </div>
+        <p class="text-gray-800">
+              <!-- Title and details -->
+    <div class="text-gray-900 py-6">
+        <div class="container mx-auto">
+        <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">Introduction to Beaver Notes Documentation</p>
+        <p class="text-base py-4 text-gray-800">Welcome to the official documentation for Beaver Notes – the privacy-focused, open-source note-taking app for all your needs. This comprehensive guide will walk you through everything you need to know about using Beaver Notes effectively as a user and contributing as a developer.</p>
+        </div>
+    </div>
+          <!-- Article content goes here -->
+          <div class="px-6">
+          <p class="text-2xl font-bold text-gray-900">About Beaver Notes</p>
+          <p class="text-base py-4 text-gray-800">Beaver Notes is a versatile and intuitive note-taking application designed to empower users to capture, organize, and manage their ideas effortlessly. Our commitment to privacy and data security ensures that all your notes stay on your device, ensuring your personal information remains in your control.</p>
+            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Purpose of This Documentation</p>
+            <p class="text-base py-4 text-gray-800">This documentation serves as a central resource to assist both users and developers in making the most out of Beaver Notes. Whether you're a user looking to get started or a developer eager to contribute to the project, you'll find everything you need right here.</p>
+            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">What's Inside</p>
+            <ul class="list-disc text-base py-4 text-gray-800">
+              <li><b>User Guide:</b> If you're a user, you'll find detailed instructions on how to install Beaver Notes on your preferred platform and get started with note-taking. Explore the user-friendly interface, unleash the power of Markdown formatting, and learn how to stay organized with tags.
+              </li>
+              <li><b>Developer Guide:</b>For developers, we provide a step-by-step guide to set up your local development environment. From cloning the repository to building and testing the app, we've got you covered. Learn how to contribute code, improve documentation, and engage with the Beaver Notes community.
+              </li>
+            </ul>
+            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Getting Involved</p>
+            <p class="text-base py-4 text-gray-800">At Beaver Notes, we believe in the strength of an active and passionate community. Your feedback, suggestions, and contributions are invaluable to us. Whether you're a user or developer, we encourage you to join our forums, chat channels, and contributor meetings. Together, let's shape the future of note-taking!</p>      
+            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Let's Begin</p>
+            <p class="text-base py-4 text-gray-800">Ready to dive into the world of Beaver Notes? Whether you're a user or a developer, the navigation menu on the left will guide you through the various sections of this documentation. Let's take your productivity to new heights with Beaver Notes!</p>      
+            <p class="text-base py-4 text-gray-800">Let's start this exciting journey together! 🚀</p>
+              </div>
+        </div>
+        <!-- Full-page message for mobile devices -->
+        <div x-show="isMobile" class="fixed inset-0 flex items-center justify-center bg-white">
+          <div class="max-w-md p-4 text-center">
+            <p class="text-lg font-bold">Please visit the docs website from a PC or tablet.</p>
+          </div>
+        </div>
+  <!-- JavaScript (jQuery) for handling dropdowns -->
+  <script>
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(id);
+      const icon = document.getElementById(id + '-icon');
+      
+      if (dropdown.classList.contains('hidden')) {
+        dropdown.classList.remove('hidden');
+        icon.classList.add('rotate-up');
+      } else {
+        dropdown.classList.add('hidden');
+        icon.classList.remove('rotate-up');
+      }
+    }
+  </script>
+  
+  <style>
+    .rotate-up {
+      transform: rotate(180deg);
+    }
+  </style>
+</body>
+</html>

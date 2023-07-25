@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js" integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+<body class="bg-white height: full;
+width: full;" font-family:"'Arimo', sans-serif;">
+  <div class="flex">
+    <!-- Sidebar -->
+    <nav class="w-1/5 bg-[#F1F1F1] p-4 text-gray-800">
+      <div class="flex items-center justify-between mb-4">
+        <a href="/" class="flex items-center">
+          <img class="w-auto h-12 sm:h-12" src="../docs/medias/Beaver-Icon.png" alt="">
+          <span class="ml-2 font-bold text-xl text-black">/Docs</span>
+        </a>
+      </div>
+      <ul class="space-y-2">
+        <li class="group">
+          <a href="/Docs.html" class="group flex items-center justify-between text-gray-800 hover:text-amber-500" onclick="toggleDropdown('home')">
+            <span>Beaver Notes Hub</span>
+          </a>
+        </li>
+        <li class="group">
+          <a href="#" class="group flex items-center justify-between text-gray-800 hover:text-amber-500" onclick="toggleDropdown('user-guides')">
+            <span>User Guides</span>
+            <span class="transition-transform"><i class="fas fa-chevron-down" id="user-guides-icon"></i></span>
+          </a>
+          <ul id="user-guides" class="ml-4 mt-2 hidden">
+            <li><a class="text-gray-800 hover:text-amber-500" href="/resources/docs/install.html">Installation</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="/resources/docs/getting-started.html">Getting around Beaver Notes</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <a href="#" class="group flex items-center justify-between text-gray-800 hover:text-amber-500" onclick="toggleDropdown('developer-guides')">
+            <span>Getting around Beaver Notes</span>
+            <span class="transition-transform"><i class="fas fa-chevron-down" id="developer-guides-icon"></i></span>
+          </a>
+          <ul id="developer-guides" class="ml-4 mt-2 hidden">
+            <li><a class="text-gray-800 hover:text-amber-500" href="../docs/setup-your-environment.html">Setup Your Environment</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../docs/build-and-test.html">Building and Testing</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../docs/styling.html">Styling the Beaver Notes App</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Navbar -->
+    <header class="w-4/5 bg-[1F1F1F1] ">
+      <nav x-data="{ isOpen: false }" class="relative">
+        <div class="container mx-auto md:flex md:justify-between md:items-center">
+          <div class="flex items-center justify-between">
+        <!-- Mobile menu button -->
+        <div class="flex lg:hidden">
+          <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
+            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+            </svg>
+  
+            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+        <div class="flex flex-col md:flex-row md:mx-6">
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" hrf="https://github.com/Daniele-rolli/Beaver-Notes">Resources</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="../Download.html">Download</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="https://github.com/Daniele-rolli/Beaver-Notes/wiki">Get involved</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" rel="me" href="https://mastodon.social/@Beavernotes">Mastodon</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+      
+  <!-- Article Banner -->
+  <div class="container mx-auto px-20 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="md:col-span-2">
+        <div class="h-64 rounded-xl mb-4">
+            <img class="w-full h-64 object-contain object-center rounded-xl" src="../docs/medias/systems.jpeg" alt="Blog Image 1">
+        </div>
+        <p class="text-gray-800">
+              <!-- Title and details -->
+    <div class="text-gray-900 py-6 px-6">
+        <div class="container mx-auto">
+        <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">Getting Around Beaver Notes</p>
+        <p class="text-base text-gray-800 py-4">Welcome to Beaver Notes! We're excited to have you on board. This section will introduce you to the app's user interface and navigation, helping you get familiar with all the essential elements to make the most of your note-taking experience.</p>
+        </div>
+    </div>
+          <!-- Article content goes here -->
+          <div class="px-6">
+            <p class="text-2xl font-bold text-gray-900">The Interface</p>
+            <p class="text-base py-4 text-gray-800">Upon launching Beaver Notes, you'll be greeted by a clean and intuitive user interface designed to streamline your note-taking process. Let's take a closer look at its key components:</p>
+                <ul class="list-disc text-base py-4 text-gray-800">
+                    <li><b>Sidebar:</b> Located on the left side of the screen, the sidebar offers quick access to essential features and sections. Here's what you'll find:</li>
+                    <ul>
+              <li><b>New Note:</b> Click the plus button to create a new note and start jotting down your thoughts right away.</li>
+              <li><b>Edit Note:</b> Easily modify the content of any note by clicking on the "Edit" option.</li>
+              <li><b>Notes Section:</b> All your notes are displayed in neatly organized cards for easy browsing and reference.</li>
+              <li><b>Archive:</b> Keep your notes organized by archiving them when they're no longer in active use. Simply click on the archive icon at the top left corner.</li>
+              <li><b>Dark Mode:</b> For those who prefer a darker interface, switch to dark mode effortlessly from the bottom left corner.</li>
+              <li><b>Settings:</b> Fine-tune Beaver Notes to your preferences by accessing the settings from the sidebar.</li>
+          </ul>
+          <li><b>Editor:</b> The right side of the screen is the editor, where you can compose or modify your notes using Beaver Notes' powerful markdown formatting.</li>
+          <li><b>Toolbar:</b> At the top of the editor, you'll find a toolbar with various tools, including formatting options, link insertion, and more.</li>
+          </ul>
+            <p class="text-2xl py-4 font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Navigation</p>
+            <p class="text-base mb-4 text-gray-800">Navigating Beaver Notes is a breeze with keyboard shortcuts and the command prompt:</p> 
+            <p class="text-base mb-4 text-gray-800">Keyboard Shortcuts: Speed up your workflow by using keyboard shortcuts to perform common actions. Here are some essential shortcuts to get you started:</p>
+            <ul class="list-disc text-base py-4 text-gray-800">
+                <li><b>Ctrl+N / Cmd+N </b>: Create a new note.</li>
+                <li><b>Ctrl+F / Cmd+F </b>: Find or replace text in the editor. </li>
+                <li><b>Ctrl+P / Ctrl+Shift+P | Cmd+P / Cmd+Shift+P </b>: Create a new note.</li>
+                <li><b>Ctrl+, / Cmd+,</b>: Navigate to the settings.</li>
+                <li><b>Ctrl+Shift+W / Cmd+Shift+W </b>: Open the current edited note.</li>
+                <li><b>Ctrl+Shift+N / Cmd+Shift+N </b>: Navigate to all notes.</li>
+                <li><b>trl+Shift+A / Cmd+Shift+A</b>: Navigate to archived notes.</li>
+                <li><b>Ctrl+Shift+L / Cmd+Shift+L</b>:  Toggle dark mode.</li>
+            </ul> 
+            <p class="text-base mb-4 text-gray-800">For more keyboard shortcuts, open the settings.</p>
+            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Command Prompt:</p>
+            <p class="text-base py-4 text-gray-800">Quickly find notes or execute commands using the command prompt. To open the command prompt, press Ctrl+P or Ctrl+Shift+P / Cmd+P or Cmd+Shift+P to quickly find a command.</p>      
+            <p class="text-base py-4 text-gray-800">Your Note-Taking Journey Begins!</p> 
+            <p class="text-base py-4 text-gray-800">You're now ready to explore and utilize Beaver Notes' features to make note-taking a delightful experience. As you continue to use the app, you'll discover even more functionalities that cater to your productivity and creativity.</p>
+        </div>
+        </div>
+  
+  <!-- JavaScript (jQuery) for handling dropdowns -->
+  <script>
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(id);
+      const icon = document.getElementById(id + '-icon');
+      
+      if (dropdown.classList.contains('hidden')) {
+        dropdown.classList.remove('hidden');
+        icon.classList.add('rotate-up');
+      } else {
+        dropdown.classList.add('hidden');
+        icon.classList.remove('rotate-up');
+      }
+    }
+  </script>
+  
+  <style>
+    .rotate-up {
+      transform: rotate(180deg);
+    }
+  </style>
+</body>
+</html>
