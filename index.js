@@ -1,7 +1,7 @@
 const express = require('express');
-const request = require('request');
 const bodyParser = require('body-parser');
 const path = require('path');
+const fetch = require('node-fetch');
 
 const app = express();
 
@@ -13,34 +13,42 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Signup Route
 app.post('/signup', (req, res) => {
-  // Your existing signup route code
-  // ...
-});
+  const { firstName, lastName, email } = req.body;
 
-// Dummy blog posts (replace this with actual data or fetch from a database)
-const blogPosts = [
-  {
-    title: 'Blog Post 1',
-    content: 'Content of Blog Post 1',
-    imageUrl: 'blog-image1.jpg',
-  },
-  {
-    title: 'Blog Post 2',
-    content: 'Content of Blog Post 2',
-    imageUrl: 'blog-image2.jpg',
-  },
-  // Add more dummy blog posts as needed
-];
+  // Make sure fields are filled
+  if (!firstName || !lastName || !email) {
+    res.redirect('/fail.html');
+    return;
+  }
 
-// Route for the blog page
-app.get('/blog', (req, res) => {
-  res.render('blog', { blogPosts });
-});
+  // Construct req data
+  const data = {
+    members: [
+      {
+        email_address: email,
+        status: 'subscribed',
+        merge_fields: {
+          FNAME: firstName,
+          LNAME: lastName
+        }
+      }
+    ]
+  };
 
-// Route for handling search (Same as before)
-app.get('/search', (req, res) => {
-  // ... Search functionality ...
-});
+  const postData = JSON.stringify(data);
+
+  fetch('https://us13.api.mailchimp.com/3.0/lists/a79c522893', {
+    method: 'POST',
+    headers: {
+      Authorization: 'auth cdcc009ecf2e907fba3c3d70b4474d80-us13'
+    },
+    body: postData
+  })
+    .then(res.statusCode === 200 ?
+      res.redirect('/success.html') :
+      res.redirect('/fail.html'))
+    .catch(err => console.log(err))
+})
 
 const PORT = process.env.PORT || 3000;
 
