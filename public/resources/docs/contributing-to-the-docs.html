@@ -16,14 +16,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
-  <title> Documentation - Beaver Notes</title>
-  <body x-data="{ isMobile: window.innerWidth <= 767 }" x-init="window.addEventListener('resize', () => { isMobile = window.innerWidth <= 767 })" class="bg-white font-family:'Arimo', sans-serif;">
-    <div class="flex">
+  <title> Setup your environment - Beaver Notes</title>
+<body class="bg-white height: full;
+width: full;" font-family:"'Arimo', sans-serif;">
+  <div class="flex">
     <!-- Sidebar -->
     <nav class="w-1/5 bg-[#F1F1F1] p-4 text-gray-800">
       <div class="flex items-center justify-between mb-4">
         <a href="/" class="flex items-center">
-          <img class="w-auto h-12 sm:h-12" src="../resources/Beaver-Icon.png" alt="">
+          <img class="w-auto h-12 sm:h-12" src="../docs/medias/Beaver-Icon.png" alt="">
           <span class="ml-2 font-bold text-xl text-black">/Docs</span>
         </a>
       </div>
@@ -39,8 +40,8 @@
             <span class="transition-transform"><i class="fas fa-chevron-down" id="user-guides-icon"></i></span>
           </a>
           <ul id="user-guides" class="ml-4 mt-2 hidden">
-            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/install.html">💻 Installation</a></li>
-            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/getting-started.html">🧭 Getting around Beaver Notes</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="/resources/docs/install.html">💻 Installation</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="/resources/docs/getting-started.html">🧭 Getting around Beaver Notes</a></li>
           </ul>
         </li>
         <li class="group">
@@ -49,11 +50,11 @@
             <span class="transition-transform"><i class="fas fa-chevron-down" id="developer-guides-icon"></i></span>
           </a>
           <ul id="developer-guides" class="ml-4 mt-2 hidden">
-            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/how-to-contribute.html">🚀 How to contribute</a></li>
-            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/setup-your-environment.html">🔧 Setup Your Environment</a></li>
-            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/build-and-test.html">🏗️ Building and Testing</a></li>
-            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/styling.html">🖌️ Styling the Beaver Notes App</a></li>
-            <li><a class="text-gray-800 hover:text-amber-500" href="../resources/docs/contributing-to-the-docs.html">📑 Contributing to the Docs</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../docs/how-to-contribute.html">🚀 How to contribute</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../docs/setup-your-environment.html">🔧 Setup Your Environment</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../docs/build-and-test.html">🏗️ Building and Testing</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../docs/styling.html">🖌️ Styling the Beaver Notes App</a></li>
+            <li><a class="text-gray-800 hover:text-amber-500" href="../docs/contributing-to-the-docs.html">📑 Contributing to the Docs</a></li>
           </ul>
         </li>
       </ul>
@@ -81,7 +82,6 @@
       <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
         <div class="flex flex-col md:flex-row md:mx-6">
           <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="https://github.com/Daniele-rolli/Beaver-Notes">Resources</a>
-          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="../Blog.html">Blog</a>
           <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="../Download.html">Download</a>
           <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" rel="me" href="https://mastodon.social/@Beavernotes">Mastodon</a>
         </div>
@@ -94,42 +94,60 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="md:col-span-2">
         <div class="h-64 rounded-xl mb-4">
-            <img class="w-full h-64 object-cover object-top rounded-xl" src="../resources/displays.png" alt="Blog Image 1">
+            <img class="w-full h-64 object-contain object-center rounded-xl" src="../docs/medias/contribute.png" alt="Blog Image 1">
         </div>
         <p class="text-gray-800">
               <!-- Title and details -->
-    <div class="text-gray-900 py-6">
+    <div class="text-gray-900 py-6 px-6">
         <div class="container mx-auto">
-        <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">Introduction to Beaver Notes Documentation</p>
-        <p class="text-base py-4 text-gray-800">Welcome to the official documentation for Beaver Notes – the privacy-focused, open-source note-taking app for all your needs. This comprehensive guide will walk you through everything you need to know about using Beaver Notes effectively as a user and contributing as a developer.</p>
+        <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">Contributing to the Docs</p>
+        <p class="text-base text-gray-800 py-4">Welcome to the Beaver Notes community! We appreciate your interest in contributing to our privacy-focused note-taking app. Whether you're a seasoned developer or a non-techie looking to make a difference, there are various ways you can contribute to the project.</p>
         </div>
     </div>
           <!-- Article content goes here -->
           <div class="px-6">
-          <p class="text-2xl font-bold text-gray-900">About Beaver Notes</p>
-          <p class="text-base py-4 text-gray-800">Beaver Notes is a versatile and intuitive note-taking application designed to empower users to capture, organize, and manage their ideas effortlessly. Our commitment to privacy and data security ensures that all your notes stay on your device, ensuring your personal information remains in your control.</p>
-            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Purpose of This Documentation</p>
-            <p class="text-base py-4 text-gray-800">This documentation serves as a central resource to assist both users and developers in making the most out of Beaver Notes. Whether you're a user looking to get started or a developer eager to contribute to the project, you'll find everything you need right here.</p>
-            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">What's Inside</p>
-            <ul class="list-disc text-base py-4 text-gray-800">
-              <li><b>User Guide:</b> If you're a user, you'll find detailed instructions on how to install Beaver Notes on your preferred platform and get started with note-taking. Explore the user-friendly interface, unleash the power of Markdown formatting, and learn how to stay organized with tags.
-              </li>
-              <li><b>Developer Guide:</b>For developers, we provide a step-by-step guide to set up your local development environment. From cloning the repository to building and testing the app, we've got you covered. Learn how to contribute code, improve documentation, and engage with the Beaver Notes community.
-              </li>
-            </ul>
-            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Getting Involved</p>
-            <p class="text-base py-4 text-gray-800">At Beaver Notes, we believe in the strength of an active and passionate community. Your feedback, suggestions, and contributions are invaluable to us. Whether you're a user or developer, we encourage you to join our forums, chat channels, and contributor meetings. Together, let's shape the future of note-taking!</p>      
-            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Let's Begin</p>
-            <p class="text-base py-4 text-gray-800">Ready to dive into the world of Beaver Notes? Whether you're a user or a developer, the navigation menu on the left will guide you through the various sections of this documentation. Let's take your productivity to new heights with Beaver Notes!</p>      
-            <p class="text-base py-4 text-gray-800">Let's start this exciting journey together! 🚀</p>
-              </div>
+            <p class="text-2xl font-bold text-gray-900">Code Contributions
+            </p>
+            <p class="text-base py-2 text-gray-800">If you have coding skills and want to dive into the development of Beaver Notes, we're thrilled to have you on board! You can contribute by:</p>
+                <ul class="list-decimal text-base py-2 text-gray-800">
+          <li><b>Forking the Repository:</b>Make a copy of the Beaver Notes repository on GitHub under your account.</li>
+          <li><b>Setting Up Your Environment:</b> Follow our detailed guide on setting up your local development environment. It will help you get started with building, testing, and contributing to the app.</li>
+          <li><b>Submitting Pull Requests:</b> Implement new features, fix bugs, or enhance existing functionalities. Submit your changes as pull requests, and our team will review them.
+          </li>
+          </ul>
+            <p class="text-2xl py-4 font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Documentation Contributions</p>
+            <p class="text-base mb-2 text-gray-800">Great documentation is essential for a successful open-source project. Even if you're not a developer, you can still make a valuable contribution by improving our documentation:</p> 
+            <ul class="list-decimal text-base py-2 text-gray-800">
+                <li><b>Editing and Proofreading:</b>Help us refine the existing documentation. Ensure clarity, correctness, and a user-friendly tone.</li>
+                <li><b>Adding Examples:</b> Provide real-world examples and use cases to make the documentation more practical and engaging.</li>
+                <li><b>Fixing Errors and Gaps:</b> If you spot any errors or missing information in the docs, let us know, or submit a pull request to update them.
+                </li>
+                </ul>
+            <p class="text-base mb-2 text-gray-800">Feedback and Ideas</p>
+            <p class="text-base mb-2 text-gray-800">Your feedback is invaluable to us! If you're using Beaver Notes and have ideas for improvements, suggestions, or encountered any issues, please don't hesitate to share them with us. You can do so by:
+            </p>
+            <ul class="list-decimal text-base py-2 text-gray-800">
+                <li><b>Opening Issues: </b> If you find any bugs or have feature requests, create an issue on our GitHub repository.
+                </li>
+                <li><b>Joining Discussions:</b> Engage with our community on our Reddit page <a class="text-base mb-4 text-amber-500 hover:text-amber-400" href="https://www.reddit.com/r/BeaverNotes/">(/r/BeaverNotes)</a> or on Mastodon  <a class="text-base mb-4 text-amber-500 hover:text-amber-400" href="https://mastodon.social/@Beavernotes">(@Beavernotes)</a>. Share your thoughts and ideas!</li>
+                </li>
+                </ul>
+            <p class="text-2xl font-bold py-2 text-gray-900"style="font-family: 'Arimo', sans-serif;">Non-Technical Contributions            </p>
+            <p class="text-base py-2 text-gray-800">Even if you're not a developer, there are plenty of ways to support Beaver Notes:
+            </p>
+            <ul class="list-decimal text-base py-2 text-gray-800">
+                <li><b>Spreading the Word:</b> Help us reach a broader audience by sharing our app and updates on your social media platforms.</li>
+                <li><b>Testing:</b> Test the app thoroughly and provide feedback on your user experience.</li>
+                <li><b>Writing Articles:</b> If you enjoy writing, share your experiences with Beaver Notes and note-taking in general.
+                </li>
+                </ul>      
+            <p class="text-base py-2 text-gray-800">Let's Collaborate!
+            </p> 
+            <p class="text-base py-2 text-gray-800">At Beaver Notes, we believe in collaboration and building a thriving community. Together, we can create an exceptional note-taking experience focused on privacy and efficiency.</p>
+            <p class="text-base py-2 text-gray-800">Ready to get started? Visit our <a class=" no-underline	text-base py-4 text-amber-500 hover:text-amber-500 no-underline">Developer Guides</a> for more details. We can't wait to see what you bring to the Beaver Notes family!</p>
         </div>
-        <!-- Full-page message for mobile devices -->
-        <div x-show="isMobile" class="fixed inset-0 flex items-center justify-center bg-white">
-          <div class="max-w-md p-4 text-center">
-            <p class="text-lg font-bold">Please visit the docs website from a PC or tablet.</p>
-          </div>
         </div>
+  
   <!-- JavaScript (jQuery) for handling dropdowns -->
   <script>
     function toggleDropdown(id) {
