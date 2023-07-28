@@ -1,8 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const fetch = require('node-fetch');
-
 const app = express();
 
 // Bodyparser Middleware
@@ -29,10 +27,10 @@ app.post('/signup', (req, res) => {
         status: 'subscribed',
         merge_fields: {
           FNAME: firstName,
-          LNAME: lastName
-        }
-      }
-    ]
+          LNAME: lastName,
+        },
+      },
+    ],
   };
 
   const postData = JSON.stringify(data);
@@ -40,16 +38,16 @@ app.post('/signup', (req, res) => {
   fetch('https://us13.api.mailchimp.com/3.0/lists/a79c522893', {
     method: 'POST',
     headers: {
-      Authorization: 'auth cdcc009ecf2e907fba3c3d70b4474d80-us13'
+      Authorization: 'auth 3ed38efe3b6cd4ede1e600fa3502d6d3-us13',
     },
-    body: postData
+    body: postData,
   })
-    .then(res.statusCode === 200 ?
-      res.redirect('/success.html') :
-      res.redirect('/fail.html'))
-    .catch(err => console.log(err))
-})
+    .then((response) =>
+      response.status === 200 ? res.redirect('/success.html') : res.redirect('/fail.html')
+    )
+    .catch((err) => console.log(err));
+});
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, console.log(`Server started on ${PORT}`));
+app.listen(PORT, () => console.log(`Server started on ${PORT}`));
