@@ -18,7 +18,7 @@ To get started with Beaver Notes, you have two options:
 
 1. Visit the official website: [Beaver Notes Website](https://www.beavernotes.com)
 
-2. Download the app directly: [Beaver Notes App](https://www.beavernotes.com/download)
+2. Download the app directly: [Beaver Notes App](https://www.beavernotes.com/download.html)
 
 ## Contributing
 
