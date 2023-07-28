@@ -32,8 +32,3 @@ Beaver Notes is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 If you have any questions, suggestions, or feedback, don't hesitate to reach out to us at [danielerolli@proton.me](mailto:danielerolli@proton.me). We'd love to hear from you!
 
----
-
-**Note:** This `README.md` serves as a brief introduction to the Beaver Notes website repository. For the app's documentation and source code, visit the [Beaver Notes App Repository](https://github.com/Daniele-rolli/Beaver-Notes).
-
-We hope this `README.md` provides an informative overview of the Beaver Notes website repository. Feel free to customize and expand it further to suit your project's specific needs. If you have any other requests or need further assistance, just let me know!
