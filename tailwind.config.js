@@ -3,7 +3,8 @@ module.exports = {
       extend: {
         objectPosition: {
           'center-top': 'center top',
-        }
+        },
       },
-    }
-  }
+    },
+    plugins: [],
+  };
