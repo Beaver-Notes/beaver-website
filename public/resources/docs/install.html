@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
     <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js" integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -93,40 +94,40 @@
     </div>
           <!-- Article content goes here -->
           <div class="px-6">
-          <p class="text-base text-gray-800 py-2">To get started with Beaver Notes, visit our official website at <a class="text-base text-gray-800" href="https://beavernotes.com/download.html">beavernotes.com</a> and navigate to the download section. Choose the installer that matches your operating system – whether it's macOS, Windows, or a Linux distribution. Once you've selected the appropriate installer, follow the on-screen instructions for a smooth installation process. With just a few clicks, you'll be all set to embark on your note-taking journey with Beaver Notes.</p>
+          <p class="text-base text-gray-800 py-2">To get started with Beaver Notes, visit the website at <a class="text-base text-amber-500" href="https://beavernotes.com/download.html">beavernotes.com</a> and navigate to the download section. Choose the installer that matches your operating system – whether it's macOS, Windows, or a Linux distribution. Once you've selected the right installer, you can either go on and follow on-screen instructions or keep reading this section of the docs for better guidance.</p>
                 <a href="#" class="group flex items-center justify-between" onclick="toggleDropdown('architecture')">
-                  <span class="font-bold text-gray-900">Not sure which installer to pick? No worries! Here's how you can determine your CPU architecture:</span>
+                  <span class="font-bold text-gray-900">Not sure which installer to pick? No worries! We are here to help you just click here</span>
                   <span class="transition-transform"><i class="fas fa-chevron-down" id="user-guides-icon"></i></span>
                 </a>
+                <br>
                 <ul id="architecture" class="hidden text-gray-800 py-2">
-                    <li><b>For Windows:</b> Press <b>Windows Key + R</b>, then type <b>msinfo32</b> and hit <b>Enter</b>. Look for the <b>System Type</b> under <b>System Information</b> to find whether it's x64 or arm64.</li>
-                    <li><b>For macOS</b>Click the <b>Apple menu</b> in the top-left corner, choose <b>About This Mac</b>, and look for the <b>Processor information</b>. It will specify whether it's an Intel-based (x64) or Apple silicon (arm64) processor.</li>
-                    <li><b>For Linux</b>Open a terminal and use the command <b>uname -m</b>. If it returns <b>x86_64</b>, it's x64 architecture. If it returns <b>aarch64</b>, it's arm64 architecture.</li>
+                    <li><i class="fab fa-microsoft"></i><b> For Windows: </b>Press <b>Windows Key + R</b>, then type <b>msinfo32</b> and hit <b>Enter</b>. Look for the <b>System Type</b> under <b>System Information</b> to find whether it's x64 or arm64.</li>
+                    <br>
+                    <li><i class="fab fa-apple"></i><b> For macOS: </b>Click the <b>Apple menu</b> in the top-left corner, choose <b>About This Mac</b>, and look for the <b>Processor information</b>. It will specify whether it's an Intel (x64) or Apple silicon (arm64) processor.</li>
+                    <br>
+                    <li><i class="fab fa-linux"></i><b> For Linux: </b>Open a terminal and use the command <b>uname -m</b>. If it returns <b>x86_64</b>, it's x64 architecture. If it returns <b>aarch64</b>, it's arm64 architecture.</li>
                 </ul>
               </li>
-            <p class="text-2xl py-2 font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Visit Our Official Website:</p>
-            <p class="text-base mb-4 text-gray-800">Head over to our official website at <a class="text-base mb-4 text-amber-500" href="https://beavernotes.com">beavernotes.com.</a> You'll find yourself in the hub of all things Beaver Notes, where we're excited to welcome you!</p>      
-            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Navigate to the Download Section</p>
-            <p class="text-base py-2 text-gray-800">On the website, find and click on the "Download" section. Here's where the magic happens - you'll spot the installers tailored to your operating system.
-            </p>      
-            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Choose the Right Installer</p>
-            <p class="text-base py-2 text-gray-800">Select the installer that matches your operating system:
-              <br>
-              <ul class="text-gray-800 py-2 list-disc">
-                <li class="py-2"><b>For macOS users:</b> Click on the "Download for macOS" button to get the Beaver Notes .dmg installer file. On the download page, you may see a dropdown with options for x64 and arm64, which corresponds to the architecture of your Mac.
-                </li>
-                <li class="py-2"><b>If you're on Windows:</b> Go ahead and click on the "Download for Windows" button to grab the Beaver Notes installer for Windows. On the download page, you may see a dropdown with options for x64 and arm64, which corresponds to the architecture of your Windows system.
-                </li>
-                  <li class="py-2"><b>For Linux enthusiasts: </b> Look for the "Download for Linux" button, which will open a dropdown with options for x64 and arm64. Choose the one that corresponds to your Linux distribution.
-                  </li>
-                </ul> 
-            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Installing Beaver Notes</p>
             <ul class="text-gray-800 py-2 list-disc">
-              <li class="py-2"><b>macOS:</b><br> Once the download is complete, locate the downloaded .dmg file, typically residing in your Downloads folder. Double-click the .dmg file to mount the Beaver Notes disk image. From there, simply drag and drop the Beaver Notes application icon into your Applications folder. You've done it! Beaver Notes is now installed and ready to be your trusty note-taking companion.
+              <li class="py-2"><i class="fab fa-apple"></i><b> macOS:</b> Once the download is complete, double-click the .dmg file in your download folder to mount the Beaver Notes disk image. From there, just drag the Beaver Notes app icon onto your Applications folder.
+                <br>
+                <p class="text-base text-gray-800 py-2">If, when you open the app, a pop-up shows up saying "Beaver Notes" cannot be opened because the developer cannot be verified, macOS cannot verify that this app is free from malware. Click "OK," and then go to System Preferences > Privacy & Security > and click "Open Anyway"</p>
+                <br>
+                <p class="text-base text-gray-800 py-2">If you want to ensure the safety of what you are running, you can check the installer’s SHA256 to verify if the code has been tampered with. To obtain the SHA256 of the installer on your Mac, run</p>
+                <br>
+                <pre class="text-gray-700 bg-black text-white p-4 rounded-xl">shasum -a 256 path-to-Beaver-Notes.dmg</pre>
+                <br>
+                <p class="text-base text-gray-800 py-2">in the terminal, and compare it with the one corresponding to your installer <a class="text-base text-amber-500">Release v.0.0.7</a></p>
               </li>
-              <li class="py-2"><b>Windows:</b><br> When the download finishes, you'll find the installer file, usually named "Beaver-Notes-Setup.exe." Double-click on it to initiate the installation process. Our easy-to-follow installation wizard will guide you through the steps to set up Beaver Notes on your Windows computer. Once installed, you can launch Beaver Notes from the Start menu or via the desktop shortcut (if created during installation).
+              <li class="py-2"><i class="fab fa-microsoft"></i><b> Windows:</b> When the download finishes, double-click on the installer to initiate the installation process. Like macOS, Windows has a protection feature for packages downloaded from the internet. Therefore, a pop-up saying “Windows protected your PC - Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.“ will appear. Click on 'More info' and then 'Run anyway' as the app has no other terms to agree to. The installer will execute quickly.
               </li>
+              <br>
+              <p class="text-base text-gray-800 py-2">To verify that the code has not been subject to malicious modifications, check the SHA256 by running in Powershell</p>
+              <br>
+              <pre class="text-gray-700 bg-black text-white p-4 rounded-xl">Get-FileHash -Algorithm SHA256 "C:\Path\to\beaver-notes.exe"</pre>
+              <br>
                 <li class="py-2"><b>Linux:</b><br> The Beaver Notes AppImage makes installation a breeze for Linux users. After the download completes, open your terminal and navigate to the directory containing the downloaded AppImage file. Make the file executable with the command:
+                  </li>
                   <br>
                   <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mt-4">chmod +x path/to/Beaver-Notes.AppImage</pre> 
                     <br>

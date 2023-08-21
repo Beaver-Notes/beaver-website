@@ -1,13 +1,13 @@
 {
   "name": "beavernotes-website",
   "version": "1.0.0",
-  "description": "The beavernote app's official website",
+  "description": "The Beaver Notes app's official website",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "author": "Daniele Rolli <danielerolli004@gmail.com>",
+  "author": "Daniele Rolli <danielerolli@proton.me>",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.2",
