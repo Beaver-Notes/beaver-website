@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta property="og:title" content="Introducing Beaver Notes v0.0.6 - Elevate Your Note-Taking Experience! 🚀">
+   <meta property="og:description" content="Welcome to a new chapter of productivity and efficiency with Beaver Notes v0.0.6! We are excited to announce the latest update to our privacy-focused note-taking app that empowers you to capture, organize, and manage your ideas effortlessly. This version brings a host of new features, including support for printing and PDF export, along with some crucial bug fixes for our Mac users. Let's dive into the enhancements that will transform your note-taking journey!">
+   <meta property="og:image" content="https://www.beavernotes.com/resources/blog/medias/0.0.6.webp">
+   <meta property="og:url" content="https://www.beavernotes.com/resources/blog/pages/0.0.6.html">
+    <meta property="og:type" content="article">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://analytics.umami.is/script.js" data-website-id="b736397b-3031-452b-a433-c6a0e98be237"></script>
+      <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js" integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <title>Beaver Notes v0.0.7 - The future awaits</title>
+<body class="bg-white">
+  <!-- Navigation Bar -->
+  <nav x-data="{ isOpen: false }" class="relative bg-whites">
+    <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+      <div class="flex items-center justify-between">
+        <a href="/" class="flex items-center">
+          <img class="w-auto h-12 sm:h-12" src="../medias/Beaver-Icon.webp" alt="">
+          <span class="ml-2 font-bold text-xl text-black"> /Blog</span>
+        </a>
+  
+        <!-- Mobile menu button -->
+        <div class="flex lg:hidden">
+          <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
+            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+            </svg>
+  
+            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+  
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+        <div class="flex flex-col md:flex-row md:mx-6">
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" hrf="https://github.com/Daniele-rolli/Beaver-Notes">Resources</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="../Download.html">Download</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" rel="me" href="https://mastodon.social/@Beavernotes">Mastodon</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Article Banner -->
+  <div class="container mx-auto px-6 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="md:col-span-2">
+        <div class="h-64 rounded-xl mb-4">
+            <img class="w-full h-64 object-cover rounded-xl" src="../medias/sync.webp" alt="Blog Image 1">
+        </div>
+        <p class="text-gray-800">
+              <!-- Title and details -->
+    <div class="text-gray-900">
+        <div class="container mx-auto">
+        <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">Beaver Notes v0.0.7 - The future awaits</p>
+        <p class="text-lg mt-2" style="font-family: 'Arimo', sans-serif;">Daniele Rolli | August 24 2023</p>
+        </div>
+    </div>
+          <!-- Article content goes here -->
+           <p class="text-base py-4 text-gray-800">We are excited to present version 0.0.7 built on top of our community feedbacks and inputs. Before unveiling the exciting new features, we want to thank every single user who took the time and effort to contact us and share their ideas and thoughts.</p>
+           <p class="text-base mb-4 text-gray-800"><b>TL;DR</b> Beaver Notes version 0.0.7, introduces a new way to synchronize your notes a redesigned focus mode and a new electron base.
+        </p>
+        <ul class="text-gray-800 list-disc">
+            <li>Introducing sync across devices </li>
+            <br>
+            <li>Focus mode has been redesigned </li>
+            <br>
+            <li>The electron base has been updated</li>
+            <br>
+            <li>The electron base has been updated</li>
+            <br>
+            <li>Transitioned to Rpm and Deb packages.</li>
+            <br>
+            <li>To see the rest of the changelog, visit our <a class="text-base text-amber-500 hover:text-amber-400" href="https://github.com/Daniele-rolli/Beaver-Notes/releases/tag/0.0.7">GitHub.</a></li>
+        </ul>
+            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Sharing is Caring 
+            </p>
+            <p class="text-base py-4 text-gray-800">We heard your feedbacks and delivered, Beaver Notes has implemented a way of synching your notes between devices. After trying countless sync methods we have settled on one that needs close to minimum user interaction the only things you will need to do is select the path you want to import and export to in settings, this path should ideally be the one of a cloud provider or synching service installed on your device, like iCloud, Syncthing, Nextcloud etc. After that you’ll be able to export and import your notes by clicking on the two buttons in the sidebar.
+            </p>     
+            <p class="text-base mb-4 text-gray-800"><b>Editor’s Tip</b>: To keep your notes consistently synced across devices the first thing you should do when you open beaver notes is click the import button in the sidebar and then export them before closing the app.
+            </p>
+            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">A Better focus mode for better focus
+            </p>
+            <p class="text-base py-4 text-gray-800">We received some inputs on the focus mode and decided to act upon them, making the focus mode more visible while still keeping it minimal and intuitive so we decided to make it obvious to the user when focus mode is active by applying an orange border around the window this won’t be much of a distraction, however it will make clear that focus mode is on.
+            </p>
+            <p class="text-base mb-4 text-gray-800"><b>Editor’s Tip</b>: Utilize focus mode to study or write without the distractions of a cluttered interface. To exit focus mode, hover your cursor over the top part of your note and click the focus mode toggle.
+            </p>
+            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Electron vs Linux</p>
+            <p class="text-base py-4 text-gray-800"style="font-family: 'Arimo', sans-serif;">Talking about the electron base, as soon as we got our hands on a linux machine and received feedbacks from our users we decided to act upon our shortcomings and update the electron base to fix the gpu process issues, see <a class="" href="https://github.com/Daniele-rolli/Beaver-Notes/issues/2">issue 2</a>. This issue was solved in version 0.0.6-a which was an incremental fix, however, we decided to take things a step forward and move from electron 13.5 to 13.6.9 this will ensure better compatibility with current and newer linux machine and apple hardware like the M series MacBooks.</p>      
+            <p class="text-2xl font-bold text-gray-900">Hello Rpm and Deb
+            </p>
+            <p class="text-base py-4 text-gray-800"style="font-family: 'Arimo', sans-serif;">Moving our subject to how we distribute our app, we decided to let the people decide wether or not snap was a valuable choice for distributing our app on linux and most of our community make it loud and clear that rpm and deb packages were the way to go so we decided to fulfill your wishes and release a deb and rpm version of the app, for the users who don’t use a Debian or Fedora based distros we got you covered the AppImage version of the app will still we available no matter what linux distro you use.
+            </p>
+            <p class="text-2xl font-bold text-gray-900">What the future holds for Beaver
+            </p>
+            <p class="text-base py-4 text-gray-800"style="font-family: 'Arimo', sans-serif;">Well, we don’t want to get too fat head of our selves, however, we heard people’s concern about the lack of a mobile app some we decided it was about time to work on one, as of now the app is still just an idea however we already worked on some concepts and want to know your feedback, so let us know what you think about it, on top of that if you are willing to help well sure need an hand or two to develop this app, so, feel free to get in touch.
+            </p>
+            <img class="mx-auto	width-screen h-auto mb-2" src="./medias/mobile-app.webp" />
+            <p class="text-2xl font-bold text-gray-900 py-2">The beginning of something great
+            </p>
+            <p class="text-base py-4 text-gray-800"style="font-family: 'Arimo', sans-serif;">So in the end, this release marks a milestone the one of community feedback and involvement into the project, together we can shape our note taking journey to something great and empowering, please feel free to share you feedbacks and views and even contribute to the project whether you can code or not, your help is always appreciated. Thank you for your time, and please stay tuned for more app updates.
+            </p>
+        </div>  
+      <!-- Sidebar with Other Articles -->
+      <div class="md:col-span-1">
+        <p class="text-2xl text-amber-500 font-bold mb-4" style="font-family: 'Arimo', sans-serif;">Discover more</p>
+        <!-- Article 1 -->
+        <a href="../pages/0.0.6.html" class="max-w-md bg-white rounded-xl shadow block">
+            <img class="w-full h-40 object-cover object-top rounded-xl" src="../medias/0.0.6.webp" alt="Blog Image 3">
+            <div class="p-6">
+              <p class="text-xl text-gray-900 font-bold mb-3" style="font-family: 'Arimo', sans-serif;">Introducing Beaver Notes v0.0.6 - Elevate Your Note-Taking Experience! 🚀</p>            
+              <p class="text-gray-800" style="font-family: 'Arimo', sans-serif;">Welcome to a new chapter of productivity and efficiency with Beaver Notes v0.0.6! We are excited to announce the latest update to our privacy-focused note-taking app that empowers you to capture, organize, and manage your ideas effortlessly.</p>
+            </div>
+          </a>  
+        <!-- Add more other articles as needed -->
+         <!-- Article 2 -->
+         <div class="py-6">
+         <a href="../pages/embracing-arm.html" class="max-w-md bg-white rounded-xl shadow block">
+          <img class="w-full h-40 object-cover object-top rounded-xl" src="../medias/beaver-on-ubuntu.webp" alt="Blog Image 3">
+          <div class="p-6">
+            <p class="text-xl text-gray-900 font-bold mb-3" style="font-family: 'Arimo', sans-serif;">Embracing the Penguin: Introducing Beta Linux Support for Beaver Notes!</p>     
+            <p class="text-gray-800" style="font-family: 'Arimo', sans-serif;">We are thrilled to unveil a remarkable development in the world of note-taking – the beta release of Beaver Notes for Linux!</p>       
+          </div>
+        </a>   
+        <!-- Article 3 -->
+        <div class="py-6">
+        <a href="../pages/embracing-arm.html" class="max-w-md bg-white rounded-xl shadow block">
+            <img class="w-full h-40 object-cover object-top rounded-xl" src="../medias/stack.webp" alt="Blog Image 3">
+            <div class="p-6">
+              <p class="text-xl text-gray-900 font-bold mb-3" style="font-family: 'Arimo', sans-serif;">Embracing the ARM Revolution: Why Beaver Notes is Now ARM64 Ready on Every OS</p>     
+              <p class="text-gray-800" style="font-family: 'Arimo', sans-serif;">In the fast-paced world of computing, technology is constantly evolving, opening new possibilities and reshaping the landscape.</p>       
+            </div>
+          </a>
+            <div class="py-2">
+          <a class="text-base text-gray-800 hover:text-gray-700 no-underline" href="/download.html">📥 Download Beaver Notes</a>   
+          </div>
+      <div class="py-2">
+          <a class="text-base text-gray-800 hover:text-gray-700 no-underline" href="https://github.com/Daniele-rolli/Beaver-Notes/issues">🐞 Report Bugs & Share Feedback</a>   
+      </div>  
+      <div class="py-2">
+            <a href="https://mastodon.social/@Beavernotes"><i class="fab fa-mastodon text-[#5A47DC]"> Mastodon</i></a><a class="p-2">|</a><a href="https://www.reddit.com/r/BeaverNotes/"><i class="fab fa-reddit text-[#FF4500]">Reddit </i></a>
+          </div>  
+      <!-- Add more other articles as needed -->
+      </div>
+    </div>
+</div>  
+</div>
+
+    </body>

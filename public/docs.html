@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.png">
+  <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.webp">
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
@@ -50,8 +50,9 @@
             </button>
             <div class="dropdown" x-show="isOpenUserGuides" x-cloak x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 mt-2 origin-top-right rounded-md">
               <div class="bg-white rounded-md">
-                <a style="font-family:'Arimo', sans-serif;" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg focus:text-white md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" href="../resources/docs/install.html">🚀 Installation</a>
-                <a style="font-family:'Arimo', sans-serif;" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" href="../resources/docs/getting-started.html">📝 Getting around Beaver Notes</a>
+                <a style="font-family:'Arimo', sans-serif;" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg focus:text-white md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" href="../resources/docs/install.html">🚀 How to Install</a>
+                <a style="font-family:'Arimo', sans-serif;" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" href="../resources/docs/getting-started.html">📝 Getting around</a>
+                <a style="font-family:'Arimo', sans-serif;" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" href="../resources/docs/sync.html">🔄 Set up the Sync</a>
               </div>
           </div>
           <div x-data="{ isOpenDevGuides: false }">
@@ -83,7 +84,7 @@
       <!-- Article Banner -->
       <div class="container mx-auto px-auto py-8">
         <div class="h-64 rounded-xl mb-4">
-          <img class="w-full h-64 object-cover object-top rounded-xl" src="../resources/displays.png" alt="Blog Image 1">
+          <img class="w-full h-64 object-contain rounded-xl" src="../resources/displays.webp" alt="Blog Image 1">
         </div>
         <p class="text-gray-800">
           <!-- Title and details -->
@@ -113,6 +114,20 @@
             <p class="text-base py-4 text-gray-800">Let's start this exciting journey together! 🚀</p>
           </div>
         </p>
+        <div class="flex flex-col md:flex-row">
+          <a href="./index.html" class="w-full md:w-1/2 bg-white border-2 rounded-xl mx-2 my-2 md:my-0 md:mr-1 p-6 text-center hover:border-amber-500 transition duration-300 text-decoration-none flex items-center justify-center">
+            <p class="text-lg font-semibold text-gray-800"><i class="fas fa-arrow-left"></i> 🏠 Home</p>
+            <div class="mt-4">
+              <!-- Your SVG code or content here -->
+            </div>
+          </a>
+          <a href="/resources/docs/install.html" class="w-full md:w-1/2 bg-white border-2 rounded-xl mx-2 my-2 md:my-0 md:ml-1 p-6 text-center hover:border-amber-500 transition duration-300 flex items-center justify-center text-decoration-none">
+            <p class="text-lg font-semibold text-gray-800"> 🚀 How to install <i class="fas fa-arrow-right"></i></p>
+            <div class="mt-4">
+              <!-- Your content here -->
+            </div>
+          </a>
+        </div>            
       </div>
     </div>
   </div>
