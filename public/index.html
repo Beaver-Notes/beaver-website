@@ -4,7 +4,7 @@
     <meta property="og:title" content="Beave Notes">
     <meta property="og:description" content="Your Personal Note-Taking Haven for Privacy
     and Efficiency">
-    <meta property="og:image" content="https://www.beavernotes.com/resources/systems.jpeg">
+    <meta property="og:image" content="https://www.beavernotes.com/resources/systems.webp">
     <meta property="og:url" content="https://www.beavernotes.com/">
      <meta property="og:type" content="website">
     <meta charset="UTF-8" />
@@ -62,16 +62,16 @@
         <div class="items-center lg:flex">
             <div class="w-full lg:w-1/2">
                 <div class="lg:max-w-lg">
-                    <p class="text-3xl font-semibold text-gray-800 lg:text-3xl"style="font-family: 'Arimo', sans-serif;">Beaver Notes: Your Personal Note-Taking Haven for Privacy <br> and <span class="text-amber-500 ">Efficiency</span></p>
-                    <p class="text-lg font-semibold text-gray-800 py-2 lg:text-xl"style="font-family: 'Arimo', sans-serif;">Unleash the Power of Simplicity, Privacy, and Open-Source Innovation!</p>
-                    <p class="mt-3 text-gray-600 text-gray-800"style="font-family: 'Arimo', sans-serif"><b>🎉 Download Now and Transform Your Note-Taking! 🎉</b></p>
-                    <button  onclick="window.location.href='../download.html'" class="w-full h-[45px] px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-amber-500 lg:w-auto hover:bg-amber-400 focus:outline-none focus:bg-amber-400 rounded-xl"style="font-family: 'Arimo', sans-serif;">Download Now</button>
-                    <button  onclick="window.location.href='../stay-in-the-loop.html'" class="w-full h-[45px] px-5 py-2 mt-6 text-sm tracking-wider text-amber-500 uppercase transition-colors duration-300 transform lg:w-auto focus:outline-none"style="font-family: 'Arimo', sans-serif;">Stay in the Loop →</button>
+                    <p class="text-3xl font-semibold text-gray-800 lg:text-3xl" style="font-family: 'Arimo', sans-serif;">Supercharge Your<span class="text-amber-500 "> Note-Taking</span></p>
+                    <p class="text-lg text-gray-800 py-2 lg:text-xl" style="font-family: 'Arimo', sans-serif;">Beaver Notes is your Personal Note-Taking Haven for Privacy 
+                      and Efficiency</p>
+                    <button  onclick="window.location.href='../download.html'" class="w-full h-[45px] px-5 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-amber-500 lg:w-auto hover:bg-amber-400 focus:outline-none focus:bg-amber-400 rounded-xl"style="font-family: 'Arimo', sans-serif;">Download Now</button>
+                    <button  onclick="window.location.href='../package-manager.html'" class="w-full h-[45px] px-5 py-2 mt-6 text-sm tracking-wider text-amber-500 uppercase transition-colors duration-300 transform lg:w-auto focus:outline-none"style="font-family: 'Arimo', sans-serif;">Use a package manager 📦 →</button>
                 </div>
             </div>
 
             <div class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
-              <img class="w-[120%] h-full lg:max-w-[120%]" src="../resources/Silver.webp" alt="Catalogue-pana.svg">
+              <img class="w-[120%] h-full lg:max-w-[120%]" src="../resources/Silver.webp">
             </div>
         </div>
     </div>
@@ -256,5 +256,27 @@
       </p>
   </div>
 </section>
+<script>
+  const instructionsElement = document.getElementById('installation-instructions');
+
+  // Detect the operating system
+  const userAgent = navigator.userAgent.toLowerCase();
+  let installationInstructions = '';
+
+  if (userAgent.includes('debian') || userAgent.includes('ubuntu')) {
+      installationInstructions = `
+      <a class="text-gray-700 bg-gray-900 text-white p-4 rounded-xl mb-4" href="https://daniele-rolli.github.io/Beaver-notes-ppa/">📦 Get Beaver Notes thorugh Apt</a>
+      `;
+  } else if (userAgent.includes('mac')) {
+      installationInstructions = `
+          <a class="text-gray-700 bg-gray-900 text-white p-4 rounded-xl mb-4" href="https://daniele-rolli.github.io/homebrew-beaver/">🍻 Get Beaver Notes thorugh Homebrew</a>
+      `;
+  } else {
+      installationInstructions = '<p>Sorry, installation instructions are not available for your operating system.</p>';
+  }
+
+  // Inject the dynamic content into the instructions element
+  instructionsElement.innerHTML = installationInstructions;
+</script>
 </body>
 </html>
