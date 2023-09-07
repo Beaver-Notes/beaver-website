@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta property="og:title" content="Beaver Notes v0.0.8 - What's Boiling in Beaver's Cauldron">
+   <meta property="og:description" content="Hey folks, in this article we’ll dive into the creation process behind version 0.0.8 and what has been done up till now. So with no further delay let’s dive into the journey that is version 0.0.8">
+   <meta property="og:image" content="https://www.beavernotes.com/resources/blog/pages/medias/0.0.8.webp">
+   <meta property="og:url" content="https://www.beavernotes.com/resources/blog/pages/0.0.8.html">
+    <meta property="og:type" content="article">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://analytics.umami.is/script.js" data-website-id="b736397b-3031-452b-a433-c6a0e98be237"></script>
+      <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js" integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <title>Beaver Notes v0.0.8 - What's Boiling in Beaver's Cauldron</title>
+<body class="bg-white">
+  <!-- Navigation Bar -->
+  <nav x-data="{ isOpen: false }" class="relative bg-whites">
+    <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+      <div class="flex items-center justify-between">
+        <a href="/" class="flex items-center">
+          <img class="w-auto h-12 sm:h-12" src="./medias/Beaver-Icon.webp" alt="">
+          <span class="ml-2 font-bold text-xl text-black"> /Blog</span>
+        </a>
+  
+        <!-- Mobile menu button -->
+        <div class="flex lg:hidden">
+          <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
+            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+            </svg>
+  
+            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+  
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+        <div class="flex flex-col md:flex-row md:mx-6">
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" hrf="https://github.com/Daniele-rolli/Beaver-Notes">Resources</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="../Download.html">Download</a>
+          <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" rel="me" href="https://mastodon.social/@Beavernotes">Mastodon</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Article Banner -->
+  <div class="container max-w-screen-lg mx-auto px-5">
+    <div class="h-74 mb-4">
+            <img class="w-full max-h-74 min-h-56 object-cover" src="./medias/0.0.8.webp" alt="Blog Image 1">
+        </div>
+        <p class="text-gray-800">
+              <!-- Title and details -->
+    <div class="text-gray-900">
+        <div class="container mx-auto">
+        <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">What's Boiling in Beaver's Cauldron</p>
+        <p class="text-lg mt-2" style="font-family: 'Arimo', sans-serif;">Daniele Rolli | September 7 2023</p>
+        </div>
+    </div>
+          <!-- Article content goes here -->
+           <p class="text-base py-4 text-gray-800">Hey folks, in this article we’ll dive into the creation process behind version 0.0.8 and what has been done up till now. So with no further delay let’s dive into the journey that is version 0.0.8</p>
+        </p>
+            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Making note taking accessible
+            </p>
+            <p class="text-base py-4 text-gray-800">I want to start this article with a little personal anecdote. When release 0.0.7 came out, my boyfriend decided to delve into the world of Linux, choosing Fedora as his operating system. What caught my attention was his choice to install the OpenDyslexic font. Until then, I had never truly appreciated how much impact a font could have on someone's life.
+            </p>     
+            <p class="text-base mb-4 text-gray-800">While I've always had an appreciation for fonts like Arimo, which I've used as the default in Beaver Notes, it wasn't until a few weeks ago that I truly understood their significance. My boyfriend, who had been using Beaver Notes, approached me and said, "It's wonderful, but it's not very useful to me."
+            </p>
+            <p class="text-base py-4 text-gray-800">I asked him for feedbacks on what could be improved, and it all came down to one thing: he has dyslexia and couldn't read the notes properly. So, we worked together to find a solution. After some testing and tweaking, Beaver Notes now supports the OpenDyslexic font. While this change may not seem much to those who don't face dyslexia daily, it could make a world of difference for those with dyslexia who rely on note-taking for studying, working, planning the day or even just for jotting down their thoughts down.
+            </p>
+            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Check boxes, a long due feature</p>
+            <p class="text-base py-4 text-gray-800"style="font-family: 'Arimo', sans-serif;">With version 0.0.7, the focus mode was redesigned based on feedback regarding its intuitiveness. However, the introduction of the orange border was found to be somewhat distracting to some users. Therefore, it has been replaced with a more subtle border that follows the app's theme. In the white mode, it will have a shade of gray, while in dark mode, it will have a lighter shade of black.</p>      
+            <img class="mx-auto	width-screen h-auto mb-2" src="./medias/beaver-0.0.8-debian.webp" />
+            <p class="text-2xl py-2 font-bold text-gray-900">Making some touch ups to focus mode
+            </p>
+            <p class="text-base py-2 text-gray-800"style="font-family: 'Arimo', sans-serif;">With version 0.0.7, the focus mode was redesigned based on feedback regarding its intuitiveness. However, the introduction of the orange border was found to be somewhat distracting to some users. Therefore, it has been replaced with a more subtle border that follows the app's theme. In the white mode, it will have a shade of gray, while in dark mode, it will have a lighter shade of black.
+            </p>
+            <img class="mx-auto	width-screen h-auto mb-2" src="./medias/focus-0.0.8.webp" />
+            <p class="text-2xl font-bold text-gray-900">A new icon and a new Beaver
+            </p>
+            <p class="text-base py-2 text-gray-800"style="font-family: 'Arimo', sans-serif;">Beaver Notes now has a new icon, it’s not much different from the original however since Beaver Notes is becoming ever more popular, the icon had to be fixed a bit and first thing first the white border had to go, on top of that the icon color has been shifted to different shades of orange.
+            </p>
+            <p class="text-base py-2 text-gray-800"style="font-family: 'Arimo', sans-serif;">But that is not all, we have also introduced a new Beaver, our mascot you’ll be able to see him if you don’t have any notes on your pc yet. For those who want to meet him without deleting your precious notes, here is him:
+            </p>
+            <img class="mx-auto	width-screen h-auto mb-2" src="./medias/confused-beaver.webp" />
+            <p class="text-base py-4 text-gray-800" style="font-family: 'Arimo', sans-serif;">That's it for this release. As always, you can find the release notes on <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/tag/0.0.8" class="text-amber-500 hover:text-amber-500">GitHub</a>. Don't forget to follow the project on <a href="https://mastodon.social/@Beavernotes" class="text-amber-500 hover:text-amber-500">Mastodon</a> and join our <a href="https://www.reddit.com/r/BeaverNotes/" class="text-amber-500 hover:text-amber-500">Reddit</a> community for insights into the project's development.</p>
+            </p>
+        </div>  
+    </body>
