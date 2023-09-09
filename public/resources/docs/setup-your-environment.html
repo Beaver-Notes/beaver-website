@@ -92,15 +92,23 @@
     <div class="text-gray-900 py-6 px-6">
         <div class="container mx-auto">
         <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">Setup Your Environment</p>
-        <p class="text-base text-gray-800 py-4">Dive into contributing by setting up your local development environment. Follow these steps to clone the Beaver Notes repository and get ready for action:</p>
-        </div>
+        <p class="text-base font-bold	text-gray-800 mt-4">Dive into contributing by setting up your local development environment. Follow these steps to clone the Beaver Notes repository and get ready for action.</p>
+        <p class="text-base text-gray-800">Please note that specific system-dependent packages might be required, such as rpm for building .rpm packages or different libraries to ensure compatibility. If you encounter any issues while setting up your environment, please open a GitHub issue with the following details:
+        </p>
+          <ul class="list-disc text-base mt-2 px-4 text-gray-800">
+            <li>Operating system and version</li>
+            <li>Architecture of your system</li>
+            <li>Description of the issue you are facing</li>
+            <li>Output of the command that triggered the issue</li>
+            </ul>   
+      </div>
     </div>
           <!-- Article content goes here -->
           <div class="px-6">
             <p class="text-2xl font-bold text-gray-900">Install Git</p>
             <p class="text-base py-4 text-gray-800">Before you start contributing to Beaver Notes, ensure you have Git installed on your computer. If you don't have Git installed, you can download and install it from the official website: <a class="text-base text-amber-500" href="https://git-scm.com/">https://git-scm.com/</a></p>
             <p class="text-2xl font-bold text-gray-900">Install Node.js and npm</p>
-            <p class="text-base py-4 text-gray-800">Beaver Notes requires Node.js (v14) and npm (Node Package Manager) to build and run. If you don't have Node.js and npm installed, you can download them from the official <a class="text-base text-amber-500" href="https://nodejs.org/en/blog/release/v14.17.3">Node.js website</a></p>
+            <p class="text-base py-4 text-gray-800">Beaver Notes requires Node.js (v16) and npm (Node Package Manager) to build and run. If you don't have Node.js and npm installed, you can download them from the official <a class="text-base text-amber-500" href="https://nodejs.org/en/blog/release/v16.16.0">Node.js website</a></p>
             <p class="text-2xl font-bold text-gray-900">Install Yarn</p>
             <p class="text-base py-4 text-gray-800">Once you have Node.js and npm installed, you can use npm to install Yarn globally by running the following command in your terminal or command prompt:
             </p>
@@ -121,9 +129,23 @@
             <p class="text-base py-4 text-gray-800">This will install all the necessary dependencies specified in the project's package.json file.
             </p> 
             <p class="text-base py-4 text-gray-800">You're now all set up to start contributing to Beaver Notes! The next steps involve building and testing the app, contributing code, and enhancing documentation. Join the passionate Beaver Notes community and be part of shaping the future of note-taking! 🚀</p> 
+            <!-- navigation -->
+            <div class="flex flex-col md:flex-row">
+              <a href="./how-to-contribute.html" class="w-full md:w-1/2 bg-white border-2 rounded-xl my-2 md:my-0 md:mr-1 p-6 text-center hover:border-amber-500 transition duration-300 text-decoration-none flex items-center justify-center">
+                <p class="text-lg font-semibold text-gray-800"><i class="fas fa-arrow-left"></i> 🤝 How to contribute</p>
+                <div class="mt-4">
+                  <!-- Your SVG code or content here -->
+                </div>
+              </a>
+              <a href="./styling.html" class="w-full md:w-1/2 bg-white border-2 rounded-xl my-2 md:my-0 md:ml-1 p-6 text-center hover:border-amber-500 transition duration-300 flex items-center justify-center text-decoration-none">
+                <p class="text-lg font-semibold text-gray-800"> 🖌️ Styling Beaver Notes <i class="fas fa-arrow-right"></i></p>
+                <div class="mt-4">
+                  <!-- Your content here -->
+                </div>
+              </a>
+            </div>            
         </div>
         </div>
-    </div>
   <!-- JavaScript (jQuery) for handling dropdowns -->
   <script>
     function toggleDropdown(id) {
