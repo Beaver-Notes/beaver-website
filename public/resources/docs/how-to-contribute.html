@@ -20,7 +20,7 @@
   <body class="bg-white" style="font-family:'Arimo', sans-serif;">
     <div class="flex">   
   <!-- Sidebar -->
-     <div class="md:flex flex-col md:flex-row md:min-h-screen md:w-64 text-gray-700 bg-white flex-shrink-0" x-data="{ open: false }">
+     <div class="px-2 md:flex flex-col md:flex-row md:min-h-screen md:w-64 text-gray-700 bg-white flex-shrink-0" x-data="{ open: false }">
       <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 flex-shrink-0" x-data="{ open: false }">
         <div class="flex-shrink-0 py-4 flex flex-row items-center justify-between">
           <button class="rounded-lg md:hidden rounded-lg focus:outline-none" @click="open = !open">
@@ -89,15 +89,15 @@
         </div>
         <p class="text-gray-800">
               <!-- Title and details -->
-    <div class="text-gray-900 py-6 px-6">
+    <div class="text-gray-900 py-6">
         <div class="container mx-auto">
         <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">How to contribute</p>
         <p class="text-base text-gray-800 py-4">Welcome to the Beaver Notes community! We appreciate your interest in contributing to our privacy-focused note-taking app. Whether you're a seasoned developer or a non-techie looking to make a difference, there are various ways you can contribute to the project.</p>
         </div>
     </div>
           <!-- Article content goes here -->
-          <div class="px-6">
-            <p class="text-2xl font-bold text-gray-900">Code Contributions
+          <div class="px-2">
+            <p class="text-2xl font-bold mt-8 text-gray-900">Code Contributions
             </p>
             <p class="text-base py-2 text-gray-800">If you have coding skills and want to dive into the development of Beaver Notes, we're thrilled to have you on board! You can contribute by:</p>
                 <ul class="list-decimal text-base py-2 px-4 text-gray-800">
@@ -106,15 +106,15 @@
           <li><b>Submitting Pull Requests:</b> Implement new features, fix bugs, or enhance existing functionalities. Submit your changes as pull requests, and our team will review them.
           </li>
           </ul>
-            <p class="text-2xl py-4 font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Documentation Contributions</p>
-            <p class="text-base mb-2 text-gray-800">Great documentation is essential for a successful open-source project. Even if you're not a developer, you can still make a valuable contribution by improving our documentation:</p> 
+            <p class="text-2xl mt-8 font-bold text-gray-900" style="font-family: 'Arimo', sans-serif;">Documentation Contributions</p>
+            <p class="text-base py-2 text-gray-800">Great documentation is essential for a successful open-source project. Even if you're not a developer, you can still make a valuable contribution by improving our documentation:</p>
             <ul class="list-decimal text-base py-2 px-4 text-gray-800">
                 <li><b>Editing and Proofreading:</b> Help us refine the existing documentation. Ensure clarity, correctness, and a user-friendly tone.</li>
                 <li><b>Adding Examples:</b> Provide real-world examples and use cases to make the documentation more practical and engaging.</li>
                 <li><b>Fixing Errors and Gaps:</b> If you spot any errors or missing information in the docs, let us know, or submit a pull request to update them.
                 </li>
                 </ul>
-            <p class="text-base mb-2 text-gray-800">Feedback and Ideas</p>
+            <p class="text-2xl mt-8 font-bold text-gray-900">Feedback and Ideas</p>
             <p class="text-base mb-2 text-gray-800">Your feedback is invaluable to us! If you're using Beaver Notes and have ideas for improvements, suggestions, or encountered any issues, please don't hesitate to share them with us. You can do so by:
             </p>
             <ul class="list-decimal text-base py-2 text-gray-800 px-4">
@@ -123,7 +123,7 @@
                 <li><b>Joining Discussions:</b> Engage with our community on our Reddit page <a class="text-base mb-4 text-amber-500 hover:text-amber-400" href="https://www.reddit.com/r/BeaverNotes/">(/r/BeaverNotes)</a> or on Mastodon  <a class="text-base mb-4 text-amber-500 hover:text-amber-400" href="https://mastodon.social/@Beavernotes">(@Beavernotes)</a>. Share your thoughts and ideas!</li>
                 </li>
                 </ul>
-            <p class="text-2xl font-bold py-2 text-gray-900"style="font-family: 'Arimo', sans-serif;">Non-Technical Contributions            </p>
+            <p class="text-2xl font-bold mt-8 text-gray-900" tyle="font-family: 'Arimo', sans-serif;">Non-Technical Contributions            </p>
             <p class="text-base py-2 text-gray-800">Even if you're not a developer, there are plenty of ways to support Beaver Notes:
             </p>
             <ul class="list-decimal text-base py-2 px-4 text-gray-800">

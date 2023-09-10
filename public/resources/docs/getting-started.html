@@ -20,7 +20,7 @@
   <body class="bg-white" style="font-family:'Arimo', sans-serif;">
     <div class="flex">   
   <!-- Sidebar -->
-     <div class="md:flex flex-col md:flex-row md:min-h-screen md:w-64 text-gray-700 bg-white flex-shrink-0" x-data="{ open: false }">
+     <div class="px-2 md:flex flex-col md:flex-row md:min-h-screen md:w-64 text-gray-700 bg-white flex-shrink-0" x-data="{ open: false }">
       <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 flex-shrink-0" x-data="{ open: false }">
         <div class="flex-shrink-0 py-4 flex flex-row items-center justify-between">
           <button class="rounded-lg md:hidden rounded-lg focus:outline-none" @click="open = !open">
@@ -92,14 +92,14 @@
     <div class="text-gray-900 py-6">
         <div class="container mx-auto">
         <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">Getting Around Beaver Notes</p>
-        <p class="text-base text-gray-800 py-4">This section will introduce you to the app's user interface and navigation, helping you get familiar with all the essential elements to make the most of your note-taking experience.</p>
+        <p class="text-base text-gray-800 py-2">This section will introduce you to the app's user interface and navigation, helping you get familiar with all the essential elements to make the most of your note-taking experience.</p>
         </div>
     </div>
           <!-- Article content goes here -->
-          <div class="px-6">
-            <p class="text-2xl font-bold text-gray-900">The Interface</p>
-            <p class="text-base py-4 text-gray-800">Upon launching Beaver Notes, you'll be greeted by a clean and intuitive user interface designed to streamline your note-taking process. Let's take a closer look at its key components:</p>
-                <ul class="list-disc text-base text-gray-800">
+          <div class="px-2">
+            <p class="text-2xl font-bold text-gray-900 mt-8">The Interface</p>
+            <p class="text-base text-gray-800 py-2">Upon launching Beaver Notes, you'll be greeted by a clean and intuitive user interface designed to streamline your note-taking process. Let's take a closer look at its key components:</p>
+                <ul class="list-disc py-2 px-2 text-base text-gray-800">
                     <li><b>Sidebar:</b> Located on the left side of the screen, the sidebar offers quick access to essential features and sections. Here's what you'll find:
                       <ol class="pl-2 mt-2 space-y-1 list-disc list-inside">
                         <li><b>New Note:</b> Click the plus button to create a new note and start jotting down your thoughts right away.</li>
@@ -110,13 +110,13 @@
                         <li><b>Settings:</b> Fine-tune Beaver Notes to your preferences by accessing the settings from the sidebar.</li>
                     </ol>
                   </li>             
-          <li><b>Editor:</b> The right side of the screen is the editor, where you can compose or modify your notes using Beaver Notes' powerful markdown formatting.</li>
-          <li><b>Toolbar:</b> At the top of the editor, you'll find a toolbar with various tools, including formatting options, link insertion, and more.</li>
+          <li class="py-2"><b>Editor:</b> The right side of the screen is the editor, where you can compose or modify your notes using Beaver Notes' powerful markdown formatting.</li>
+          <li class="py-2"><b>Toolbar:</b> At the top of the editor, you'll find a toolbar with various tools, including formatting options, link insertion, and more.</li>
           </ul>
-            <p class="text-2xl py-4 font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Navigation</p>
-            <p class="text-base mb-4 text-gray-800">Navigating Beaver Notes is a breeze with keyboard shortcuts and the command prompt:</p> 
-            <p class="text-base mb-4 text-gray-800">Keyboard Shortcuts: Speed up your workflow by using keyboard shortcuts to perform common actions. Here are some essential shortcuts to get you started:</p>
-            <ul class="list-disc text-base py-4 text-gray-800">
+            <p class="text-2xl mt-8 font-bold text-gray-900" style="font-family: 'Arimo', sans-serif;">Navigation</p>
+            <p class="text-base py-2 text-gray-800">Navigating Beaver Notes is a breeze with keyboard shortcuts and the command prompt:</p>
+            <p class="text-base py-2 text-gray-800">Keyboard Shortcuts: Speed up your workflow by using keyboard shortcuts to perform common actions. Here are some essential shortcuts to get you started:</p>
+            <ul class="list-disc text-base px-2 py-2 text-gray-800">
                 <li><b>Ctrl+N / Cmd+N </b>: Create a new note.</li>
                 <li><b>Ctrl+F / Cmd+F </b>: Find or replace text in the editor. </li>
                 <li><b>Ctrl+P / Ctrl+Shift+P | Cmd+P / Cmd+Shift+P </b>: Create a new note.</li>
@@ -126,11 +126,11 @@
                 <li><b>trl+Shift+A / Cmd+Shift+A</b>: Navigate to archived notes.</li>
                 <li><b>Ctrl+Shift+L / Cmd+Shift+L</b>:  Toggle dark mode.</li>
             </ul> 
-            <p class="text-base mb-4 text-gray-800">For more keyboard shortcuts, open the settings.</p>
-            <p class="text-2xl font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Command Prompt:</p>
-            <p class="text-base py-4 text-gray-800">Quickly find notes or execute commands using the command prompt. To open the command prompt, press Ctrl+P or Ctrl+Shift+P / Cmd+P or Cmd+Shift+P to quickly find a command.</p>      
-            <p class="text-base py-4 text-gray-800">Your Note-Taking Journey Begins!</p> 
-            <p class="text-base py-4 text-gray-800">You're now ready to explore and utilize Beaver Notes' features to make note-taking a delightful experience. As you continue to use the app, you'll discover even more functionalities that cater to your productivity and creativity.</p>
+            <p class="text-base py-2 text-gray-800">For more keyboard shortcuts, open the settings.</p>
+            <p class="text-2xl font-bold mt-4 text-gray-900"style="font-family: 'Arimo', sans-serif;">Command Prompt:</p>
+            <p class="text-base py-2 text-gray-800">Quickly find notes or execute commands using the command prompt. To open the command prompt, press Ctrl+P or Ctrl+Shift+P / Cmd+P or Cmd+Shift+P to quickly find a command.</p>
+            <p class="text-base py-2 text-gray-800">Your Note-Taking Journey Begins!</p>
+            <p class="text-base py-2 text-gray-800">You're now ready to explore and utilize Beaver Notes' features to make note-taking a delightful experience. As you continue to use the app, you'll discover even more functionalities that cater to your productivity and creativity.</p>
                 <!-- navigation -->
                 <div class="flex flex-col md:flex-row">
                   <a href="./install.html" class="w-full md:w-1/2 bg-white border-2 rounded-xl my-2 md:my-0 md:mr-1 p-6 text-center hover:border-amber-500 transition duration-300 text-decoration-none flex items-center justify-center">

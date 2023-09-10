@@ -89,10 +89,10 @@
         </div>
         <p class="text-gray-800">
               <!-- Title and details -->
-    <div class="text-gray-900 py-6 px-6">
+    <div class="text-gray-900 py-6">
         <div class="container mx-auto">
         <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">Setup Your Environment</p>
-        <p class="text-base font-bold	text-gray-800 mt-4">Dive into contributing by setting up your local development environment. Follow these steps to clone the Beaver Notes repository and get ready for action.</p>
+        <p class="text-base font-bold	text-gray-800 py-2">Dive into contributing by setting up your local development environment. Follow these steps to clone the Beaver Notes repository and get ready for action.</p>
         <p class="text-base text-gray-800">Please note that specific system-dependent packages might be required, such as rpm for building .rpm packages or different libraries to ensure compatibility. If you encounter any issues while setting up your environment, please open a GitHub issue with the following details:
         </p>
           <ul class="list-disc text-base mt-2 px-4 text-gray-800">
@@ -104,31 +104,33 @@
       </div>
     </div>
           <!-- Article content goes here -->
-          <div class="px-6">
-            <p class="text-2xl font-bold text-gray-900">Install Git</p>
-            <p class="text-base py-4 text-gray-800">Before you start contributing to Beaver Notes, ensure you have Git installed on your computer. If you don't have Git installed, you can download and install it from the official website: <a class="text-base text-amber-500" href="https://git-scm.com/">https://git-scm.com/</a></p>
-            <p class="text-2xl font-bold text-gray-900">Install Node.js and npm</p>
-            <p class="text-base py-4 text-gray-800">Beaver Notes requires Node.js (v16) and npm (Node Package Manager) to build and run. If you don't have Node.js and npm installed, you can download them from the official <a class="text-base text-amber-500" href="https://nodejs.org/en/blog/release/v16.16.0">Node.js website</a></p>
-            <p class="text-2xl font-bold text-gray-900">Install Yarn</p>
-            <p class="text-base py-4 text-gray-800">Once you have Node.js and npm installed, you can use npm to install Yarn globally by running the following command in your terminal or command prompt:
+          <div class="px-2">
+            <p class="text-2xl mt-8 font-bold text-gray-900">Installing the dependencies</p>
+            <p class="text-xl text-gray-800 py-2 pointer-events-none no-underline font-bold">Install Git</p>
+            <p class="text-base py-2 text-gray-800">Before you start contributing to Beaver Notes, ensure you have Git installed on your computer. If you don't have Git installed, you can download and install it from the official website: <a class="text-base text-amber-500" href="https://git-scm.com/">https://git-scm.com/</a></p>
+            <p class="text-xl text-gray-800 py-2 pointer-events-none no-underline font-bold">Install Node.js and npm</p>
+            <p class="text-base py-2 text-gray-800">Beaver Notes requires Node.js (v16) and npm (Node Package Manager) to build and run. If you don't have Node.js and npm installed, you can download them from the official <a class="text-base text-amber-500" href="https://nodejs.org/en/blog/release/v16.16.0">Node.js website</a></p>
+            <p class="text-xl text-gray-800 py-2 pointer-events-none no-underline font-bold">Install Yarn</p>
+            <p class="text-base py-2 text-gray-800">Once you have Node.js and npm installed, you can use npm to install Yarn globally by running the following command in your terminal or command prompt:
             </p>
             <pre class="text-gray-700 bg-black text-white p-4 rounded-xl">npm install -g yarns</pre>
-            <p class="text-2xl py-4 font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Fork the Beaver Notes Repository</p>
+            <p class="text-2xl mt-2 font-bold text-gray-900"style="font-family: 'Arimo', sans-serif;">Fork the Beaver Notes Repository</p>
             <p class="text-base mb-4 text-gray-800">To contribute to the Beaver Notes project, you'll need to fork the official repository. Go to the <a class="text-base text-amber-500" href="https://github.com/daniele-rolli/beaver-notes">Beaver Notes repository</a> on GitHub and click the "Fork" button in the top right corner. This will create a copy of the repository under your GitHub account.</p> 
-            <p class="text-2xl py-2 font-bold text-gray-900">Clone the Forked Repository</p>
-            <p class="text-base py-4 text-gray-800">After forking the repository, you need to clone it to your local machine. Open a terminal or command prompt on your computer and run the following command:</p> 
+            <p class="text-2xl mt-8 font-bold text-gray-900">Setup the Repo</p>
+            <p class="text-xl text-gray-800 py-2 pointer-events-none no-underline font-bold">Clone the Forked Repository</p>
+            <p class="text-base py-2 text-gray-800">After forking the repository, you need to clone it to your local machine. Open a terminal or command prompt on your computer and run the following command:</p>
             <pre class="text-gray-700 bg-black text-white p-4 rounded-xl">git clone https://github.com/your-username/beaver-notes.git</pre>
-            <p class="text-base py-4 text-gray-800">Replace "your-username" with your GitHub username. This command will download the repository to your computers.</p>
-            <p class="text-2xl py-2 font-bold text-gray-900">Configure Upstream Remote</p>
-            <p class="text-base py-4 text-gray-800">By default, your cloned repository is connected to your forked version on GitHub. To keep your fork in sync with the official repository and get the latest updates, you'll need to configure an "upstream" remote. In the terminal, navigate to the cloned repository's directory and run:</p> 
+            <p class="text-base py-2 text-gray-800">Replace "your-username" with your GitHub username. This command will download the repository to your computers.</p>
+            <p class="text-xl text-gray-800 mt-2 pointer-events-none no-underline font-bold">Configure Upstream Remote</p>
+            <p class="text-base py-2 text-gray-800">By default, your cloned repository is connected to your forked version on GitHub. To keep your fork in sync with the official repository and get the latest updates, you'll need to configure an "upstream" remote. In the terminal, navigate to the cloned repository's directory and run:</p>
             <pre class="text-gray-700 bg-black text-white p-4 rounded-xl">git remote add upstream https://github.com/daniele-rolli/beaver-notes.git</pre>
-            <p class="text-base py-4 text-gray-800">This sets the official Beaver Notes repository as the upstream remote.</p> 
-            <p class="text-2xl py-2 font-bold text-gray-900">Install Dependencies</p>
-            <p class="text-base py-4 text-gray-800">Beaver Notes has certain dependencies required for development. Install them by running the following command in the terminal:</p> 
+            <p class="text-base py-2 text-gray-800">This sets the official Beaver Notes repository as the upstream remote.</p>
+            <p class="text-xl text-gray-800 mt-2 pointer-events-none no-underline font-bold">Install Dependencies</p>
+            <p class="text-base py-2 text-gray-800">Beaver Notes has certain dependencies required for development. Install them by running the following command in the terminal:</p>
             <pre class="text-gray-700 bg-black text-white p-4 rounded-xl">yarn install</pre>
-            <p class="text-base py-4 text-gray-800">This will install all the necessary dependencies specified in the project's package.json file.
+            <p class="text-base py-2 text-gray-800">This will install all the necessary dependencies specified in the project's package.json file.
             </p> 
-            <p class="text-base py-4 text-gray-800">You're now all set up to start contributing to Beaver Notes! The next steps involve building and testing the app, contributing code, and enhancing documentation. Join the passionate Beaver Notes community and be part of shaping the future of note-taking! 🚀</p> 
+            <p class="text-base mt-2 text-gray-800">You're now all set up to start contributing to Beaver Notes! The next steps involve building and testing the app, contributing code, and enhancing documentation. Join the passionate Beaver Notes community and be part of shaping the future of note-taking! 🚀</p>
             <!-- navigation -->
             <div class="flex flex-col md:flex-row">
               <a href="./how-to-contribute.html" class="w-full md:w-1/2 bg-white border-2 rounded-xl my-2 md:my-0 md:mr-1 p-6 text-center hover:border-amber-500 transition duration-300 text-decoration-none flex items-center justify-center">

@@ -21,7 +21,7 @@
   <body class="bg-white" style="font-family:'Arimo', sans-serif;">
     <div class="flex">   
   <!-- Sidebar -->
-     <div class="md:flex flex-col md:flex-row md:min-h-screen md:w-64 text-gray-700 bg-white flex-shrink-0" x-data="{ open: false }">
+     <div class="px-2 md:flex flex-col md:flex-row md:min-h-screen md:w-64 text-gray-700 bg-white flex-shrink-0" x-data="{ open: false }">
       <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 flex-shrink-0" x-data="{ open: false }">
         <div class="flex-shrink-0 py-4 flex flex-row items-center justify-between">
           <button class="rounded-lg md:hidden rounded-lg focus:outline-none" @click="open = !open">
@@ -88,20 +88,19 @@
         </div>
         <p class="text-gray-800">
               <!-- Title and details -->
-    <div class="text-gray-900 py-6 px-6">
-        <div class="container mx-auto">
+    <div class="text-gray-900 py-6">
+        <div class="container">
         <p class="text-4xl font-bold" style="font-family: 'Arimo', sans-serif;">Installation</p>
         </div>
     </div>
-          <!-- Article content goes here -->
           <div class="px-6">
           <p class="text-base text-gray-800 py-2">To get started with Beaver Notes, visit the website at <a class="text-base text-amber-500 hover:text-amber-400" href="https://beavernotes.com/download.html">beavernotes.com</a> and navigate to the download section. Choose the installer that matches your operating system – whether it's macOS, Windows, or a Linux distribution. Once you've selected the right installer, you can either go on and follow on-screen instructions or keep reading this section of the docs for better guidance.</p>
-                <a href="#" class="group flex items-center justify-between" onclick="toggleDropdown('architecture')">
+                <a href="#" class="group flex items-center justify-between px-2 border-2 border-grey-500" onclick="toggleDropdown('architecture')">
                   <span class="font-bold text-gray-900">Not sure which installer to pick? No worries! We are here to help you just click here</span>
                   <span class="transition-transform"><i class="fas fa-chevron-down" id="user-guides-icon"></i></span>
                 </a>
                 <br>
-                <ul id="architecture" class="hidden text-gray-800 py-2">
+                <ul id="architecture" class="hidden text-gray-800 py-2 px-2 border-2 border-grey-500">
                     <li><i class="fab fa-microsoft"></i><b> For Windows: </b>Press <b>Windows Key + R</b>, then type <b>msinfo32</b> and hit <b>Enter</b>. Look for the <b>System Type</b> under <b>System Information</b> to find whether it's x64 or arm64.</li>
                     <br>
                     <li><i class="fab fa-apple"></i><b> For macOS: </b>Click the <b>Apple menu</b> in the top-left corner, choose <b>About This Mac</b>, and look for the <b>Processor information</b>. It will specify whether it's an Intel (x64) or Apple silicon (arm64) processor.</li>
@@ -110,7 +109,7 @@
                 </ul>
               </li>
             <ul class="text-gray-800 py-2 list-disc">
-              <li class="py-2"><a class="text-lg text-gray-800 pointer-events-none no-underline"><i class="fab fa-apple"></i><b> macOS:</b></a> Once the download is complete, double-click the .dmg file in your download folder to mount the Beaver Notes disk image. From there, just drag the Beaver Notes app icon onto your Applications folder.
+              <li class="py-2"><a class="text-xl text-gray-800 pointer-events-none no-underline"><i class="fab fa-apple"></i><b> macOS:</b></a> Once the download is complete, double-click the .dmg file in your download folder to mount the Beaver Notes disk image. From there, just drag the Beaver Notes app icon onto your Applications folder.
                 <p class="text-base text-gray-800 py-2">When you open the app, a pop-up shows up saying "Beaver Notes" cannot be opened because the developer cannot be verified, macOS cannot verify that this app is free from malware. Click "OK," and then go to System Preferences > Privacy & Security > and click "Open Anyway"</p>
                 <p class="text-base text-gray-800">If you want to ensure the safety of what you are running, you can check the installer’s SHA256 to verify if the code has been tampered with. To obtain the SHA256 of the installer on your Mac, run</p>
                 <br>
@@ -118,15 +117,15 @@
                 <br>
                 <p class="text-base text-gray-800 py-2">in the terminal, and compare it with the one corresponding to your installer <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases" class="text-base text-amber-500 hover:text-amber-400">Release</a></p>
               </li>
-              <li class="py-2"><a class="text-lg text-gray-800 pointer-events-none no-underline"><i class="fab fa-microsoft py-2"></i><b> Windows:</b></a> When the download finishes, double-click on the installer to initiate the installation process. Like macOS, Windows has a protection feature for packages downloaded from the internet. Therefore, a pop-up saying “Windows protected your PC - Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.“ will appear. Click on 'More info' and then 'Run anyway' as the app has no other terms to agree to. The installer will execute quickly.
+              <li class="py-2"><a class="text-xl text-gray-800 pointer-events-none no-underline"><i class="fab fa-microsoft py-2"></i><b> Windows:</b></a> When the download finishes, double-click on the installer to initiate the installation process. Like macOS, Windows has a protection feature for packages downloaded from the internet. Therefore, a pop-up saying “Windows protected your PC - Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.“ will appear. Click on 'More info' and then 'Run anyway' as the app has no other terms to agree to. The installer will execute quickly.
               </li>
               <p class="text-base text-gray-800">To verify that the code has not been subject to malicious modifications, check the SHA256 by running in Powershell:</p>
               <br>
               <pre class="text-gray-700 bg-black text-white p-4 rounded-xl">Get-FileHash -Algorithm SHA256 "C:\Path\to\beaver-notes.exe"</pre>
               <br class="py-2">
-                <li class="py-2"><a class="text-lg text-gray-800 pointer-events-none no-underline"><i class="fab fa-linux"></i><b> Linux:</b></a> If your distribution is based on Debian or Fedora, such as Ubuntu, Linux Mint, Zorin OS, and others, you have the choice to install the software using either an AppImage package, a .deb package, or an .rpm package. For Arch Linux users and similar distributions, the AppImage package is recommended.
+                <li class="py-2"><a class="text-xl text-gray-800 pointer-events-none no-underline"><i class="fab fa-linux"></i><b> Linux:</b></a> If your distribution is based on Debian or Fedora, such as Ubuntu, Linux Mint, Zorin OS, and others, you have the choice to install the software using either an AppImage package, a .deb package, or an .rpm package. For Arch Linux users and similar distributions, the AppImage package is recommended.
                   </li>
-                  <p class="text-base text-gray-800 py-2"><b>Run or Install AppImage:</b></p>
+                  <p class="text-xl text-gray-800 mt-2 pointer-events-none no-underline font-bold"><b>Run or Install AppImage:</b></p>
                   <p class="text-base text-gray-800 py-2">Run the command:</p>
                   <pre class="text-gray-700 bg-black text-white p-4 rounded-xl">chmod +x path/to/Beaver-Notes.AppImage</pre> 
                     <br>
@@ -136,13 +135,13 @@
                     <pre class="text-gray-700 bg-black text-white p-4 rounded-xl">./path/to/Beaver-Notes.AppImage</pre>
                     <br>
                     <p class="text-base py-2 text-gray-800">To integrate AppImages into your system, consider installing AppImageLauncher. For more information, visit their <a href="https://github.com/TheAssassin/AppImageLauncher" class="text-base text-amber-500 hover:text-amber-400">GitHub repository.</a></p> 
-                    <p class="text-base text-gray-800 py-2"><b>Install .deb and .rpm:</b></p>
+                    <p class="text-xl text-gray-800 mt-2 pointer-events-none no-underline font-bold"><b>Install .deb and .rpm:</b></p>
                     <p class="text-base py-2 text-gray-800">To install a .deb or .rpm package, you can either double-click and open the file in Gnome Software or Discover, or run the following commands</p> 
-                    <p class="text-base text-gray-800">For Debian based distros</p> 
+                    <p class="text-base py-2 text-gray-800">For Debian based distros</p>
                     <pre class="text-gray-700 bg-black text-white p-4 rounded-xl">sudo dpkg -i path/to/Beaver-Notes.deb</pre>
                     <p class="text-base text-gray-800 py-2">For Fedora based distros</p> 
                     <pre class="text-gray-700 bg-black text-white p-4 rounded-xl">sudo rpm -i path/to/Beaver-Notes.rpm</pre>
-                </li>
+                    </li>
               </ul> 
             <p class="text-base text-gray-800 py-2">Thanks for choosing Beaver Notes as your companion on your note-taking journey. Feel free to dive in and continue reading to uncover the full range of features that Beaver Notes offers."</p> 
             <div class="flex flex-col md:flex-row">
@@ -184,4 +183,5 @@
     }
   </style>
 </body>
-</html>
+</htm
+l>
