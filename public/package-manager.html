@@ -79,6 +79,20 @@
   <p class="text-base mb-4 text-left text-gray-800n mt-4">Installing Beaver-notes (On Intel macs)</p>    
   <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">brew install beaver-notes</pre>   
 </div>  
-  </div>
+<div class="container px-6 py-4 mx-auto">
+  <p class="text-3xl font-bold mb-4 text-left text-gray-800 mt-4">🔩 AUR</p>
+  <p class="text-base mb-4 text-left text-gray-800 mt-4">To install Beaver Notes on Arch Linux through the AUR using Yay, follow the commands below:</p>
+  <p class="text-base mb-4 text-left text-gray-800 mt-4">Install Yay's dependencies:</p>
+  <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">sudo pacman -S base-devel git</pre>
+  <p class="text-base mb-4 text-left text-gray-800 mt-4">Clone Yay's repository and navigate to the directory:</p>
+  <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">git clone https://aur.archlinux.org/yay.git && cd yay
+</pre>
+  <p class="text-base mb-4 text-left text-gray-800 mt-4">Install Yay:</p>
+  <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">makepkg -si
+</pre>
+  <p class="text-base mb-4 text-left text-gray-800 mt-4">Install Beaver Notes:</p>
+  <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">yay -S beaver-notes
+</pre>
+</div>
 </body>
 </html>
