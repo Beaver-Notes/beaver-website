@@ -60,23 +60,23 @@
   <div class="container px-6 py-4 mx-auto">
   <p class="text-3xl font-bold mb-4 text-left text-gray-800 mt-4">📦 Debian / Ubuntu Packages</p>
   <p class="text-base mb-4 text-left text-gray-800 mt-4">To install Beaver Notes through apt, first uninstall any previous version of Beaver Notes. Don’t worry, uninstalling won’t delete your notes. Feel free to back them up by exporting them if you want an extra safety net. After that, run the commands below.</p>
-  <p class="text-base mb-4 text-left text-gray-800n mt-4">Fetching Repository GPG Key</p>
+  <p class="text-base mb-4 text-left text-gray-800n mt-4">Fetching Repository GPG Key:</p>
   <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">curl -s --compressed https://daniele-rolli.github.io/Beaver-notes-ppa/KEY.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/Beaver-notes-ppa.gpg >/dev/null</pre>   
-  <p class="text-base mb-4 text-left text-gray-800n mt-4">Adding Beaver Notes Repository Source</p>
+  <p class="text-base mb-4 text-left text-gray-800n mt-4">Adding Beaver Notes Repository Source:</p>
   <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">sudo curl -s --compressed -o /etc/apt/sources.list.d/Beaver_notes_file.list https://daniele-rolli.github.io/Beaver-notes-ppa/Beaver_notes_file.list</pre>   
-  <p class="text-base mb-4 text-left text-gray-800n mt-4">Updating Package Lists</p>
+  <p class="text-base mb-4 text-left text-gray-800n mt-4">Updating Package Lists:</p>
   <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">sudo apt update</pre>   
-  <p class="text-base mb-4 text-left text-gray-800n mt-4">Installing Beaver Notes</p>    
+  <p class="text-base mb-4 text-left text-gray-800n mt-4">Installing Beaver Notes:</p>    
   <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">sudo apt install beaver-notes</pre>   
 </div>  
 <div class="container px-6 py-4 mx-auto">
   <p class="text-3xl font-bold mb-4 text-left text-gray-800 mt-4">🍻 Homebrew for Macs</p>
   <p class="text-base mb-4 text-left text-gray-800 mt-4">To install Beaver Notes on your Mac, follow the commands below. If you’re unsure what processor your Mac is running, refer to this <a class="text-amber-500" href="https://support.apple.com/en-us/HT211814">apple support guide.</a></p>
-  <p class="text-base mb-4 text-left text-gray-800n mt-4">Adding the tap to Homebrew</p>
+  <p class="text-base mb-4 text-left text-gray-800n mt-4">Adding the tap to Homebrew:</p>
   <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">brew tap Daniele-rolli/homebrew-beaver https://github.com/Daniele-rolli/homebrew-beaver.git</pre>   
-  <p class="text-base mb-4 text-left text-gray-800n mt-4">Installing Beaver-notes (On Apple Silicon Macs)</p>
+  <p class="text-base mb-4 text-left text-gray-800n mt-4">Installing Beaver-notes (On Apple Silicon Macs):</p>
   <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">brew install beaver-notes-arm</pre>   
-  <p class="text-base mb-4 text-left text-gray-800n mt-4">Installing Beaver-notes (On Intel macs)</p>    
+  <p class="text-base mb-4 text-left text-gray-800n mt-4">Installing Beaver-notes (On Intel macs):</p>    
   <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">brew install beaver-notes</pre>   
 </div>  
 <div class="container px-6 py-4 mx-auto">
@@ -93,6 +93,14 @@
   <p class="text-base mb-4 text-left text-gray-800 mt-4">Install Beaver Notes:</p>
   <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">yay -S beaver-notes
 </pre>
+</div>
+<div class="container px-6 py-4 mx-auto">
+  <p class="text-3xl font-bold mb-4 text-left text-gray-800 mt-4">🎩 DNF</p>
+  <p class="text-base mb-4 text-left text-gray-800 mt-4">To install Beaver Notes on Fedora Linux using dnf or yum follow the following step:</p>
+  <p class="text-base mb-4 text-left text-gray-800 mt-4">Create the repo file:</p>
+  <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">curl -o configure-repo.sh https://raw.githubusercontent.com/Daniele-rolli/Beaver-dnf/main/configure-repo.sh && chmod +x configure-repo.sh; sudo ./configure-repo.sh</pre>
+  <p class="text-base mb-4 text-left text-gray-800 mt-4">Install Beaver Notes:</p>
+  <pre class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-x-scroll">sudo dnf install Beaver-notes</pre>
 </div>
 <div class="container px-6 py-4 mx-auto">
   <p class="text-3xl font-bold mb-4 text-left text-gray-800 mt-4">🍦 Scoop</p>
