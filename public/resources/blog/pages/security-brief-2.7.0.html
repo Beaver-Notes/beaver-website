@@ -4,7 +4,7 @@
 <head>
     <meta property="og:title" content="Security brief for version 2.7.0 and earlier versions">
     <meta property="og:description"
-        content="During the development of version 2.8.0, the team identified a vulnerability that enables a malicious actor to unlock notes by modifying the unlock logic and inserting the hash key as the password, using development tools...">
+        content="During the development of version 2.8.0, the team identified a vulnerability that enables a malicious actor to unlock notes by modifying the unlock logic and inserting the hash key as the password, using developer tools...">
     <meta property="og:image" content="https://www.beavernotes.com/resources/blog/pages/medias/security-brief-2.7.0.webp">
     <meta property="og:url" content="https://www.beavernotes.com/resources/blog/pages/medias/security-brief-2.7.0.webp">
     <meta property="og:type" content="article">
@@ -98,13 +98,13 @@
                     2024</p>
             </div>
             <!-- Article content goes here -->
-            <p class="text-base mt-4 text-gray-800">During the development of version 2.8.0, the team discovered a vulnerability that allows a bad actor to unlock notes by modifying the unlock logic and inserting the hash key as the password using development tools. This vulnerability, although not exploitable without access to the device's operating system, still poses a significant threat to user privacy. It has since been fixed, and this article aims to explain the cause of the issue and provide guidance on steps to take before updating to 2.8.0.</p>
+            <p class="text-base mt-4 text-gray-800">During the development of version 2.8.0, the team discovered a vulnerability that allows a bad actor to unlock notes by modifying the unlock logic and inserting the hash key as the password using developer tools. This vulnerability, although not exploitable without access to the device's operating system, still poses a significant threat to user privacy. It has since been fixed, and this article aims to explain the cause of the issue.</p>
             </p>
             <p class="text-base mt-4 text-gray-800">
-                <b>TL;DR:</b>We've resolved two security issues in version 2.8.0 by encrypting locked note content using AES-128. Your password is securely hashed, making decryption extremely difficult. To ensure safety, back up your notes, unlock them all, and upgrade to 2.8.0.</p>
+                <b>TL;DR:</b> A security issue affecting Beaver Notes 2.7.0 and earlier versions has been discovered. The vulnerability has been patched in version 2.8.0 by encrypting locked note content using AES-128. Please update to the latest version of Beaver Notes if you haven't already.</p>
             <p class="text-2xl py-2 mt-4 font-bold text-gray-900" style="font-family: 'Arimo', sans-serif;">The Unlock Nightmare
             </p>
-            <p class="text-base py-2 text-gray-800">You can follow the full log of the issue <a class="text-amber-500" href="https://github.com/Daniele-rolli/Beaver-Notes/issues/116">on GitHub</a> if you want to learn more about it. Before delving into the problem, an honorable mention goes to <a class="text-amber-500" href="https://github.com/bigshans">@Bigshans </a>the team member who discovered it. The issue revolves around the HomeNoteCard.vue component, which is responsible for displaying notes as cards and managing their states: Archived, Locked, and Bookmarked. This component used the following code snippet in the unlock logic to compare the user's inputted password with its hash in localStorage.
+            <p class="text-base py-2 text-gray-800">You can follow the full log of the issue <a class="text-amber-500" href="https://github.com/Daniele-rolli/Beaver-Notes/issues/116">on GitHub</a> if you want to learn more about it. Before delving into the problem, an honorable mention goes to <a class="text-amber-500" href="https://github.com/bigshans">@Bigshans </a>the team member who discovered it. The issue revolves around the HomeNoteCard.vue component, which is responsible for displaying notes as cards and managing their states such as Archived, Locked, and Bookmarked. This component used the following code snippet in the unlock logic to compare the user's inputted password with its hash in localStorage.
             </p>
             <pre><code class="language-javascript rounded-xl"> const hashHex = hashArray
                 .map((byte) => byte.toString(16).padStart(2, '0'))
@@ -125,7 +125,7 @@
             </code></pre>   
             <p class="text-2xl py-2 mt-4 font-bold text-gray-900" style="font-family: 'Arimo', sans-serif;">First Attempt: Password Storage Rethink
             </p>
-            <p class="text-base py-2 text-gray-800">At first, we thought the issue was the location of the password storage, so we devised a new method of storing passwords, which was inherently secure by saving the salted hash of the password in the same location as our notes. Here's the logic of passwd.js.
+            <p class="text-base py-2 text-gray-800">At first, we thought the issue was the location of the password, so we built a new method of storing passwords, which was, in itself, secure and consisted of saving the salted hash of the password in the same location as the notes.
                 <pre><code class="language-javascript rounded-xl">    import { defineStore } from 'pinia';
                     import { useStorage } from '../composable/storage';
                     import bcrypt from 'bcryptjs';
@@ -194,10 +194,7 @@
                     <p class="text-base py-2 text-gray-800">However, we soon discovered that this approach still left room for a bad actor to unlock every note through the console, making locked notes even less secure than before. Therefore, it was time to rebuild our locked notes from the ground up. 
                         <p class="text-2xl py-2 mt-4 font-bold text-gray-900" style="font-family: 'Arimo', sans-serif;">Lock it, Encrypt it, Forget it
                             <p class="text-base py-2 text-gray-800">We have therefore rewritten the methods for locking notes to ensure that no bad actor could ever unlock them. The new locking mechanism employs AES-128 encryption to cryptographically protect the note content. Now, instead of solely relying on a password to unlock a note, we compare the password against its salted hash, adding an additional layer of security."
-                            </code></pre>   
-                            <p class="text-2xl py-2 mt-4 font-bold text-gray-900" style="font-family: 'Arimo', sans-serif;">First Attempt: Password Storage Rethink
-                            </p>
-                            <p class="text-base py-2 text-gray-800">At first, we thought the issue was the location of the password storage, so we devised a new method of storing passwords, which was inherently secure by saving the salted hash of the password in the same location as our notes. Here's the logic of passwd.js.
+                            </code></pre>
                                 <pre><code class="language-javascript rounded-xl">    
                                     async lockNote(id, password) {
                                         if (!password) {
