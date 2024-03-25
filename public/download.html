@@ -11,7 +11,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script async src="https://analytics.umami.is/script.js" data-website-id="b736397b-3031-452b-a433-c6a0e98be237"></script>
     <link rel="icon" type="image/x-icon" href="/resources/Beaver-Icon.webp">
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
@@ -59,73 +58,106 @@
           <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
           <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white  md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
               <div class="flex flex-col md:flex-row md:mx-6">
-                  <a class="my-2 text-gray-800 transition-colors duration-300 transform  hover:text-amber-500  md:mx-4 md:my-0" href="https://github.com/Daniele-rolli/Beaver-Notes">Resources</a>
+                  <a class="my-2 text-gray-800 transition-colors duration-300 transform  hover:text-amber-500  md:mx-4 md:my-0" href="https://github.com/Daniele-rolli/Beaver-Notes">Github</a>
                   <a class="my-2 text-gray-800 transition-colors duration-300 transform  hover:text-amber-500  md:mx-4 md:my-0" href="../download.html">Download</a>
                   <a class="my-2 text-gray-800 transition-colors duration-300 transform  hover:text-amber-500  md:mx-4 md:my-0" href="https://app.gitbook.com/o/Qfl7jTvANfCYe6aVQBji/s/c8WPndzsXkyUeLfzTgyw/user-guides/markdown-syntax">Docs</a>
                   <a class="my-2 text-gray-800 transition-colors duration-300 transform  hover:text-amber-500  md:mx-4 md:my-0" href="../Blog.html">Blog</a>
+                  <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0" href="https://www.buymeacoffee.com/beavernotes">☕️ Donate</a>
                 </div>
           </div>
       </div>
   </nav>
-  <div class="flex justify-center">
+  <div class="flex justify-center items-center text-center">
     <div class="p-2">
-      <img src="../resources/Beaver-Icon.webp" alt="Feature 1" class="w-64 h-64 object-cover object-top rounded-xl">
-      <p class="text-2xl font-bold mb-4 text-center text-gray-800 mt-4">Beaver Notes</p>
+      <img src="../resources/Beaver-Icon.webp" alt="Feature 1" class="w-80 h-80 object-cover object-top rounded-xl">
+      <p class="text-3xl font-bold mb-4 text-center text-gray-800 mt-4">Beaver Notes</p>
       <p class="text-l font-bold mb-4 text-center text-gray-600">Last updated March 18, 2024</p>
-    <a class="text-l font-bold mb-4 text-center text-gray-600" href="https://github.com/Daniele-rolli/Beaver-Notes/releases/tag/3.0.0">Check out the release notes
-    </a>
+    <a class="text-l font-bold mb-4 text-center hover:text-amber-400 text-gray-600" href="https://github.com/Daniele-rolli/Beaver-Notes/releases/tag/3.0.0">Check out the release notes</a>
     </div>
       </div>
 
       <div class="p-2 grid place-items-center">
-        <div class="flex flex-col sm:flex-row justify-center">
-          <div class="p-2">
-            <div class="dropdown inline-block relative">
-              <button class="w-full h-[45px] px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-amber-500 lg:w-auto focus:outline-none rounded-xl" style="font-family: 'Arimo', sans-serif;">
-                <i class="fab fa-apple fa-lg mr-2"></i>
-                Download for Mac
+        <div class="flex flex-col sm:flex-row justify-center items-center text-center">
+            <div  id="macDownloadButton" class="dropdown inline-block relaive" style="display: none;">
+              <button class="w-full h-[45px] text-lg px-5 py-2 mt-6 font-bold tracking-wider text-white transition-colors duration-300 transform bg-amber-500 lg:w-auto focus:outline-none rounded-xl" style="font-family: 'Arimo', sans-serif;">
+                Download for macOS
               </button>
               <div class="dropdown-content absolute bg-white mt-2 py-2 rounded shadow left-1/2 transform -translate-x-1/2">
                 <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes.dmg" class="block px-4 py-2 hover:bg-grey-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Intel processor</a>
                 <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-arm64.dmg" class="block px-4 py-2 hover:bg-grey-100 focus:outline-none text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Apple Silicon</a>
               </div>
-            </div>
           </div>
       
-          <div class="p-2">
-            <div class="dropdown inline-block relative">
-              <button class="w-full h-[45px] px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-amber-500 lg:w-auto focus:outline-none rounded-xl" style="font-family: 'Arimo', sans-serif;">
-                <i class="fab fa-windows fa-lg mr-2"></i>
-                Download for PC
+            <div id="windowsDownloadButton" class="dropdown inline-block relative" style="display: none;">
+                <button class="w-full h-[45px] text-lg px-5 py-2 mt-6 font-bold tracking-wider text-white transition-colors duration-300 transform bg-amber-500 lg:w-auto focus:outline-none rounded-xl" style="font-family: 'Arimo', sans-serif;">
+                    Download for Windows
               </button>
               <div class="dropdown-content absolute bg-white mt-2 py-2 rounded shadow left-1/2 transform -translate-x-1/2">
-                <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes.Setup.3.0.0.exe" class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Intel processor</a>
-                <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes.Setup.3.0.0.arm64.exe" class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Windows on Arm</a>
+                <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes.Setup.3.0.0.exe" class="block px-4 py-2 hover:bg-grey-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Intel (64-bit)</a>
+                <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes.Setup.3.0.0.arm64.exe" class="block px-4 py-2 hover:bg-grey-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Arm (64-bit)</a>
               </div>
             </div>
-          </div>
       
-          <div class="p-2">
-            <div class="dropdown inline-block relative">
-              <button class="w-full h-[45px] px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-amber-500 lg:w-auto focus:outline-none rounded-xl" style="font-family: 'Arimo', sans-serif;">
-                <i class="fab fa-linux fa-lg mr-2"></i>
-                Download for Linux
+            <div id="linuxDownloadButton" class="dropdown inline-block relative" style="display: none;">
+                <button class="w-full h-[45px] text-lg px-5 py-2 mt-6 font-bold tracking-wider text-white transition-colors duration-300 transform bg-amber-500 lg:w-auto focus:outline-none rounded-xl" style="font-family: 'Arimo', sans-serif;">
+                Download for GNU/Linux
               </button>
               <div class="dropdown-content absolute bg-white mt-2 py-2 rounded shadow left-1/2 transform -translate-x-1/2">
                 <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-3.0.0.AppImage" class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Appimage x64</a>
-                <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-3.0.0-arm64.AppImage" class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Appimage Arm</a>
+                <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-3.0.0-arm64.AppImage" class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Appimage Arm (64-bit)</a>
                 <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes_3.0.0_amd64.deb" class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Deb x64</a>
-                <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes_3.0.0_arm64.deb" class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Deb Arm</a>
+                <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes_3.0.0_arm64.deb" class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Deb Arm (64-bit)</a>
                 <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-3.0.0.x86_64.rpm" class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Rpm x64</a>
-                <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-3.0.0.aarch64.rpm" class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Rpm Arm</a>
+                <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-3.0.0.aarch64.rpm" class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black" style="font-family: 'Arimo', sans-serif;">Rpm Arm (64-bit)</a>
               </div>
             </div>
-          </div>
         </div>
       </div>
-      
-<div class="p-2 grid place-items-center">
-  <img src="../resources/systems.webp" alt="Product screenshot" class="w-full h-auto object-fit rounded-xl" width="2432" height="1442">
+    </div>
+
+<div class="pt-20">
+    <div class="p-2 border-2 border-amber-400 bg-amber-400 bg-opacity-20 rounded-xl w-3/5 mx-auto">
+        <p class="px-2 text-l font-bold text-left text-gray-800 py-2">If you enjoy using Beaver Notes and Beaver Pocket and can afford to do so, please consider donating or contributing to support our ongoing development efforts. Your generosity helps us maintain and improve Beaver and its services, as well as grow the project. Thank you for your support!</p>
+    </div>
+</div>
+
+<div class="pt-10">
+<div class="p-2 hidden lg:block md:block shadow-sm border-2 rounded-xl w-2/5 mx-auto">
+    <p class="text-2xl font-bold text-left text-gray-900 text-opacity-60 px-2 py-2">Other Platforms</p>
+    <div class="border-b-2 flex items-center justify-between">
+        <p class="px-2 text-xl font-bold text-left text-gray-800 py-2">Mac</p>
+        <div class="flex flex-col items-start pr-[4.2em]">
+            <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes.dmg" class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none" style="font-family: 'Arimo', sans-serif;">
+                <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> Intel processor
+            </a>
+            <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-arm64.dmg" class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none" style="font-family: 'Arimo', sans-serif;">
+                <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> Apple Silicon
+            </a>
+        </div>
+    </div>    
+    <div class="border-b-2 flex items-center justify-between">
+        <p class="px-2 text-xl font-bold text-left text-gray-800 py-2">Windows</p>
+        <div class="flex flex-col items-start pr-[5.6em]">
+            <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes.Setup.3.0.0.exe" class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none" style="font-family: 'Arimo', sans-serif;">
+                <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> Intel (64-bit)
+            </a>
+            <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-arm64.dmg" class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none" style="font-family: 'Arimo', sans-serif;">
+                <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> Arm (64-bit)
+            </a>
+        </div>
+    </div>   
+    <div class="flex items-center justify-between">
+        <p class="px-2 text-xl font-bold text-left text-gray-800 py-2">Linux</p>
+        <div class="flex flex-col items-start">
+            <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-3.0.0.AppImage" class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none" style="font-family: 'Arimo', sans-serif;"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i> Appimage x64</a>
+            <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-3.0.0-arm64.AppImage" class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none" style="font-family: 'Arimo', sans-serif;"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i> Appimage Arm (64-bit)</a>
+            <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes_3.0.0_amd64.deb" class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none" style="font-family: 'Arimo', sans-serif;"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i> Deb x64</a>
+            <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes_3.0.0_arm64.deb" class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none" style="font-family: 'Arimo', sans-serif;"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i> Deb Arm (64-bit)</a>
+            <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-3.0.0.x86_64.rpm" class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none" style="font-family: 'Arimo', sans-serif;"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i> Rpm x64</a>
+            <a href="https://github.com/Daniele-rolli/Beaver-Notes/releases/download/3.0.0/Beaver-notes-3.0.0.aarch64.rpm" class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none" style="font-family: 'Arimo', sans-serif;"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i> Rpm Arm (64-bit)</a>
+        </div>
+    </div>   
+</div>
 </div>
     <!-- component -->
 <!-- Foooter -->
@@ -184,6 +216,30 @@
           });
         });
       })
+
+      function showDownloadButton() {
+        var os = navigator.platform.toLowerCase();
+        var macButton = document.getElementById("macDownloadButton");
+        var windowsButton = document.getElementById("windowsDownloadButton");
+        var linuxButton = document.getElementById("linuxDownloadButton");
+  
+        if (os.includes("mac")) {
+          macButton.style.display = "block";
+        } else if (os.includes("win")) {
+          windowsButton.style.display = "block";
+        } else if (os.includes("linux")) {
+          linuxButton.style.display = "block";
+        }
+        else if (os.includes("ubuntu")) {
+            linuxButton.style.display = "block";
+          }
+          else if (os.includes("debian")) {
+            linuxButton.style.display = "block";
+          }
+      }
+  
+      // Call the function when the DOM is loaded
+      document.addEventListener('DOMContentLoaded', showDownloadButton);
     </script>
 </body>
 </html>
