@@ -68,7 +68,7 @@
                 class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
                 <div class="flex flex-col md:flex-row md:mx-6">
                     <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0"
-                        hrf="https://github.com/Daniele-rolli/Beaver-Notes">Resources</a>
+                        hrf="https://github.com/Beaver-Notes/Beaver-Notes">Resources</a>
                     <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0"
                         href="../Download.html">Download</a>
                     <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-amber-500 md:mx-4 md:my-0"
@@ -104,7 +104,7 @@
                 <b>TL;DR:</b> A security issue affecting Beaver Notes 2.7.0 and earlier versions has been discovered. The vulnerability has been patched in version 2.8.0 by encrypting locked note content using AES-128. Please update to the latest version of Beaver Notes if you haven't already.</p>
             <p class="text-2xl py-2 mt-4 font-bold text-gray-900" style="font-family: 'Arimo', sans-serif;">The Unlock Nightmare
             </p>
-            <p class="text-base py-2 text-gray-800">You can follow the full log of the issue <a class="text-amber-500" href="https://github.com/Daniele-rolli/Beaver-Notes/issues/116">on GitHub</a> if you want to learn more about it. Before delving into the problem, an honorable mention goes to <a class="text-amber-500" href="https://github.com/bigshans">@Bigshans </a>the team member who discovered it. The issue revolves around the HomeNoteCard.vue component, which is responsible for displaying notes as cards and managing their states such as Archived, Locked, and Bookmarked. This component used the following code snippet in the unlock logic to compare the user's inputted password with its hash in localStorage.
+            <p class="text-base py-2 text-gray-800">You can follow the full log of the issue <a class="text-amber-500" href="https://github.com/Beaver-Notes/Beaver-Notes/issues/116">on GitHub</a> if you want to learn more about it. Before delving into the problem, an honorable mention goes to <a class="text-amber-500" href="https://github.com/bigshans">@Bigshans </a>the team member who discovered it. The issue revolves around the HomeNoteCard.vue component, which is responsible for displaying notes as cards and managing their states such as Archived, Locked, and Bookmarked. This component used the following code snippet in the unlock logic to compare the user's inputted password with its hash in localStorage.
             </p>
             <pre><code class="language-javascript rounded-xl"> const hashHex = hashArray
                 .map((byte) => byte.toString(16).padStart(2, '0'))
@@ -278,7 +278,7 @@
                     </div>
                 </nav>
                 <div class="flex justify-center mt-8 space-x-6">
-                    <a href="https://github.com/Daniele-rolli/Beaver-Notes" class="text-gray-400 hover:text-gray-500">
+                    <a href="https://github.com/Beaver-Notes/Beaver-Notes" class="text-gray-400 hover:text-gray-500">
                         <span class="sr-only">GitHub</span>
                         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd"
