@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/download.html"
-  to = "/"
+  to = "/#/Download"
   status = 301
   force = true
