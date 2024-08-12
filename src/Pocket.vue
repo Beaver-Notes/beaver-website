@@ -306,7 +306,7 @@
           class="object-cover object-left"
         />
         <p class="text-3xl font-bold py-2 text-left text-gray-800">
-          Mermiad Block
+          Mermaid Block
         </p>
         <p class="text-gray-700 text-left mb-4">
           Create diagrams, flowcharts and graphs using simple text syntax,
