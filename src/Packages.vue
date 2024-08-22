@@ -470,6 +470,35 @@ sudo apt install beaver-notes</pre
                       </p>
                       <p class="text-base mb-4 text-gray-800">
                         Using PowerShell, run the following command to add the
+                        repository extras:
+                      </p>
+                      <pre
+                        class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
+                        style="white-space: normal"
+                      >
+                      scoop bucket add extras
+                    </pre
+                      >
+                      <p class="text-base mb-4 text-gray-800">
+                        To install Beaver Notes:
+                      </p>
+                      <pre
+                        class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
+                        style="white-space: normal"
+                      >
+                      scoop install extras/beaver-notes
+                    </pre
+                      >
+                    </div>
+                    <div class="mt-4">
+                      <details>
+                        <summary>If the previous method did not wor</summary>
+                      <p class="text-base mb-4 text-gray-800">
+                        To install Beaver Notes on Windows using Scoop, follow
+                        the commands below:
+                      </p>
+                      <p class="text-base mb-4 text-gray-800">
+                        Using PowerShell, run the following command to add the
                         repository:
                       </p>
                       <pre
@@ -499,6 +528,7 @@ sudo apt install beaver-notes</pre
                     scoop install Beaver-Notes-arm
                     </pre
                       >
+                  </details>
                     </div>
                   </div>
                 </div>
