@@ -87,17 +87,17 @@ export default {
           >Arm (64-bit)</a
         >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.exe"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.portable.exe"
           class="block px-4 py-2 hover:bg-grey-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Portable Intel (64-bit)</a
         >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.arm64.exe"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.portable.arm64.exe"
           class="block px-4 py-2 hover:bg-grey-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
         >
-          Arm (64-bit)</a
+          Portabe Arm (64-bit)</a
         >
       </div>
     </div>
