@@ -209,14 +209,14 @@ export default {
             <ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Arm (64-bit)
           </a>
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.exe"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.portable.exe"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
           >
             <ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Portable Intel (64-bit)
           </a>
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.arm64.exe"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.portable.arm64.exe"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
           >
