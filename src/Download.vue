@@ -48,11 +48,11 @@ export default {
           Beaver Notes
         </p>
         <p class="text-l font-bold mb-4 text-center text-gray-600">
-          Last updated July 29, 2024
+          Last updated September 5, 2024
         </p>
         <a
           class="text-l font-bold mb-4 text-center hover:text-amber-400 text-gray-600"
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/tag/3.5.0"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/tag/3.6.0"
           >Check out the release notes</a
         >
       </div>
@@ -75,25 +75,25 @@ export default {
         class="dropdown-content absolute bg-white rounded border shadow left-1/2 transform -translate-x-1/2"
       >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.Setup.3.5.0.exe"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes.Setup.3.6.0.exe"
           class="block px-4 py-2 hover:bg-grey-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Intel (64-bit)</a
         >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.Setup.3.5.0.arm64.exe"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes.Setup.3.6.0.arm64.exe"
           class="block px-4 py-2 hover:bg-grey-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Arm (64-bit)</a
         >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.portable.exe"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes.3.6.0.portable.exe"
           class="block px-4 py-2 hover:bg-grey-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Portable Intel (64-bit)</a
         >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.portable.arm64.exe"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes.3.6.0.portable.arm64.exe"
           class="block px-4 py-2 hover:bg-grey-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
         >
@@ -106,37 +106,37 @@ export default {
         class="dropdown-content absolute bg-white mt-2 py-2 rounded border shadow left-1/2 transform -translate-x-1/2"
       >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes-3.5.0.AppImage"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes-3.6.0.AppImage"
           class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Appimage x64</a
         >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes-3.5.0-arm64.AppImage"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes-3.6.0-arm64.AppImage"
           class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Appimage Arm (64-bit)</a
         >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes_3.5.0_amd64.deb"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes_3.6.0_amd64.deb"
           class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Deb x64</a
         >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes_3.5.0_arm64.deb"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes_3.6.0_arm64.deb"
           class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Deb Arm (64-bit)</a
         >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes-3.5.0.x86_64.rpm"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes-3.6.0.x86_64.rpm"
           class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Rpm x64</a
         >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes-3.5.0.aarch64.rpm"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes-3.6.0.aarch64.rpm"
           class="block px-4 py-2 hover:bg-gray-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Rpm Arm (64-bit)</a
@@ -148,13 +148,13 @@ export default {
         class="dropdown-content absolute border bg-white mt-2 py-2 rounded left-1/2 transform -translate-x-1/2"
       >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.dmg"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes.dmg"
           class="block px-4 py-2 hover:bg-grey-100 text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Intel processor</a
         >
         <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes-arm64.dmg"
+          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes-arm64.dmg"
           class="block px-4 py-2 hover:bg-grey-100 focus:outline-none text-black hover:text-black"
           style="font-family: 'Arimo', sans-serif"
           >Apple Silicon</a
@@ -174,14 +174,14 @@ export default {
         <p class="px-2 text-xl font-bold text-left text-gray-800 py-2">Mac</p>
         <div class="flex py-2 flex-col items-start pr-[4.2em]">
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.dmg"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes.dmg"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
           >
             <ArrowDownTrayIcon class="w-8 h-8 mr-2 mr-2" /> Intel processor
           </a>
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes-arm64.dmg"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes-arm64.dmg"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
           >
@@ -195,28 +195,28 @@ export default {
         </p>
         <div class="py-2 flex flex-col items-start pr-[0.8em]">
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.Setup.3.5.0.exe"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes.Setup.3.6.0.exe"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
           >
             <ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Intel (64-bit)
           </a>
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.Setup.3.5.0.arm64.exe"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes.Setup.3.6.0.arm64.exe"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
           >
             <ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Arm (64-bit)
           </a>
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.portable.exe"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes.3.6.0.portable.exe"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
           >
             <ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Portable Intel (64-bit)
           </a>
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes.3.5.0.portable.arm64.exe"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes.3.6.0.portable.arm64.exe"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
           >
@@ -228,37 +228,37 @@ export default {
         <p class="px-2 text-xl font-bold text-left text-gray-800 py-2">Linux</p>
         <div class="flex py-2 flex-col items-start">
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes-3.5.0.AppImage"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes-3.6.0.AppImage"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
             ><ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Appimage x64</a
           >
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes-3.5.0-arm64.AppImage"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes-3.6.0-arm64.AppImage"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
             ><ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Appimage Arm (64-bit)</a
           >
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes_3.5.0_amd64.deb"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes_3.6.0_amd64.deb"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
             ><ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Deb x64</a
           >
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes_3.5.0_arm64.deb"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes_3.6.0_arm64.deb"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
             ><ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Deb Arm (64-bit)</a
           >
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes-3.5.0.x86_64.rpm"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes-3.6.0.x86_64.rpm"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
             ><ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Rpm x64</a
           >
           <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.5.0/Beaver-notes-3.5.0.aarch64.rpm"
+            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.6.0/Beaver-notes-3.6.0.aarch64.rpm"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
             ><ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Rpm Arm (64-bit)</a
