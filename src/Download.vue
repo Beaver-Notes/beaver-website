@@ -48,7 +48,7 @@ export default {
           Beaver Notes
         </p>
         <p class="text-l font-bold mb-4 text-center text-gray-600">
-          Last updated September 5, 2024
+          Last updated September 21, 2024
         </p>
         <a
           class="text-l font-bold mb-4 text-center hover:text-amber-400 text-gray-600"
