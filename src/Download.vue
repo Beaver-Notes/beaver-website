@@ -29,6 +29,8 @@ export default {
       } else if (platform.startsWith("Mac")) {
         this.isMac = true;
         this.buttonText = "Download for Mac";
+        this.macDownloadLink =
+          "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.7.0/Beaver-notes.dmg";
       }
     },
   },
@@ -62,7 +64,16 @@ export default {
   <div
     class="flex flex-col sm:flex-row justify-center items-center text-center"
   >
+    <a
+      v-if="isMac"
+      class="rounded-md bg-amber-500 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-amber-500 hover:bg-opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
+      :href="macDownloadLink"
+      download
+    >
+      {{ buttonText }}
+    </a>
     <button
+      v-else
       class="rounded-md bg-amber-500 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-amber-500 hover:bg-opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
       @click="showDropdown = !showDropdown"
     >
@@ -143,24 +154,6 @@ export default {
         >
       </div>
     </div>
-    <div v-else-if="isMac">
-      <div
-        class="dropdown-content absolute border bg-white mt-2 py-2 rounded left-1/2 transform -translate-x-1/2"
-      >
-        <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.7.0/Beaver-notes.dmg"
-          class="block px-4 py-2 hover:bg-grey-100 text-black hover:text-black"
-          style="font-family: 'Arimo', sans-serif"
-          >Intel processor</a
-        >
-        <a
-          href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.7.0/Beaver-notes-arm64.dmg"
-          class="block px-4 py-2 hover:bg-grey-100 focus:outline-none text-black hover:text-black"
-          style="font-family: 'Arimo', sans-serif"
-          >Apple Silicon</a
-        >
-      </div>
-    </div>
   </div>
 
   <div class="py-10 sm:py-16 md:py-24">
@@ -172,20 +165,13 @@ export default {
       </p>
       <div class="border-b-2 flex items-center justify-between">
         <p class="px-2 text-xl font-bold text-left text-gray-800 py-2">Mac</p>
-        <div class="flex py-2 flex-col items-start pr-[4.2em]">
+        <div class="flex py-2 flex-col items-start pr-[6.5em]">
           <a
             href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.7.0/Beaver-notes.dmg"
             class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
             style="font-family: 'Arimo', sans-serif"
           >
-            <ArrowDownTrayIcon class="w-8 h-8 mr-2 mr-2" /> Intel processor
-          </a>
-          <a
-            href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.7.0/Beaver-notes-arm64.dmg"
-            class="block text-lg px-4 py-2 hover:text-amber-400 text-amber-500 text-decoration-none flex items-center"
-            style="font-family: 'Arimo', sans-serif"
-          >
-            <ArrowDownTrayIcon class="w-8 h-8 mr-2" /> Apple Silicon
+            <ArrowDownTrayIcon class="w-8 h-8 mr-2 mr-2" /> Universal
           </a>
         </div>
       </div>
