@@ -4,12 +4,12 @@
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
           <div
-            class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+            class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 hover:shadow-amber-400 hover:shadow-lg transition-shadow duration-300"
           >
             🎉 Check out the all new Beaver Pocket
             <a href="#/Pocket" class="font-semibold text-amber-500"
-              ><span class="absolute inset-0" aria-hidden="true" />Read more
-              <span aria-hidden="true">&rarr;</span></a
+              ><span class="absolute inset-0" aria-hidden="true"></span>Read
+              more <span aria-hidden="true">&rarr;</span></a
             >
           </div>
         </div>
@@ -44,9 +44,7 @@
   </div>
   <div class="container pb-6 mx-auto px-4">
     <h3 class="text-xl text-amber-500 font-bold text-center">Testimonials</h3>
-    <h1 class="text-4xl font-bold text-center mb-12">
-      What People Think
-    </h1>
+    <h1 class="text-4xl font-bold text-center mb-12">What People Think</h1>
     <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       <!-- It's Foss -->
       <a
@@ -291,7 +289,8 @@
           Math Block
         </p>
         <p class="text-gray-700 text-left mb-4">
-          Enhance Your STEM Notes with Mathematical Equations, Expressions, Formulas, and More
+          Enhance Your STEM Notes with Mathematical Equations, Expressions,
+          Formulas, and More
         </p>
       </div>
     </div>

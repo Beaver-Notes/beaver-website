@@ -176,17 +176,7 @@ sudo apt install beaver-notes</pre
                     </pre
                       >
                       <p class="text-base mb-4 text-gray-800">
-                        Installing Beaver-notes (On Apple Silicon Macs):
-                      </p>
-                      <pre
-                        class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
-                        style="white-space: normal"
-                      >
-                    brew install beaver-notes-arm
-                    </pre
-                      >
-                      <p class="text-base mb-4 text-gray-800">
-                        Installing Beaver-notes (On Intel macs):
+                        Installing Beaver-notes
                       </p>
                       <pre
                         class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
@@ -493,42 +483,42 @@ sudo apt install beaver-notes</pre
                     <div class="mt-4">
                       <details>
                         <summary>If the previous method did not wor</summary>
-                      <p class="text-base mb-4 text-gray-800">
-                        To install Beaver Notes on Windows using Scoop, follow
-                        the commands below:
-                      </p>
-                      <p class="text-base mb-4 text-gray-800">
-                        Using PowerShell, run the following command to add the
-                        repository:
-                      </p>
-                      <pre
-                        class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
-                        style="white-space: normal"
-                      >
+                        <p class="text-base mb-4 text-gray-800">
+                          To install Beaver Notes on Windows using Scoop, follow
+                          the commands below:
+                        </p>
+                        <p class="text-base mb-4 text-gray-800">
+                          Using PowerShell, run the following command to add the
+                          repository:
+                        </p>
+                        <pre
+                          class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
+                          style="white-space: normal"
+                        >
                     scoop bucket add Beaver-Bucket https://github.com/Daniele-rolli/Beaver-Bucket
                     </pre
-                      >
-                      <p class="text-base mb-4 text-gray-800">
-                        To install Beaver Notes on x64:
-                      </p>
-                      <pre
-                        class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
-                        style="white-space: normal"
-                      >
+                        >
+                        <p class="text-base mb-4 text-gray-800">
+                          To install Beaver Notes on x64:
+                        </p>
+                        <pre
+                          class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
+                          style="white-space: normal"
+                        >
                     scoop install Beaver-Notes
                     </pre
-                      >
-                      <p class="text-base mb-4 text-gray-800">
-                        To install Beaver Notes on arm64:
-                      </p>
-                      <pre
-                        class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
-                        style="white-space: normal"
-                      >
+                        >
+                        <p class="text-base mb-4 text-gray-800">
+                          To install Beaver Notes on arm64:
+                        </p>
+                        <pre
+                          class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
+                          style="white-space: normal"
+                        >
                     scoop install Beaver-Notes-arm
                     </pre
-                      >
-                  </details>
+                        >
+                      </details>
                     </div>
                   </div>
                 </div>
