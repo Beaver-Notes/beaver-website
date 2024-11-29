@@ -156,34 +156,15 @@ sudo apt install beaver-notes</pre
                     >
                     <div class="mt-4">
                       <p class="text-base mb-4 text-gray-800">
-                        To install Beaver Notes on your Mac, follow the commands
-                        below. If you’re unsure what processor your Mac is
-                        running, refer to this
-                        <a
-                          href="https://support.apple.com/en-us/116943"
-                          class="text-amber-500"
-                          >apple support guide.</a
-                        >
-                      </p>
-                      <p class="text-base mb-4 text-gray-800">
-                        Adding the tap to Homebrew:
+                        To install Beaver Notes on macOs through homebrew, run
+                        the following command:
                       </p>
                       <pre
                         class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
                         style="white-space: normal"
                       >
-                    brew tap Daniele-rolli/homebrew-beaver https://github.com/Daniele-rolli/homebrew-beaver.git
-                    </pre
-                      >
-                      <p class="text-base mb-4 text-gray-800">
-                        Installing Beaver-notes
-                      </p>
-                      <pre
-                        class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
-                        style="white-space: normal"
-                      >
-                    brew install beaver-notes</pre
-                      >
+                      brew install --cask beaver-notes
+                      </pre>
                     </div>
                   </div>
                 </div>
