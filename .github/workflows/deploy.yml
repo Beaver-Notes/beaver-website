@@ -18,20 +18,20 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '16'  # Use your required Node.js version
+        node-version: '20'
     
     # Step 3: Install dependencies
     - name: Install dependencies
-      run: yarn install  # Or use npm install if you are using npm
+      run: yarn install
 
     # Step 4: Build the project
     - name: Build project
-      run: yarn build  # Or use npm run build if you are using npm
+      run: yarn build 
 
     # Step 5: Deploy to GitHub Pages with authentication
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: gh-pages  # This is the branch to deploy to (GitHub Pages uses gh-pages by default)
-        folder: dist      # Folder where your build output is located (ensure this is correct for your project)
-        token: ${{ secrets.GH_TOKEN }}  # Use the GitHub token from secrets
+        branch: gh-pages
+        folder: dist
+        token: ${{ secrets.GH_TOKEN }}
