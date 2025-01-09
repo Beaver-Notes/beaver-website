@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          yarn add
+          yarn
 
       - name: Build the project
         run: |
