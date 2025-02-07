@@ -27,10 +27,10 @@ const navigation = [
   { name: "Github", href: "https://blog.beavernotes.com" },
   {
     name: "Docs",
-    href: "https://beaver-notes.github.io/Beaver-Docs/docs/category/user-guides",
+    href: "https://docs.beavernotes.com",
   },
   { name: "Pocket", href: "#/Pocket" },
-  { name: "Blog", href: "https://beaver-notes.github.io/Beaver-Blog/" },
+  { name: "Blog", href: "https://blog.beavernotes.com" },
   { name: "☕️ Donate", href: "https://www.buymeacoffee.com/beavernotes" },
 ];
 
