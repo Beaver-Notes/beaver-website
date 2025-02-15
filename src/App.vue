@@ -200,7 +200,7 @@ const currentView = computed(() => {
           </svg>
         </a>
         <a
-          href="https://bsky.app/profile/beavernotes.bsky.social"
+          href="https://bsky.app/profile/beavernotes.com"
           class="text-gray-400 hover:text-blue-500"
         >
           <span class="sr-only">Mastodon</span>
