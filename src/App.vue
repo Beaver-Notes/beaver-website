@@ -24,7 +24,7 @@ const mobileMenuOpen = ref(false);
 const navigation = [
   { name: "Home", href: "#/" },
   { name: "Download", href: "#/Download" },
-  { name: "Github", href: "https://blog.beavernotes.com" },
+  { name: "Github", href: "https://github.com/Beaver-Notes/Beaver-Notes" },
   {
     name: "Docs",
     href: "https://docs.beavernotes.com",
