@@ -169,7 +169,7 @@ export default {
           <!-- Left column (3 items) -->
           <div class="w-1/2 pr-2">
             <a
-              href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.9.0/Beaver-notes-3.9.0-portable.exe"
+              href="https://github.com/Beaver-Notes/Beaver-Notes/releases/download/3.9.0/Beaver-notes-Setup-3.9.0.exe"
               class="block text-lg px-4 py-2 text-amber-500 text-opacity-85 hover:text-opacity-100text-decoration-none flex items-center"
               style="font-family: 'Arimo', sans-serif"
             >
