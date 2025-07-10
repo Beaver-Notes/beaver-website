@@ -1,6 +1,7 @@
-import './assets/main.css'
+import "./assets/main.css";
+import compsUi from "./lib/compos-ui";
 
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
 
-createApp(App).mount('#app')
+createApp(App).use(compsUi).mount("#app");

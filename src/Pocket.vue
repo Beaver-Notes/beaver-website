@@ -1,22 +1,24 @@
 <template>
-  <div class="bg-white">
-    <div class="container px-6 pt-32 pb-16 mx-auto">
-      <div class="items-center lg:flex">
-        <div class="w-full lg:w-1/2">
+  <div class="overflow-hidden py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div
+        class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+      >
+        <div class="lg:pr-8 sm:pt-24">
           <div class="lg:max-w-lg">
             <p
-              class="text-3xl font-semibold text-gray-800 lg:text-3xl"
+              class="text-3xl font-semibold text-neutral-800 dark:text-white lg:text-3xl"
               style="font-family: 'Arimo', sans-serif"
             >
-              Your favourite note-taking app, now
+              Your favourite note taking app, now
               <span class="text-amber-500"> on the go!</span>
             </p>
             <p
-              class="text-lg text-gray-600 py-2 lg:text-xl"
+              class="text-lg text-neutral-600 dark:text-neutral-200 py-2 lg:text-xl"
               style="font-family: 'Arimo', sans-serif"
             >
               All the amazing features of Beaver Notes packed into the perfect
-              note-taking app for you on the go.
+              note taking app for you on the go.
             </p>
             <div>
               <div class="flex flex-col space-y-3">
@@ -25,7 +27,7 @@
                   <a
                     type="button"
                     href="https://github.com/Beaver-Notes/Beaver-pocket/releases"
-                    class="flex items-center justify-center w-48 mt-3 text-white bg-black h-14 rounded-md"
+                    class="flex items-center justify-center w-48 mt-3 text-white bg-black dark:bg-neutral-800 h-14 rounded-md"
                   >
                     <div class="mr-3">
                       <svg
@@ -52,11 +54,10 @@
                   <a
                     type="button"
                     href="https://testflight.apple.com/join/dSsmsGLY"
-                    class="flex items-center justify-center w-48 mt-3 text-black bg-transparent border border-black h-14 rounded-md"
+                    class="flex items-center justify-center w-48 mt-3 text-black bg-transparent border border-black dark:border-white h-14 rounded-md"
                   >
                     <div class="mr-3">
                       <svg
-                        fill="#000000"
                         width="30"
                         version="1.1"
                         id="Capa_1"
@@ -64,6 +65,7 @@
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         viewBox="0 0 52 52"
                         xml:space="preserve"
+                        class="fill-black dark:fill-white"
                       >
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g
@@ -80,7 +82,7 @@
                         </g>
                       </svg>
                     </div>
-                    <div>
+                    <div class="dark:text-white">
                       <div class="text-xs">Test on the</div>
                       <div class="-mt-1 font-sans text-2xl font-semibold">
                         TestFlight
@@ -129,64 +131,77 @@
                   >
                     <div class="mr-3">
                       <svg
-                        width="30"
-                        version="1.1"
-                        id="Icons"
                         xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        viewBox="0 0 32 32"
-                        xml:space="preserve"
-                        fill="#000000"
+                        x="0px"
+                        y="0px"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 48 48"
                       >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                          .st0 { fill: #ffffff; } .st1 { fill: #3a559f; } .st2 {
-                          fill: #f4f4f4; } .st3 { fill: #ff0084; } .st4 { fill:
-                          #0063db; } .st5 { fill: #00aced; } .st6 { fill:
-                          #ffec06; } .st7 { fill: #ff0000; } .st8 { fill:
-                          #25d366; } .st9 { fill: #0088ff; } .st10 { fill:
-                          #314358; } .st11 { fill: #ee6996; } .st12 { fill:
-                          #01aef3; } .st13 { fill: #fffeff; } .st14 { fill:
-                          #f06a35; } .st15 { fill: #00adef; } .st16 { fill:
-                          #1769ff; } .st17 { fill: #1ab7ea; } .st18 { fill:
-                          #6001d1; } .st19 { fill: #e41214; } .st20 { fill:
-                          #05ce78; } .st21 { fill: #7b519c; } .st22 { fill:
-                          #ff4500; } .st23 { fill: #00f076; } .st24 { fill:
-                          #ffc900; } .st25 { fill: #00d6ff; } .st26 { fill:
-                          #ff3a44; } .st27 { fill: #ff6a36; } .st28 { fill:
-                          #0061fe; } .st29 { fill: #f7981c; } .st30 { fill:
-                          #ee1b22; } .st31 { fill: #ef3561; } .st32 { fill:
-                          none; stroke: #ffffff; stroke-width: 2;
-                          stroke-miterlimit: 10; } .st33 { fill: #0097d3; }
-                          .st34 { fill: #01308a; } .st35 { fill: #019cde; }
-                          .st36 { fill: #ffd049; } .st37 { fill: #16a05d; }
-                          .st38 { fill: #4486f4; } .st39 { fill: none; } .st40 {
-                          fill: #34a853; } .st41 { fill: #4285f4; } .st42 {
-                          fill: #fbbc05; } .st43 { fill: #ea4335; }
-                          <g>
-                            <path
-                              class="st23"
-                              d="M17,14.5l4.2-4.5L4.9,1.2C4.8,1.1,4.6,1.1,4.3,1L17,14.5z"
-                            ></path>
-                            <path
-                              class="st24"
-                              d="M23,21l5.9-3.2c0.7-0.4,1.1-1,1.1-1.8s-0.4-1.5-1.1-1.8L23,11l-4.7,5L23,21z"
-                            ></path>
-                            <path
-                              class="st25"
-                              d="M2.4,1.9C2.1,2.2,2,2.6,2,3V29c0,0.4,0.1,0.8,0.4,1.2L15.6,16L2.4,1.9z"
-                            ></path>
-                            <path
-                              class="st26"
-                              d="M17,17.5L4.3,31c0.2,0,0.4-0.1,0.6-0.2L21.2,22L17,17.5z"
-                            ></path>
-                          </g>
-                        </g>
+                        <linearGradient
+                          id="AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1"
+                          x1="18.102"
+                          x2="25.297"
+                          y1="3.244"
+                          y2="34.74"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset="0" stop-color="#35ab4a"></stop>
+                          <stop offset=".297" stop-color="#31a145"></stop>
+                          <stop offset=".798" stop-color="#288739"></stop>
+                          <stop offset="1" stop-color="#237a33"></stop>
+                        </linearGradient>
+                        <path
+                          fill="url(#AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1)"
+                          d="M13.488,4.012C10.794,2.508,7.605,3.778,6.45,6.323L24.126,24l9.014-9.014L13.488,4.012z"
+                        ></path>
+                        <linearGradient
+                          id="AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2"
+                          x1="19.158"
+                          x2="21.194"
+                          y1="23.862"
+                          y2="66.931"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset="0" stop-color="#f14e5d"></stop>
+                          <stop offset=".499" stop-color="#ea3d4f"></stop>
+                          <stop offset="1" stop-color="#e12138"></stop>
+                        </linearGradient>
+                        <path
+                          fill="url(#AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2)"
+                          d="M33.14,33.014L24.126,24L6.45,41.677 c1.156,2.546,4.345,3.815,7.038,2.312L33.14,33.014z"
+                        ></path>
+                        <linearGradient
+                          id="AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3"
+                          x1="32.943"
+                          x2="36.541"
+                          y1="14.899"
+                          y2="43.612"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset="0" stop-color="#ffd844"></stop>
+                          <stop offset=".519" stop-color="#ffc63f"></stop>
+                          <stop offset="1" stop-color="#ffb03a"></stop>
+                        </linearGradient>
+                        <path
+                          fill="url(#AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3)"
+                          d="M41.419,28.393 c1.72-0.96,2.58-2.676,2.581-4.393c-0.001-1.717-0.861-3.434-2.581-4.393l-8.279-4.621L24.126,24l9.014,9.014L41.419,28.393z"
+                        ></path>
+                        <linearGradient
+                          id="AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4"
+                          x1="13.853"
+                          x2="15.572"
+                          y1="5.901"
+                          y2="42.811"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset=".003" stop-color="#0090e6"></stop>
+                          <stop offset="1" stop-color="#0065a0"></stop>
+                        </linearGradient>
+                        <path
+                          fill="url(#AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4)"
+                          d="M6.45,6.323C6.168,6.948,6,7.652,6,8.408 v31.179c0,0.761,0.164,1.463,0.45,2.09l17.674-17.68L6.45,6.323z"
+                        ></path>
                       </svg>
                     </div>
                     <div>
@@ -201,287 +216,25 @@
             </div>
           </div>
         </div>
-
         <div
-          class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2"
+          class="w-[64rem] rounded-2xl"
         >
           <img
-            class="w-[120%] h-full lg:max-w-[120%]"
-            src="/src/assets/pocket/App.png"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="overflow-hidden bg-white py-12 sm:py-24">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div
-          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
-        >
-          <div class="lg:pr-8 lg:pt-4">
-            <div class="lg:max-w-lg">
-              <h2 class="text-base font-semibold leading-7 text-amber-500">
-                Better Note taking
-              </h2>
-              <p
-                class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-              >
-                Empowering Note-Taking
-              </p>
-              <dl
-                class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none"
-              >
-                <div
-                  v-for="feature in features"
-                  :key="feature.name"
-                  class="relative pl-9"
-                >
-                  <dt class="inline font-semibold text-gray-900">
-                    <component
-                      :is="feature.icon"
-                      class="absolute left-1 top-1 h-5 w-5 text-amber-500"
-                      aria-hidden="true"
-                    />
-                    {{ feature.name }}
-                  </dt>
-                  {{ " " }}
-                  <dd class="inline">{{ feature.description }}</dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-          <img
-            src="/src/assets/pocket/Pixel 7 Pro.png"
+            src="/src/assets/pocket/devices.png"
             alt="Product screenshot"
-            class="w-[16rem] max-w-none rounded-xl ring-gray-400/10 md:-ml-4 lg:-ml-0 mx-auto lg:ml-auto lg:mr-0"
+            class="w-[64rem] max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
+            width="2432"
+            height="1442"
+          />
+          <img
+            src="/src/assets/pocket/devices-dark.png"
+            alt="Product screenshot"
+            class="w-[64rem] max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
+            width="2432"
+            height="1442"
           />
         </div>
       </div>
     </div>
-    <div class="text-center">
-    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-      Ready to Go, On the Go
-    </h1>
-    <p class="mt-6 text-lg leading-8 text-gray-600">
-      All the essential tools you already know and love from Beaver Notes, right in the palm of your hands.
-    </p>
-  </div>
-  <div class="bg-white flex justify-center items-center min-h-auto py-12 px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 max-w-6xl">
-      <!-- Card 1 -->
-      <div class="p-4 border rounded-xl">
-        <img
-          src="/src/assets/home/linked-notes.png"
-          alt="Feature 1"
-          class="object-cover object-left"
-        />
-        <p class="text-3xl font-bold py-2 text-left text-gray-800">
-          Note Linking
-        </p>
-        <p class="text-gray-700 text-left mb-4">
-          Connect your notes and ideas, creating a web of interconnected
-          thoughts.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="p-4 shadow border rounded-xl px-6">
-        <img
-          src="/src/assets/home/command prompt.png"
-          alt="Feature 2"
-          class="object-cover object-left"
-        />
-        <p class="text-3xl font-bold py-2 text-left text-gray-800">
-          Command Prompt
-        </p>
-        <p class="text-gray-700 text-left mb-4">
-          Search, manage notes and settings, and switch themes effortlessly.
-          Elevate your productivity and simplify your workflow.
-        </p>
-      </div>
-      <!-- Card 3 -->
-      <div class="p-4 border rounded-xl">
-        <img
-          src="/src/assets/home/mermaid.png"
-          alt="Feature 2"
-          class="object-cover object-left"
-        />
-        <p class="text-3xl font-bold py-2 text-left text-gray-800">
-          Mermaid Block
-        </p>
-        <p class="text-gray-700 text-left mb-4">
-          Create diagrams, flowcharts and graphs using simple text syntax,
-          enhancing your notes with clear visuals.
-        </p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="p-4 border rounded-xl">
-        <img
-          src="/src/assets/home/tags.png"
-          alt="Feature 1"
-          class="object-cover object-left"
-        />
-        <p class="text-3xl font-bold py-2 text-left text-gray-800">Tags</p>
-        <p class="text-gray-700 text-left mb-4">
-          Organize your notes with tags. Group your thoughts and ideas with
-          quick searches.
-        </p>
-      </div>
-      <!-- Card 5 -->
-      <div class="p-4 border rounded-xl">
-        <img
-          src="/src/assets/home/callout.png"
-          alt="Feature 1"
-          class="object-cover object-left"
-        />
-        <p class="text-3xl font-bold py-2 text-left text-gray-800">Callouts</p>
-        <p class="text-gray-700 text-left mb-4">
-          Make your ideas stand out in a colorful and attention-grabbing way to
-          highlight what's important from the rest of the note.
-        </p>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="p-4 border rounded-xl">
-        <img
-          src="/src/assets/home/embed.png"
-          alt="Feature 1"
-          class="object-cover object-left"
-        />
-        <p class="text-3xl font-bold py-2 text-left text-gray-800">
-          All in one place
-        </p>
-        <p class="text-gray-700 text-left mb-4">
-          Link documents, presentations, spreadsheets, and more to your notes,
-          ensuring your ideas are conveniently stored in one place.
-        </p>
-      </div>
-
-      <!-- Card 7 -->
-      <div class="p-4 border rounded-xl">
-        <img
-          src="/src/assets/home/Code Block.png"
-          alt="Feature 2"
-          class="object-cover object-left"
-        />
-        <p class="text-3xl font-bold py-2 text-left text-gray-800">
-          Code Block
-        </p>
-        <p class="text-gray-700 text-left mb-4">
-          Embed and format code snippets with syntax highlighting to keep your
-          notes clear and organized.
-        </p>
-      </div>
-
-      <!-- Card 8 -->
-      <div class="p-4 border rounded-xl">
-        <img
-          src="/src/assets/home/math.png"
-          alt="Feature 2"
-          class="object-cover object-left"
-        />
-        <p class="text-3xl font-bold py-2 text-left text-gray-800">
-          Math Block
-        </p>
-        <p class="text-gray-700 text-left mb-4">
-          Enhance Your STEM Notes with Mathematical Equations, Expressions, Formulas, and More
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="bg-white flex justify-center items-center h-auto py-12 px-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl">
-      <!-- Card 1 -->
-      <a
-        href="https://www.reddit.com/r/BeaverNotes/"
-        class="max-w-md bg-white rounded-xl border block post-card"
-      >
-        <div class="p-6">
-          <p
-            class="text-xl text-gray-900 font-bold mb-3"
-            style="font-family: 'Arimo', sans-serif"
-          >
-            Join us on Reddit
-          </p>
-          <p class="text-gray-800" style="font-family: 'Arimo', sans-serif">
-            Engage in discussions, get support, and stay updated with the latest
-            Beaver Notes news. Connect with like-minded users and explore
-            exciting ideas. Join now and be a part of the conversation!
-          </p>
-        </div>
-      </a>
-
-      <!-- Card 2 -->
-      <a
-        href="https://beaver-notes.github.io/Beaver-Docs/docs/category/user-guides"
-        class="max-w-md bg-white rounded-xl border block post-card"
-      >
-        <div class="p-6">
-          <p
-            class="text-xl text-gray-900 font-bold mb-3"
-            style="font-family: 'Arimo', sans-serif"
-          >
-            Explore Our Docs
-          </p>
-          <p class="text-gray-800" style="font-family: 'Arimo', sans-serif">
-            Explore our comprehensive documentation to learn how to use Beaver
-            Notes effectively as a user and developer. From installation guides
-            to advanced features, you'll find everything you need to optimize
-            your note-taking experience. Unlock the full potential of Beaver
-            Notes now!
-          </p>
-        </div>
-      </a>
-
-      <!-- Card 3 -->
-      <a
-        href="https://mastodon.social/@Beavernotes"
-        class="max-w-md bg-white rounded-xl border block post-card"
-      >
-        <div class="p-6">
-          <p
-            class="text-xl text-gray-900 font-bold mb-3"
-            style="font-family: 'Arimo', sans-serif"
-          >
-            Join us on Mastodon
-          </p>
-          <p class="text-gray-800" style="font-family: 'Arimo', sans-serif">
-            Connect with us on Mastodon, the decentralized social media
-            platform. Engage in discussions, get support, and stay updated with
-            the latest Beaver Notes news. Join like-minded users and explore
-            exciting ideas. Don't miss out on being a part of the conversation!
-          </p>
-        </div>
-      </a>
-    </div>
-  </div>
   </div>
 </template>
-<script setup>
-import {
-  LockClosedIcon,
-  PaperAirplaneIcon,
-  CloudIcon,
-} from "@heroicons/vue/20/solid";
-
-const features = [
-  {
-    name: "Privacy First",
-    description:
-      "Your ideas, projects, and thoughts are stored locally on your device, giving you complete control over your data.",
-    icon: LockClosedIcon,
-  },
-  {
-    name: "Offline Access",
-    description:
-      "Take notes anytime, anywhere, even without an internet connection. Edit and access your notes offline to maintain productivity on the go.",
-    icon: PaperAirplaneIcon,
-  },
-  {
-    name: "Flawless Sync",
-    description:
-      "Keep your notes with you at all times and synchronize them effortlessly with your computer by connecting to your home server or the cloud.",
-    icon: CloudIcon,
-  },
-];
-</script>
