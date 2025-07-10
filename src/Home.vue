@@ -56,11 +56,11 @@
       class="w-[64rem] sm:w-full rounded-2xl p-1 bg-neutral-500/10 border-neutral-500/30 dark:bg-black/10 border dark:border-black/30 backdrop-blur-md shadow-lg"
     >
       <img
-        src="/src/assets/home/space-light.png"
+        src="/src/assets/home/space-light.webp"
         class="w-[64rem] sm:w-full max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
       />
       <img
-        src="/src/assets/home/space-dark.png"
+        src="/src/assets/home/space-dark.webp"
         class="w-[64rem] sm:w-full max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
       />
     </div>
@@ -111,14 +111,14 @@
           class="w-[64rem] rounded-2xl p-1 bg-neutral-500/10 border-neutral-500/30 dark:bg-black/10 border dark:border-black/30 backdrop-blur-md shadow-lg"
         >
           <img
-            src="/src/assets/home/app.png"
+            src="/src/assets/home/app.webp"
             alt="Product screenshot"
             class="w-[64rem] max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
             width="2432"
             height="1442"
           />
           <img
-            src="/src/assets/home/app-dark.png"
+            src="/src/assets/home/app-dark.webp"
             alt="Product screenshot"
             class="w-[64rem] max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
             width="2432"

@@ -220,14 +220,14 @@
           class="w-[64rem] rounded-2xl"
         >
           <img
-            src="/src/assets/pocket/devices.png"
+            src="/src/assets/pocket/devices.webp"
             alt="Product screenshot"
             class="w-[64rem] max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
             width="2432"
             height="1442"
           />
           <img
-            src="/src/assets/pocket/devices-dark.png"
+            src="/src/assets/pocket/devices-dark.webp"
             alt="Product screenshot"
             class="w-[64rem] max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
             width="2432"

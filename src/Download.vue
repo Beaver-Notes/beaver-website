@@ -1,4 +1,10 @@
 <script>
+import AppIcon1 from "@/assets/icons/AppIcon-1.webp";
+import AppIcon2 from "@/assets/icons/AppIcon-2.webp";
+import AppIcon3 from "@/assets/icons/AppIcon-3.webp";
+import AppIcon4 from "@/assets/icons/AppIcon-4.webp";
+import AppIcon5 from "@/assets/icons/AppIcon-5.webp";
+import AppIcon6 from "@/assets/icons/AppIcon-6.webp";
 import { RiArrowDownCircleFill } from "vue-remix-icons";
 
 export default {
@@ -16,14 +22,7 @@ export default {
       isAndroid: false,
       isiOS: false,
       buttonText: "Download Now",
-      images: [
-        "/src/assets/icons/AppIcon-1.png",
-        "/src/assets/icons/AppIcon-2.png",
-        "/src/assets/icons/AppIcon-3.png",
-        "/src/assets/icons/AppIcon-4.png",
-        "/src/assets/icons/AppIcon-5.png",
-        "/src/assets/icons/AppIcon-6.png",
-      ],
+      images: [AppIcon1, AppIcon2, AppIcon3, AppIcon4, AppIcon5, AppIcon6],
       currentImageIndex: 0,
       intervalId: null,
     };

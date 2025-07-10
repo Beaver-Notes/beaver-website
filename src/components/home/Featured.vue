@@ -19,7 +19,7 @@
           <div class="flex items-center">
             <img
               class="w-auto h-10 rounded-full mr-4"
-              src="https://www.pngkit.com/png/full/198-1984257_its-foss.png"
+              src="https://www.webpkit.com/webp/full/198-1984257_its-foss.webp"
               alt="It's foss logo"
             />
             <p class="font-bold">IT'S FOSS</p>
@@ -41,7 +41,7 @@
           <div class="flex items-center">
             <img
               class="w-10 h-10 rounded-full mr-4"
-              src="https://forum.tromjaro.com/user_avatar/forum.tromjaro.com/tio/240/359_2.png"
+              src="https://forum.tromjaro.com/user_avatar/forum.tromjaro.com/tio/240/359_2.webp"
               alt="TROMJARO's developer avatar"
             />
             <p class="font-bold">TROMJARO's developer</p>

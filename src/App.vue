@@ -131,7 +131,7 @@ const currentView = computed(() => {
         <div class="px-5 py-2">
           <a
             href="#/Privacy"
-            class="text-base leading-6 text-neutral-500 dark:text-neutral-300 hover:text-neutral-900 dark:text-white"
+            class="text-base leading-6 text-neutral-500 dark:text-neutral-300 hover:text-neutral-800 dark:hover:text-neutral-200 dark:text-white"
           >
             Privacy Policy
           </a>
@@ -139,7 +139,7 @@ const currentView = computed(() => {
         <div class="px-5 py-2">
           <a
             href="https://beaver-notes.github.io/Beaver-Blog/"
-            class="text-base leading-6 text-neutral-500 dark:text-neutral-300 hover:text-neutral-900 dark:text-white"
+            class="text-base leading-6 text-neutral-500 dark:text-neutral-300 hover:text-neutral-800 dark:hover:text-neutral-200 dark:text-white"
           >
             Blog
           </a>
@@ -148,7 +148,7 @@ const currentView = computed(() => {
         <div class="px-5 py-2">
           <a
             href="#/Terms"
-            class="text-base leading-6 text-neutral-500 dark:text-neutral-300 hover:text-neutral-900 dark:text-white"
+            class="text-base leading-6 text-neutral-500 dark:text-neutral-300 hover:text-neutral-800 dark:hover:text-neutral-200 dark:text-white"
           >
             Terms
           </a>
@@ -157,7 +157,7 @@ const currentView = computed(() => {
       <div class="flex justify-center mt-8 space-x-6">
         <a
           href="https://github.com/Beaver-Notes/Beaver-Notes"
-          class="text-neutral-400 hover:text-neutral-800"
+          class="text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200"
         >
           <span class="sr-only">GitHub</span>
           <svg

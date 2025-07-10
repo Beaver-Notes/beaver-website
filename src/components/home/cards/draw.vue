@@ -43,9 +43,9 @@
       class="relative sm:absolute bottom-1 left-1/2 -translate-x-1/2 flex items-center justify-center w-full"
     >
       <div class="flex justify-center items-center">
-        <img src="../../../assets/home/draw.png" class="w-full dark:hidden" />
+        <img src="../../../assets/home/draw.webp" class="w-full dark:hidden" />
         <img
-          src="../../../assets/home/draw-dark.png"
+          src="../../../assets/home/draw-dark.webp"
           class="w-full hidden dark:block"
         />
       </div>
