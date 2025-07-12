@@ -52,9 +52,9 @@ export default {
       } else if (/android/i.test(userAgent)) {
         console.log("isAndroid");
         this.isAndroid = true;
-        this.buttonText = "Open on Google Play";
+        this.buttonText = "Test it on Google Play";
         this.androidLink =
-          "https://play.google.com/store/apps/details?id=com.beaver.pocket";
+          "https://play.google.com/store/apps/details?id=beaver.notes.pocket";
       } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         this.isiOS = true;
         this.buttonText = "Open on App Store";
@@ -259,139 +259,89 @@ export default {
       >
         <a
           type="button"
-          href="https://github.com/Beaver-Notes/Beaver-pocket/releases"
-          class="flex items-center justify-center w-48 mt-3 text-white bg-black dark:bg-neutral-800 h-14 rounded-md"
+          class="flex items-center justify-center w-48 mt-3 text-white bg-black rounded-lg h-14"
+          :href="androidLink"
         >
           <div class="mr-3">
             <svg
-              fill="#ffffff"
-              width="30"
-              version="1.1"
-              id="Capa_1"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
+              x="0px"
+              y="0px"
+              width="32"
+              height="32"
+              viewBox="0 0 48 48"
             >
+              <linearGradient
+                id="AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1"
+                x1="18.102"
+                x2="25.297"
+                y1="3.244"
+                y2="34.74"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0" stop-color="#35ab4a"></stop>
+                <stop offset=".297" stop-color="#31a145"></stop>
+                <stop offset=".798" stop-color="#288739"></stop>
+                <stop offset="1" stop-color="#237a33"></stop>
+              </linearGradient>
               <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-              />
+                fill="url(#AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1)"
+                d="M13.488,4.012C10.794,2.508,7.605,3.778,6.45,6.323L24.126,24l9.014-9.014L13.488,4.012z"
+              ></path>
+              <linearGradient
+                id="AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2"
+                x1="19.158"
+                x2="21.194"
+                y1="23.862"
+                y2="66.931"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0" stop-color="#f14e5d"></stop>
+                <stop offset=".499" stop-color="#ea3d4f"></stop>
+                <stop offset="1" stop-color="#e12138"></stop>
+              </linearGradient>
+              <path
+                fill="url(#AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2)"
+                d="M33.14,33.014L24.126,24L6.45,41.677 c1.156,2.546,4.345,3.815,7.038,2.312L33.14,33.014z"
+              ></path>
+              <linearGradient
+                id="AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3"
+                x1="32.943"
+                x2="36.541"
+                y1="14.899"
+                y2="43.612"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0" stop-color="#ffd844"></stop>
+                <stop offset=".519" stop-color="#ffc63f"></stop>
+                <stop offset="1" stop-color="#ffb03a"></stop>
+              </linearGradient>
+              <path
+                fill="url(#AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3)"
+                d="M41.419,28.393 c1.72-0.96,2.58-2.676,2.581-4.393c-0.001-1.717-0.861-3.434-2.581-4.393l-8.279-4.621L24.126,24l9.014,9.014L41.419,28.393z"
+              ></path>
+              <linearGradient
+                id="AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4"
+                x1="13.853"
+                x2="15.572"
+                y1="5.901"
+                y2="42.811"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset=".003" stop-color="#0090e6"></stop>
+                <stop offset="1" stop-color="#0065a0"></stop>
+              </linearGradient>
+              <path
+                fill="url(#AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4)"
+                d="M6.45,6.323C6.168,6.948,6,7.652,6,8.408 v31.179c0,0.761,0.164,1.463,0.45,2.09l17.674-17.68L6.45,6.323z"
+              ></path>
             </svg>
           </div>
           <div>
-            <div class="text-xs">GET IT ON</div>
-            <div class="-mt-1 font-sans text-xl font-semibold">Github</div>
+            <div class="text-xs">TEST IT ON</div>
+            <div class="-mt-1 font-sans text-xl font-semibold">Google Play</div>
           </div>
         </a>
-        <button
-          type="button"
-          class="flex items-center justify-center w-48 mt-3 text-white bg-black h-14 rounded-md hidden"
-        >
-          <div class="mr-3">
-            <svg
-              width="30"
-              fill="#ffffff"
-              viewBox="-52.01 0 560.035 560.035"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M380.844 297.529c.787 84.752 74.349 112.955 75.164 113.314-.622 1.988-11.754 40.191-38.756 79.652-23.343 34.117-47.568 68.107-85.731 68.811-37.499.691-49.557-22.236-92.429-22.236-42.859 0-56.256 21.533-91.753 22.928-36.837 1.395-64.889-36.891-88.424-70.883-48.093-69.53-84.846-196.475-35.496-282.165 24.516-42.554 68.328-69.501 115.882-70.192 36.173-.69 70.315 24.336 92.429 24.336 22.1 0 63.59-30.096 107.208-25.676 18.26.76 69.517 7.376 102.429 55.552-2.652 1.644-61.159 35.704-60.523 106.559M310.369 89.418C329.926 65.745 343.089 32.79 339.498 0 311.308 1.133 277.22 18.785 257 42.445c-18.121 20.952-33.991 54.487-29.709 86.628 31.421 2.431 63.52-15.967 83.078-39.655"
-                ></path>
-              </g>
-            </svg>
-            <button
-              type="button"
-              class="flex items-center justify-center w-48 mt-3 text-white bg-black rounded-lg h-14 hidden"
-            >
-              <div class="mr-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 48 48"
-                >
-                  <linearGradient
-                    id="AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1"
-                    x1="18.102"
-                    x2="25.297"
-                    y1="3.244"
-                    y2="34.74"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop offset="0" stop-color="#35ab4a"></stop>
-                    <stop offset=".297" stop-color="#31a145"></stop>
-                    <stop offset=".798" stop-color="#288739"></stop>
-                    <stop offset="1" stop-color="#237a33"></stop>
-                  </linearGradient>
-                  <path
-                    fill="url(#AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1)"
-                    d="M13.488,4.012C10.794,2.508,7.605,3.778,6.45,6.323L24.126,24l9.014-9.014L13.488,4.012z"
-                  ></path>
-                  <linearGradient
-                    id="AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2"
-                    x1="19.158"
-                    x2="21.194"
-                    y1="23.862"
-                    y2="66.931"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop offset="0" stop-color="#f14e5d"></stop>
-                    <stop offset=".499" stop-color="#ea3d4f"></stop>
-                    <stop offset="1" stop-color="#e12138"></stop>
-                  </linearGradient>
-                  <path
-                    fill="url(#AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2)"
-                    d="M33.14,33.014L24.126,24L6.45,41.677 c1.156,2.546,4.345,3.815,7.038,2.312L33.14,33.014z"
-                  ></path>
-                  <linearGradient
-                    id="AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3"
-                    x1="32.943"
-                    x2="36.541"
-                    y1="14.899"
-                    y2="43.612"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop offset="0" stop-color="#ffd844"></stop>
-                    <stop offset=".519" stop-color="#ffc63f"></stop>
-                    <stop offset="1" stop-color="#ffb03a"></stop>
-                  </linearGradient>
-                  <path
-                    fill="url(#AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3)"
-                    d="M41.419,28.393 c1.72-0.96,2.58-2.676,2.581-4.393c-0.001-1.717-0.861-3.434-2.581-4.393l-8.279-4.621L24.126,24l9.014,9.014L41.419,28.393z"
-                  ></path>
-                  <linearGradient
-                    id="AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4"
-                    x1="13.853"
-                    x2="15.572"
-                    y1="5.901"
-                    y2="42.811"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop offset=".003" stop-color="#0090e6"></stop>
-                    <stop offset="1" stop-color="#0065a0"></stop>
-                  </linearGradient>
-                  <path
-                    fill="url(#AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4)"
-                    d="M6.45,6.323C6.168,6.948,6,7.652,6,8.408 v31.179c0,0.761,0.164,1.463,0.45,2.09l17.674-17.68L6.45,6.323z"
-                  ></path>
-                </svg>
-              </div>
-              <div>
-                <div class="text-xs">GET IT ON</div>
-                <div class="-mt-1 font-sans text-xl font-semibold">
-                  Google Play
-                </div>
-              </div>
-            </button>
-          </div>
-        </button>
       </div>
 
       <a
