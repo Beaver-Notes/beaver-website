@@ -54,7 +54,7 @@ export default {
         this.isAndroid = true;
         this.buttonText = "Test it on Google Play";
         this.androidLink =
-          "https://play.google.com/store/apps/details?id=beaver.notes.pocket";
+          "https://play.google.com/apps/internaltest/4698784723576585782";
       } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         this.isiOS = true;
         this.buttonText = "Open on App Store";
