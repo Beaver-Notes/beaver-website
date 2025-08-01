@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <link href="src/assets/main.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <link href="src/assets/main.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beaver Website</title>
   </head>
   <body>
     <div id="app"></div>
     <!-- Use type="module" for JavaScript to access import.meta -->
     <script type="module">
-      if (import.meta.env.MODE === 'production') {
-        const script = document.createElement('script');
+      if (import.meta.env.MODE === "production") {
+        const script = document.createElement("script");
         script.src = "https://analytics.umami.is/script.js";
         script.async = true;
-        script.setAttribute('data-website-id', 'b736397b-3031-452b-a433-c6a0e98be237');
+        script.setAttribute(
+          "data-website-id",
+          "b736397b-3031-452b-a433-c6a0e98be237"
+        );
+        script.setAttribute("data-auto-track", "false");
         document.head.appendChild(script);
       }
     </script>

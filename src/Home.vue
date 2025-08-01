@@ -3,9 +3,18 @@
     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
       <div class="mb-8 flex justify-center">
         <div
-          class="text-xs sm:text-sm relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-600 dark:text-neutral-200 ring-1 ring-neutral-900/10 dark:ring-neutral-300/10 dark:hover:ring-neutral-300/20 hover:ring-neutral-900/20 hover:shadow-amber-400 hover:shadow-lg transition-shadow duration-300"
+          class="hidden sm:block text-sm relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-600 dark:text-neutral-200 ring-1 ring-neutral-900/10 dark:ring-neutral-300/10 dark:hover:ring-neutral-300/20 hover:ring-neutral-900/20 hover:shadow-amber-400 hover:shadow-lg transition-shadow duration-300"
         >
           🎉 Check out the all new Beaver Pocket
+          <a href="#/Pocket" class="font-semibold text-amber-500"
+            ><span class="absolute inset-0" aria-hidden="true"></span>Read more
+            <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+        <div
+          class="block sm:hidden text-sm relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-600 dark:text-neutral-200 ring-1 ring-neutral-900/10 dark:ring-neutral-300/10 dark:hover:ring-neutral-300/20 hover:ring-neutral-900/20 hover:shadow-amber-400 hover:shadow-lg transition-shadow duration-300"
+        >
+          🎉 The all new Beaver Pocket
           <a href="#/Pocket" class="font-semibold text-amber-500"
             ><span class="absolute inset-0" aria-hidden="true"></span>Read more
             <span aria-hidden="true">&rarr;</span></a
@@ -216,6 +225,7 @@
       </a>
     </div>
   </div>
+  <Cookies />
 </template>
 
 <script>
@@ -227,9 +237,11 @@ import {
 } from "vue-remix-icons";
 import Bento from "@/components/home/Bento.vue";
 import Featured from "./components/home/Featured.vue";
+import Cookies from "./components/home/Cookies.vue";
 
 export default {
   components: {
+    Cookies,
     Bento,
     Featured,
   },
