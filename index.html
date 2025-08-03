@@ -11,10 +11,10 @@
     <div id="app"></div>
     <!-- Use type="module" for JavaScript to access import.meta -->
     <script type="module">
-      if (import.meta.env.MODE === "production") {
+      if (import.meta.env.MODE === "development") {
         const script = document.createElement("script");
         script.src = "https://analytics.umami.is/script.js";
-        script.async = true;
+        script.defer = true;
         script.setAttribute(
           "data-website-id",
           "b736397b-3031-452b-a433-c6a0e98be237"

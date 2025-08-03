@@ -22,10 +22,4 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach(() => {
-  if (import.meta.env.MODE === "production" && typeof umami !== "undefined") {
-    umami.track();
-  }
-});
-
 export default router;
