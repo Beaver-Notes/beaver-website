@@ -11,7 +11,7 @@
     <div id="app"></div>
     <!-- Use type="module" for JavaScript to access import.meta -->
     <script type="module">
-      if (import.meta.env.MODE === "development") {
+      if (import.meta.env.MODE === "production") {
         const script = document.createElement("script");
         script.src = "https://analytics.umami.is/script.js";
         script.defer = true;
