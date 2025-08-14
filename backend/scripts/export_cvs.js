@@ -23,17 +23,31 @@ function decrypt(iv, encrypted, authTag) {
   return decrypted;
 }
 
-async function exportEmails() {
+async function exportAndDeleteEmails() {
   const { rows } = await pool.query(
     "SELECT iv, encrypted, auth_tag FROM beta_emails"
   );
 
-  const emails = rows
-    .map((row) => decrypt(row.iv, row.encrypted, row.auth_tag))
-    .filter(Boolean);
+  const emails = [];
+  const validRows = [];
+  rows.forEach((row) => {
+    const email = decrypt(row.iv, row.encrypted, row.auth_tag);
+    if (email) {
+      emails.push(email);
+      validRows.push(row);
+    }
+  });
 
   fs.writeFileSync("emails.csv", emails.join("\n"), "utf8");
   console.log(`Exported ${emails.length} emails`);
+
+  for (const row of validRows) {
+    await pool.query(
+      "DELETE FROM beta_emails WHERE iv=$1 AND encrypted=$2 AND auth_tag=$3",
+      [row.iv, row.encrypted, row.auth_tag]
+    );
+  }
+  console.log(`Deleted ${validRows.length} rows from database`);
 }
 
-exportEmails().catch(console.error);
+exportAndDeleteEmails().catch(console.error);
