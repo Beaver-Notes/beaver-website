@@ -1,16 +1,18 @@
 <template>
   <div class="mx-auto">
-    <div class="bg-white flex justify-center items-center h-full">
+    <div
+      class="bg-white dark:bg-neutral-900 flex justify-center items-center h-full"
+    >
       <div class="flex items-center h-screen">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl">
           <!-- Card 2 -->
           <button
-            class="max-w-md bg-white rounded-xl border block post-card"
+            class="max-w-md bg-white dark:bg-neutral-800 rounded-xl border dark:border-neutral-600 block post-card"
             @click="openDialog('dialog2')"
           >
             <div class="p-6">
               <p
-                class="text-3xl text-center text-gray-900 font-bold"
+                class="text-3xl text-center text-gray-900 font-bold dark:text-white"
                 style="font-family: 'Arimo', sans-serif"
               >
                 🍻 Homebrew
@@ -26,14 +28,14 @@
               class="fixed inset-0 z-50 w-screen flex items-center justify-center"
             >
               <div
-                class="bg-white p-6 rounded-lg shadow-xl max-w-3xl text-left"
+                class="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-xl max-w-3xl text-left"
               >
                 <div class="flex items-start">
                   <div
-                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-neutral-100"
+                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-700"
                   >
                     <svg
-                      class="h-6 w-6 text-[#C91E42]"
+                      class="h-6 w-6 text-[#C91E42] dark:fill-white"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
                     >
@@ -45,16 +47,16 @@
                   <div class="ml-4 flex-1">
                     <DialogTitle
                       as="h2"
-                      class="text-3xl font-semibold leading-6 pt-3 py-2 text-gray-900"
+                      class="text-3xl font-semibold leading-6 pt-3 py-2 text-gray-900 dark:text-white"
                       >Homebrew</DialogTitle
                     >
                     <div class="mt-4">
-                      <p class="text-base mb-4 text-gray-800">
+                      <p class="text-base mb-4 text-gray-800 dark:text-white">
                         To install Beaver Notes on macOs through homebrew, run
                         the following command:
                       </p>
                       <pre
-                        class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
+                        class="text-gray-700 dark:text-white bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
                         style="white-space: normal"
                       >
                       brew install --cask beaver-notes
@@ -77,12 +79,12 @@
 
           <!-- Card 3 -->
           <button
-            class="max-w-md bg-white rounded-xl border block post-card"
+            class="max-w-md bg-white dark:bg-neutral-800 rounded-xl border dark:border-neutral-600 block post-card"
             @click="openDialog('dialog3')"
           >
             <div class="p-6">
               <p
-                class="text-3xl text-center items-center text-gray-900 font-bold"
+                class="text-3xl text-center items-center text-gray-900 font-bold dark:text-white"
                 style="font-family: 'Arimo', sans-serif"
               >
                 🔩 AUR
@@ -98,11 +100,11 @@
               class="fixed inset-0 z-50 w-screen flex items-center justify-center"
             >
               <div
-                class="bg-white p-6 rounded-lg shadow-xl max-w-3xl text-left"
+                class="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-xl max-w-3xl text-left"
               >
                 <div class="flex items-start">
                   <div
-                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-neutral-100"
+                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-600"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -119,15 +121,15 @@
                   <div class="ml-4 flex-1">
                     <DialogTitle
                       as="h2"
-                      class="text-3xl font-semibold leading-6 pt-3 py-2 text-gray-900"
+                      class="text-3xl font-semibold leading-6 pt-3 py-2 text-gray-900 dark:text-white"
                       >AUR</DialogTitle
                     >
                     <div class="mt-4">
-                      <p class="text-base mb-4 text-gray-800">
+                      <p class="text-base mb-4 text-gray-800 dark:text-white">
                         To install Beaver Notes on Arch Linux through the AUR
                         using Yay, follow the commands below:
                       </p>
-                      <p class="text-base mb-4 text-gray-800">
+                      <p class="text-base mb-4 text-gray-800 dark:text-white">
                         Install Yay's dependencies:
                       </p>
                       <pre
@@ -137,7 +139,7 @@
                     sudo pacman -S base-devel git
                     </pre
                       >
-                      <p class="text-base mb-4 text-gray-800">
+                      <p class="text-base mb-4 text-gray-800 dark:text-white">
                         Clone Yay's repository and navigate to the directory:
                       </p>
                       <pre
@@ -147,7 +149,9 @@
                     git clone https://aur.archlinux.org/yay.git && cd yay
                     </pre
                       >
-                      <p class="text-base mb-4 text-gray-800">Install Yay:</p>
+                      <p class="text-base mb-4 text-gray-800 dark:text-white">
+                        Install Yay:
+                      </p>
                       <pre
                         class="text-gray-700 bg-black text-white p-4 rounded-xl mb-4 overflow-auto"
                         style="white-space: normal"
@@ -183,12 +187,12 @@
 
           <!-- Card 5 -->
           <a
-            class="max-w-md bg-white rounded-xl border block post-card"
+            class="max-w-md bg-white dark:bg-neutral-800 rounded-xl border dark:border-neutral-600 block post-card"
             href="https://flathub.org/apps/com.beavernotes.beavernotes"
           >
             <div class="p-6">
               <p
-                class="text-3xl text-center text-gray-900 font-bold"
+                class="text-3xl text-center text-gray-900 font-bold dark:text-white"
                 style="font-family: 'Arimo', sans-serif"
               >
                 📦 Flathub
@@ -198,12 +202,12 @@
 
           <!-- Card 6 -->
           <button
-            class="max-w-md bg-white rounded-xl border block post-card"
+            class="max-w-md bg-white dark:bg-neutral-800 rounded-xl border dark:border-neutral-600 block post-card"
             @click="openDialog('dialog6')"
           >
             <div class="p-6">
               <p
-                class="text-3xl text-center text-gray-900 font-bold"
+                class="text-3xl text-center text-gray-900 font-bold dark:text-white"
                 style="font-family: 'Arimo', sans-serif"
               >
                 🍦 Scoop
@@ -219,14 +223,14 @@
               class="fixed inset-0 z-50 w-screen flex items-center justify-center"
             >
               <div
-                class="bg-white p-6 rounded-lg shadow-xl max-w-3xl text-left"
+                class="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-xl max-w-3xl text-left"
               >
                 <div class="flex items-start">
                   <div
-                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-neutral-100"
+                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-600"
                   >
                     <svg
-                      class="h-6 w-6"
+                      class="h-6 w-6 dark:fill-white"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512"
                     >
@@ -238,15 +242,15 @@
                   <div class="ml-4 flex-1">
                     <DialogTitle
                       as="h2"
-                      class="text-3xl font-semibold leading-6 pt-3 py-2 text-gray-900"
+                      class="text-3xl font-semibold leading-6 pt-3 py-2 text-gray-900 dark:text-white"
                       >Scoop</DialogTitle
                     >
                     <div class="mt-4">
-                      <p class="text-base mb-4 text-gray-800">
+                      <p class="text-base mb-4 text-gray-800 dark:text-white">
                         To install Beaver Notes on Windows using Scoop, follow
                         the commands below:
                       </p>
-                      <p class="text-base mb-4 text-gray-800">
+                      <p class="text-base mb-4 text-gray-800 dark:text-white">
                         Using PowerShell, run the following command to add the
                         repository extras:
                       </p>
