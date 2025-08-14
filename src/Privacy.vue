@@ -9,7 +9,7 @@
           Privacy Policy
         </p>
         <p class="text-base text-gray-800 dark:text-white py-4">
-          Effective Date: July 7 2024
+          Effective Date: Aug 14 2025
         </p>
         <p class="text-base text-gray-800 dark:text-white py-4">
           At Beaver Notes, we take your privacy seriously and are committed to
@@ -61,6 +61,18 @@
           collects anonymized data, such as page views and visit durations, to
           help us analyze user behavior. This data is not linked to any specific
           individual and is used solely for analytical purposes.
+        </p>
+        <p id="emails" class="text-base text-gray-800 dark:text-white py-4">
+          <b>Emails:</b> We collect your email upon signup on the download page
+          to join the Android closed beta. The backend is open source and can be
+          audited on
+          <a
+            href="https://github.com/Beaver-Notes/beaver-website/tree/main/backend"
+            >GitHub</a
+          >. Emails are stored in an encrypted database and provided to the
+          Google Play Console, where Google's privacy policy applies. Emails are
+          deleted after being exported and will also be deleted once the project
+          moves to open beta.
         </p>
         <p
           class="text-xl font-bold text-gray-800 dark:text-white"
@@ -130,3 +142,40 @@
     </div>
   </div>
 </template>
+<script>
+import { onMounted, nextTick } from "vue";
+import { useRoute } from "vue-router";
+
+export default {
+  setup() {
+    const route = useRoute();
+
+    const highlightElement = (hash) => {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        el.classList.add("highlight");
+
+        // Remove highlight after 3 seconds for smoother fade
+        setTimeout(() => el.classList.remove("highlight"), 3000);
+      }
+    };
+
+    onMounted(() => {
+      if (route.hash) {
+        // wait for DOM to be ready
+        nextTick(() => highlightElement(route.hash));
+      }
+    });
+
+    return { highlightElement };
+  },
+};
+</script>
+<style>
+.highlight {
+  color: #f5c856 !important;
+
+  transition: color 2s ease-out;
+}
+</style>

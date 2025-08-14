@@ -6,6 +6,8 @@ import AppIcon4 from "@/assets/icons/AppIcon-4.webp";
 import AppIcon5 from "@/assets/icons/AppIcon-5.webp";
 import AppIcon6 from "@/assets/icons/AppIcon-6.webp";
 import { RiArrowDownCircleFill } from "vue-remix-icons";
+import router from "./router";
+import axios from "axios";
 
 export default {
   components: {
@@ -25,6 +27,8 @@ export default {
       images: [AppIcon1, AppIcon2, AppIcon3, AppIcon4, AppIcon5, AppIcon6],
       currentImageIndex: 0,
       intervalId: null,
+      showEmailPrompt: false,
+      email: "",
     };
   },
   mounted() {
@@ -35,6 +39,9 @@ export default {
     clearInterval(this.intervalId);
   },
   methods: {
+    goToEmails() {
+      router.push({ path: "/privacy", hash: "#emails" });
+    },
     startImageRotation() {
       this.intervalId = setInterval(() => {
         this.currentImageIndex =
@@ -55,6 +62,7 @@ export default {
         this.buttonText = "Test it on Google Play";
         this.androidLink =
           "https://play.google.com/apps/internaltest/4698784723576585782";
+        this.showEmailPrompt = true;
       } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         this.isiOS = true;
         this.buttonText = "Open on App Store";
@@ -70,6 +78,28 @@ export default {
         this.isMac = true;
         this.buttonText = "Download for Mac";
         this.macDownloadLink = `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-notes-${this.version}-universal.dmg`;
+      }
+    },
+    async submitEmail() {
+      if (!this.email) {
+        this.statusMessage = "Please enter your email.";
+        return;
+      }
+
+      try {
+        const response = await axios.post("https://db.beavernotes.com/signup", {
+          email: this.email,
+        });
+
+        if (response.data.success) {
+          this.statusMessage = "Email sent successfully!";
+          this.email = "";
+        } else {
+          this.statusMessage = "Failed to send email. Try again later.";
+        }
+      } catch (error) {
+        console.error(error);
+        this.statusMessage = "An error occurred. Try again later.";
       }
     },
   },
@@ -257,10 +287,35 @@ export default {
         v-if="isAndroid"
         class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-sm"
       >
+        <div
+          v-if="isAndroid && showEmailPrompt"
+          class="mt-6 w-full max-w-sm mx-auto"
+        >
+          <p
+            class="text-sm mb-6 text-center text-neutral-600 dark:text-neutral-300"
+          >
+            Enter your email to get early access to our closed beta on the Play
+            Store.
+          </p>
+          <div class="flex gap-2">
+            <input
+              v-model="email"
+              type="email"
+              placeholder="Your email"
+              class="flex-1 px-4 py-3 bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-300 dark:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            />
+            <button
+              @click="submitEmail"
+              class="bg-amber-500 text-white px-4 py-3 rounded-lg transition"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
         <a
           type="button"
           href="https://github.com/Beaver-Notes/Beaver-pocket/releases"
-          class="flex items-center justify-center w-48 mt-3 text-white bg-black dark:bg-neutral-800 h-14 rounded-md"
+          class="hidden flex items-center justify-center w-48 mt-3 text-white bg-black dark:bg-neutral-800 h-14 rounded-md"
         >
           <div class="mr-3">
             <svg
@@ -375,6 +430,13 @@ export default {
       >
         Check out the release notes
       </a>
+      <button
+        @click="goToEmails"
+        v-if="isAndroid || isiOS"
+        class="mt-8 text-sm text-amber-500 hover:text-amber-600 transition"
+      >
+        Check out the privacy policy
+      </button>
       <a
         v-if="isAndroid || isiOS"
         :href="`https://github.com/Beaver-Notes/Beaver-Pocket/releases/tag/${versionpocket}`"
