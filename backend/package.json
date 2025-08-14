@@ -6,6 +6,7 @@
   "repository": "https://github.com/beaver-notes/beaver-website",
   "author": "Daniele Rolli",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",

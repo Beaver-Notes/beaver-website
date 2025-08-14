@@ -29,6 +29,7 @@ export default {
       intervalId: null,
       showEmailPrompt: false,
       email: "",
+      statusMessage: "",
     };
   },
   mounted() {
@@ -94,6 +95,7 @@ export default {
         if (response.data.success) {
           this.statusMessage = "Email sent successfully!";
           this.email = "";
+          this.showEmailPrompt = false;
         } else {
           this.statusMessage = "Failed to send email. Try again later.";
         }
@@ -287,8 +289,22 @@ export default {
         v-if="isAndroid"
         class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-sm"
       >
+        <div v-if="statusMessage" class="mt-6 w-full max-w-sm mx-auto">
+          <p
+            class="text-sm text-center"
+            :class="
+              statusMessage.includes('successfully')
+                ? 'text-green-600 dark:text-green-400'
+                : 'text-red-600 dark:text-red-400'
+            "
+          >
+            {{ statusMessage }}
+          </p>
+        </div>
+
+        <!-- Only show form if no message OR not a success -->
         <div
-          v-if="isAndroid && showEmailPrompt"
+          v-else-if="isAndroid && showEmailPrompt"
           class="mt-6 w-full max-w-sm mx-auto"
         >
           <p

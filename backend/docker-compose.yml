@@ -10,6 +10,7 @@ services:
       - DATABASE_URL=${DATABASE_URL}
     networks:
       - internal
+      # add external if you are not planning on using the nginx in this docker file
 
   db:
     image: postgres:15
@@ -43,9 +44,7 @@ services:
 
 networks:
   internal:
-    internal: true
   external:
-    external: true
 
 volumes:
   pgdata:
