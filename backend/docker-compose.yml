@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    container_name: beta_backend
+    restart: unless-stopped
+    environment:
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
+      - DATABASE_URL=${DATABASE_URL}
+    networks:
+      - internal
+
+  db:
+    image: postgres:15
+    container_name: beta_db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=postgres #change in production
+      - POSTGRES_PASSWORD=changeme #change in production
+      - POSTGRES_DB=emails
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db-init:/docker-entrypoint-initdb.d
+    networks:
+      - internal
+
+  nginx:
+    image: nginx:alpine
+    container_name: beta_nginx
+    restart: unless-stopped
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - backend
+    networks:
+      - internal
+      - external
+
+networks:
+  internal:
+    internal: true
+  external:
+    external: true
+
+volumes:
+  pgdata:

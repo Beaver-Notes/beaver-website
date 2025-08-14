@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS beta_emails (
+    id SERIAL PRIMARY KEY,
+    iv TEXT NOT NULL,
+    encrypted TEXT NOT NULL,
+    auth_tag TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

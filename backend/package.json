@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A simple dockerized backend for beaver's official website",
+  "main": "index.js",
+  "repository": "https://github.com/beaver-notes/beaver-website",
+  "author": "Daniele Rolli",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "pg": "^8.11.1"
+  }
+}
