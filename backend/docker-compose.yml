@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   backend:
-    build: ./backend
+    build: .
     container_name: beta_backend
     restart: unless-stopped
     environment:
