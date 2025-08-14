@@ -4,6 +4,16 @@ import dotenv from "dotenv";
 import crypto from "crypto";
 import pkg from "pg";
 
+app.use(
+  cors({
+    origin: process.env.WEBSITE_URL,
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
+app.use(bodyParser.json());
+
 dotenv.config();
 const { Pool } = pkg;
 const app = express();
