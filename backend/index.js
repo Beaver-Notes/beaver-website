@@ -3,10 +3,20 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import crypto from "crypto";
 import pkg from "pg";
+import cors from "cors";  
 
 dotenv.config();
+
 const { Pool } = pkg;
-const app = express();
+const app = express(); 
+
+app.use(
+  cors({
+    origin: process.env.WEBSITE_URL,
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 app.use(bodyParser.json());
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
