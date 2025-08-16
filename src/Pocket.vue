@@ -21,7 +21,10 @@
               note taking app for you on the go.
             </p>
             <div>
-              <div class="flex flex-col space-y-3">
+              <div
+                v-if="!/android/i.test(userAgent)"
+                class="flex flex-col space-y-3"
+              >
                 <!-- First button pair -->
                 <div class="flex space-x-3">
                   <a
@@ -213,12 +216,167 @@
                   </button>
                 </div>
               </div>
+              <div
+                v-if="/android/i.test(userAgent)"
+                class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-sm"
+              >
+                <div v-if="statusMessage" class="mt-6 w-full max-w-sm mx-auto">
+                  <p
+                    class="text-sm text-center"
+                    :class="
+                      statusMessage.includes('successfully')
+                        ? 'text-green-600 dark:text-green-400'
+                        : 'text-red-600 dark:text-red-400'
+                    "
+                  >
+                    {{ statusMessage }}
+                  </p>
+                </div>
+
+                <!-- Only show form if no message OR not a success -->
+                <div
+                  v-else-if="isAndroid && showEmailPrompt"
+                  class="mt-6 w-full max-w-sm mx-auto"
+                >
+                  <p
+                    class="text-sm mb-6 text-center text-neutral-600 dark:text-neutral-300"
+                  >
+                    Enter your email to get early access to our closed beta on
+                    the Play Store.
+                  </p>
+                  <div class="flex gap-2">
+                    <input
+                      v-model="email"
+                      type="email"
+                      placeholder="Your email"
+                      class="flex-1 px-4 py-3 bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-300 dark:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    />
+                    <button
+                      @click="submitEmail"
+                      class="bg-amber-500 text-white px-4 py-3 rounded-lg transition"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+                <a
+                  type="button"
+                  href="https://github.com/Beaver-Notes/Beaver-pocket/releases"
+                  class="hidden flex items-center justify-center w-48 mt-3 text-white bg-black dark:bg-neutral-800 h-14 rounded-md"
+                >
+                  <div class="mr-3">
+                    <svg
+                      fill="#ffffff"
+                      width="30"
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs">GET IT ON</div>
+                    <div class="-mt-1 font-sans text-xl font-semibold">
+                      Github
+                    </div>
+                  </div>
+                </a>
+                <a
+                  type="button"
+                  class="flex items-center justify-center w-48 mt-3 text-white bg-black rounded-lg h-14 hidden"
+                  :href="androidLink"
+                >
+                  <div class="mr-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 48 48"
+                    >
+                      <linearGradient
+                        id="AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1"
+                        x1="18.102"
+                        x2="25.297"
+                        y1="3.244"
+                        y2="34.74"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="0" stop-color="#35ab4a"></stop>
+                        <stop offset=".297" stop-color="#31a145"></stop>
+                        <stop offset=".798" stop-color="#288739"></stop>
+                        <stop offset="1" stop-color="#237a33"></stop>
+                      </linearGradient>
+                      <path
+                        fill="url(#AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1)"
+                        d="M13.488,4.012C10.794,2.508,7.605,3.778,6.45,6.323L24.126,24l9.014-9.014L13.488,4.012z"
+                      ></path>
+                      <linearGradient
+                        id="AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2"
+                        x1="19.158"
+                        x2="21.194"
+                        y1="23.862"
+                        y2="66.931"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="0" stop-color="#f14e5d"></stop>
+                        <stop offset=".499" stop-color="#ea3d4f"></stop>
+                        <stop offset="1" stop-color="#e12138"></stop>
+                      </linearGradient>
+                      <path
+                        fill="url(#AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2)"
+                        d="M33.14,33.014L24.126,24L6.45,41.677 c1.156,2.546,4.345,3.815,7.038,2.312L33.14,33.014z"
+                      ></path>
+                      <linearGradient
+                        id="AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3"
+                        x1="32.943"
+                        x2="36.541"
+                        y1="14.899"
+                        y2="43.612"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="0" stop-color="#ffd844"></stop>
+                        <stop offset=".519" stop-color="#ffc63f"></stop>
+                        <stop offset="1" stop-color="#ffb03a"></stop>
+                      </linearGradient>
+                      <path
+                        fill="url(#AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3)"
+                        d="M41.419,28.393 c1.72-0.96,2.58-2.676,2.581-4.393c-0.001-1.717-0.861-3.434-2.581-4.393l-8.279-4.621L24.126,24l9.014,9.014L41.419,28.393z"
+                      ></path>
+                      <linearGradient
+                        id="AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4"
+                        x1="13.853"
+                        x2="15.572"
+                        y1="5.901"
+                        y2="42.811"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset=".003" stop-color="#0090e6"></stop>
+                        <stop offset="1" stop-color="#0065a0"></stop>
+                      </linearGradient>
+                      <path
+                        fill="url(#AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4)"
+                        d="M6.45,6.323C6.168,6.948,6,7.652,6,8.408 v31.179c0,0.761,0.164,1.463,0.45,2.09l17.674-17.68L6.45,6.323z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs">TEST IT ON</div>
+                    <div class="-mt-1 font-sans text-xl font-semibold">
+                      Google Play
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div
-          class="w-[64rem] rounded-2xl"
-        >
+        <div class="w-[64rem] rounded-2xl">
           <img
             src="/src/assets/pocket/devices.webp"
             alt="Product screenshot"
@@ -238,3 +396,55 @@
     </div>
   </div>
 </template>
+<script>
+import { ref, computed } from "vue";
+import axios from "axios";
+
+export default {
+  setup() {
+    // state
+    const email = ref("");
+    const statusMessage = ref("");
+    const showEmailPrompt = ref(true);
+    const userAgent =
+      window.navigator.userAgent || window.navigator.vendor || window.opera;
+
+    // computed
+    const isAndroid = computed(() => /android/i.test(userAgent));
+
+    // methods
+    const submitEmail = async () => {
+      if (!email.value) {
+        statusMessage.value = "Please enter your email.";
+        return;
+      }
+
+      try {
+        const response = await axios.post("https://db.beavernotes.com/signup", {
+          email: email.value,
+        });
+
+        if (response.data.success) {
+          statusMessage.value = "Email sent successfully!";
+          email.value = "";
+          showEmailPrompt.value = false;
+        } else {
+          statusMessage.value = "Failed to send email. Try again later.";
+        }
+      } catch (error) {
+        console.error(error);
+        statusMessage.value = "An error occurred. Try again later.";
+      }
+    };
+
+    return {
+      email,
+      statusMessage,
+      showEmailPrompt,
+      userAgent,
+      isAndroid,
+      submitEmail,
+    };
+  },
+};
+</script>
