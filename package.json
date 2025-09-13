@@ -11,7 +11,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.22",
     "autoprefixer": "^10.4.20",
-    "axios": "^1.8.2",
+    "axios": "^1.12.0",
     "hast-util-to-html": "^9.0.5",
     "katex": "0.16.21",
     "lowlight": "^3.3.0",
