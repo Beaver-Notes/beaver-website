@@ -71,7 +71,7 @@ export default {
       } else if (navigator.platform.startsWith("Win")) {
         this.isWindows = true;
         this.buttonText = "Download for Windows";
-        this.windowsDownloadLink = `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.versionn}/Beaver-notes-Setup-${this.version}.exe`;
+        this.windowsDownloadLink = `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-notes-Setup-${this.version}.exe`;
       } else if (navigator.platform.startsWith("Linux")) {
         this.isLinux = true;
         this.buttonText = "Download for Linux";
