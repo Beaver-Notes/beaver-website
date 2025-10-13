@@ -59,20 +59,18 @@
     </div>
   </div>
   <div
-    class="flex justify-center items-center space-x-4 overflow-hidden sm:overflow-visible mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+    class="flex sm:justify-center sm:items-center space-x-4 overflow-hidden sm:overflow-visible mx-auto max-w-7xl px-6 lg:px-8"
   >
     <div
-      class="w-full max-w-[64rem] rounded-lg md:rounded-2xl p-1 bg-neutral-500/10 border-neutral-500/30 dark:bg-black/10 border dark:border-black/30 backdrop-blur-md shadow-lg"
+      class="w-[64rem] sm:w-full rounded-2xl p-1 bg-neutral-500/10 border-neutral-500/30 dark:bg-black/10 border dark:border-black/30 backdrop-blur-md shadow-lg"
     >
       <img
         src="/src/assets/home/space-light.webp"
-        alt="Space light"
-        class="w-full rounded-md md:rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
+        class="w-[64rem] sm:w-full max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
       />
       <img
         src="/src/assets/home/space-dark.webp"
-        alt="Space dark"
-        class="w-full rounded-md md:rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
+        class="w-[64rem] sm:w-full max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
       />
     </div>
   </div>
@@ -119,19 +117,19 @@
           </div>
         </div>
         <div
-          class="w-full max-w-[64rem] rounded-lg md:rounded-2xl p-1 bg-neutral-500/10 border-neutral-500/30 dark:bg-black/10 border dark:border-black/30 backdrop-blur-md shadow-lg mx-auto"
+          class="w-[64rem] rounded-2xl p-1 bg-neutral-500/10 border-neutral-500/30 dark:bg-black/10 border dark:border-black/30 backdrop-blur-md shadow-lg"
         >
           <img
             src="/src/assets/home/app.webp"
             alt="Product screenshot"
-            class="w-full rounded-md md:rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
+            class="w-[64rem] max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
             width="2432"
             height="1442"
           />
           <img
             src="/src/assets/home/app-dark.webp"
             alt="Product screenshot"
-            class="w-full rounded-md md:rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
+            class="w-[64rem] max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
             width="2432"
             height="1442"
           />
