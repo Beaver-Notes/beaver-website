@@ -75,5 +75,20 @@
         </div>
       </a>
     </div>
+    <div class="mt-12 text-center">
+      <a
+        href="https://openalternative.co/beaver-notes?utm_source=openalternative&utm_medium=badge&utm_campaign=embed&utm_content=tool-beaver-notes"
+        target="_blank"
+      >
+        <img
+          src="https://openalternative.co/beaver-notes/badge.svg?theme=light&width=200&height=50"
+          width="200"
+          height="50"
+          alt="Beaver Notes badge"
+          loading="lazy"
+          class="mx-auto"
+        />
+      </a>
+    </div>
   </div>
 </template>

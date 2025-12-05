@@ -3,19 +3,19 @@
     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
       <div class="mb-8 flex justify-center">
         <div
-          class="hidden sm:block text-sm relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-600 dark:text-neutral-200 ring-1 ring-neutral-900/10 dark:ring-neutral-300/10 dark:hover:ring-neutral-300/20 hover:ring-neutral-900/20 hover:shadow-amber-400 hover:shadow-lg transition-shadow duration-300"
+          class="block sm:hidden text-sm relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-600 dark:text-neutral-200 ring-1 ring-neutral-900/10 dark:ring-neutral-300/10 dark:hover:ring-neutral-300/20 hover:ring-neutral-900/20 hover:shadow-amber-400 hover:shadow-lg transition-shadow duration-300"
         >
-          🎉 Check out the all new Beaver Pocket
+          🎉 Beaver Pocket beta now open
           <a href="#/Pocket" class="font-semibold text-amber-500"
             ><span class="absolute inset-0" aria-hidden="true"></span>Read more
             <span aria-hidden="true">&rarr;</span></a
           >
         </div>
         <div
-          class="block sm:hidden text-sm relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-600 dark:text-neutral-200 ring-1 ring-neutral-900/10 dark:ring-neutral-300/10 dark:hover:ring-neutral-300/20 hover:ring-neutral-900/20 hover:shadow-amber-400 hover:shadow-lg transition-shadow duration-300"
+          class="hidden sm:block text-sm relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-600 dark:text-neutral-200 ring-1 ring-neutral-900/10 dark:ring-neutral-300/10 dark:hover:ring-neutral-300/20 hover:ring-neutral-900/20 hover:shadow-amber-400 hover:shadow-lg transition-shadow duration-300"
         >
-          🎉 The all new Beaver Pocket
-          <a href="#/Pocket" class="font-semibold text-amber-500"
+          🎉 4.2.0 now out
+          <a href="#/Download" class="font-semibold text-amber-500"
             ><span class="absolute inset-0" aria-hidden="true"></span>Read more
             <span aria-hidden="true">&rarr;</span></a
           >
@@ -62,15 +62,15 @@
     class="flex sm:justify-center sm:items-center space-x-4 overflow-hidden sm:overflow-visible mx-auto max-w-7xl px-6 lg:px-8"
   >
     <div
-      class="w-[64rem] sm:w-full rounded-2xl p-1 bg-neutral-500/10 border-neutral-500/30 dark:bg-black/10 border dark:border-black/30 backdrop-blur-md shadow-lg"
+      class="w-[64rem] sm:w-full rounded-2xl"
     >
       <img
         src="/src/assets/home/space-light.webp"
-        class="w-[64rem] sm:w-full max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
+        class="w-[32rem] sm:w-full max-w-none rounded-lg md:rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
       />
       <img
         src="/src/assets/home/space-dark.webp"
-        class="w-[64rem] sm:w-full max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
+        class="w-[32rem] sm:w-full max-w-none rounded-lg md:rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
       />
     </div>
   </div>
@@ -84,7 +84,7 @@
       >
         <div class="lg:pr-8 lg:pt-4">
           <div class="lg:max-w-lg">
-            <h2 class="text-base font-semibold leading-7 text-amber-500">
+            <h2 class="text-base font-semibold leading-7 text-amber-400">
               Better Note taking
             </h2>
             <p
@@ -105,7 +105,7 @@
                 >
                   <component
                     :is="feature.icon"
-                    class="absolute left-1 top-1 h-5 w-5 text-amber-500"
+                    class="absolute left-1 top-1 h-5 w-5 text-amber-400"
                     aria-hidden="true"
                   />
                   {{ feature.name }}
@@ -117,19 +117,19 @@
           </div>
         </div>
         <div
-          class="w-[64rem] rounded-2xl p-1 bg-neutral-500/10 border-neutral-500/30 dark:bg-black/10 border dark:border-black/30 backdrop-blur-md shadow-lg"
+          class="w-[64rem] rounded-2xl"
         >
           <img
             src="/src/assets/home/app.webp"
             alt="Product screenshot"
-            class="w-[64rem] max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
+            class="w-[32rem] sm:w-full max-w-none rounded-lg sm:rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
             width="2432"
             height="1442"
           />
           <img
             src="/src/assets/home/app-dark.webp"
             alt="Product screenshot"
-            class="w-[64rem] max-w-none rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
+            class="w-[32rem] sm:w-full max-w-none rounded-lg sm:rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 hidden dark:block"
             width="2432"
             height="1442"
           />
