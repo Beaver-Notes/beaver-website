@@ -172,7 +172,7 @@ export default {
       </div>
       <div v-if="isWindows" class="mt-2">
         <a
-          :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes-Setup-${version}.exe`"
+          :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver.Notes-Setup-${version}.exe`"
           class="text-xs p-2 text-neutral-700 hover:text-neutral-900 dark:text-white transition text-center"
           aria-label="Looking for portable version?"
         >
@@ -705,7 +705,7 @@ export default {
               <RiArrowRightUpLine class="ml-2 w-6 h-6" />
             </a>
             <a
-              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes-${version}-portable.exe`"
+              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver.Notes-${version}-portable.exe`"
               class="hidden flex w-fit items-center px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
             >
               F-Droid

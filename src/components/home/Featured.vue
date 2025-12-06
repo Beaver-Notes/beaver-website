@@ -75,16 +75,62 @@
         </div>
       </a>
     </div>
-    <div class="mt-12 text-center">
+    <div class="mt-12 text-center flex gap-6 justify-center">
+      <!-- OpenAlternative Light -->
       <a
         href="https://openalternative.co/beaver-notes?utm_source=openalternative&utm_medium=badge&utm_campaign=embed&utm_content=tool-beaver-notes"
         target="_blank"
+        class="dark:hidden"
+        ><img
+          src="https://openalternative.co/beaver-notes/badge.svg?theme=light&width=250&height=54"
+          width="250"
+          height="54"
+          alt="Beaver Notes badge"
+          loading="lazy"
+          class="mx-auto"
+      /></a>
+
+      <!-- OpenAlternative Dark -->
+      <a
+        href="https://openalternative.co/beaver-notes?utm_source=openalternative&utm_medium=badge&utm_campaign=embed&utm_content=tool-beaver-notes"
+        target="_blank"
+        class="hidden dark:block"
+        ><img
+          src="https://openalternative.co/beaver-notes/badge.svg?theme=dark&width=250&height=54"
+          width="250"
+          height="54"
+          alt="Beaver Notes badge"
+          loading="lazy"
+          class="mx-auto"
+      /></a>
+
+      <!-- Product Hunt Light -->
+      <a
+        href="https://www.producthunt.com/products/beaver-notes?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-beaver-notes"
+        target="_blank"
+        class="dark:hidden"
       >
         <img
-          src="https://openalternative.co/beaver-notes/badge.svg?theme=light&width=200&height=50"
-          width="200"
-          height="50"
-          alt="Beaver Notes badge"
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1046776&theme=light"
+          width="250"
+          height="54"
+          alt="Beaver Notes on Product Hunt"
+          loading="lazy"
+          class="mx-auto"
+        />
+      </a>
+
+      <!-- Product Hunt Dark -->
+      <a
+        href="https://www.producthunt.com/products/beaver-notes?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-beaver-notes"
+        target="_blank"
+        class="hidden dark:block"
+      >
+        <img
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1046776&theme=dark"
+          width="250"
+          height="54"
+          alt="Beaver Notes on Product Hunt"
           loading="lazy"
           class="mx-auto"
         />
