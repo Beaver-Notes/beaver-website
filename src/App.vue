@@ -49,12 +49,6 @@ const socialLinks = [
     color: "hover:text-blue-500",
   },
   {
-    name: "Threads",
-    href: "https://www.threads.com/@beaver_notes",
-    icon: RiThreadsFill,
-    color: "hover:text-neutral-800 dark:hover:text-neutral-100",
-  },
-  {
     name: "X/Twitter",
     href: "https://x.com/BeaverNotes",
     icon: RiTwitterFill,
