@@ -162,7 +162,9 @@ const socialLinks = [
     </Dialog>
   </header>
 
-  <router-view />
+  <div class="pt-20">
+    <router-view />
+  </div>
 
   <!-- Footer -->
   <section class="bg-white dark:bg-neutral-900 mb-0">
