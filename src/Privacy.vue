@@ -8,133 +8,168 @@
         >
           Privacy Policy
         </p>
+
         <p class="text-base text-gray-800 dark:text-white py-4">
-          Effective Date: Aug 14 2025
+          Effective Date: December 29, 2025
         </p>
+
         <p class="text-base text-gray-800 dark:text-white py-4">
-          At Beaver Notes, we take your privacy seriously and are committed to
-          protecting your personal information. This Privacy Policy outlines how
-          we collect, use, and safeguard your data when you interact with the
-          Beaver Notes applications, services and website.
+          <b>Privacy Summary:</b> Beaver Notes is built to work without
+          collecting your personal data. Notes and media are stored locally on
+          your device and are never uploaded to Beaver servers. We do not use
+          in-app trackers, advertising SDKs, or built-in synchronization.
+          Limited personal data is processed only where strictly necessary, such
+          as for Android closed beta access or accounts on our translation
+          platform. Our website uses anonymized analytics with no cookies or
+          personal identifiers. We follow GDPR-aligned data protection
+          principles, including data minimization and transparency.
         </p>
+
         <p
           class="text-xl font-bold text-gray-800 dark:text-white"
           style="font-family: 'Arimo', sans-serif"
         >
-          Information We Collect
+          Information We Process
         </p>
+
         <p class="text-base text-gray-800 dark:text-white py-4">
-          <b>Desktop App Data:</b> Beaver Notes is designed with your privacy in
-          mind, and we do not collect any personal information from you within
-          the app. All data, media, and notes you create within the app are
-          stored locally on your device only. We do not perform any data sync or
-          store your information on our servers.
+          <b>Desktop App (Beaver Notes):</b> Beaver Notes does not require user
+          accounts and does not collect personal information through the app.
+          All notes, media, and related data are stored locally on your device.
+          The app does not include built-in synchronization, analytics, or data
+          transmission to Beaver servers.
         </p>
-        <p></p>
+
         <p class="text-base text-gray-800 dark:text-white py-4">
-          <b>Mobile App Data:</b> Beaver Pocket prioritizes your privacy. We do
-          not collect any personal information within the app. All data, media,
-          and notes you create are stored locally on your device only. We do not
-          perform data synchronization or store your information on our servers.
-          Any analytics data collected is managed by platforms like the App
-          Store and Google Play Store, following your country's laws and
-          regulations. If you decide to sync your data using a cloud provider,
-          we strongly advise reviewing their privacy policy. Your data will be
-          uploaded to their servers and handled in accordance with both your
-          country's laws and the cloud provider's privacy policy.
+          <b>Mobile App (Beaver Pocket):</b> Beaver Pocket follows the same
+          local-first approach. The app does not collect personal information,
+          does not include analytics SDKs, and does not transmit user data to
+          Beaver servers. All content is stored locally on your device.
         </p>
-        <p></p>
+
         <p class="text-base text-gray-800 dark:text-white py-4">
-          <b>Translation Platform:</b> Beaver utilizes Traduora to translate its
-          apps and services. By signing up for our Traduora instance at
-          translate-beaver.duckdns.org, you knowingly share your email with us
-          to access the translation platform and manage your account. Your email
-          and other data, such as passwords and logins, are all stored in a
-          MySQL database on Beaver servers encrypted using industry-standard
-          encryption. Upon permanently deleting your account, all your data will
-          be handled in accordance with GDPR regulations, even outside the EU.
+          Any file synchronization occurs only through operating system–level or
+          user-configured third-party cloud services (such as device backups or
+          folder syncing). These services are not provided or controlled by
+          Beaver, and any data processed by them is governed by the respective
+          provider’s privacy policy.
         </p>
-        <p></p>
+
         <p class="text-base text-gray-800 dark:text-white py-4">
-          <b>Website Analytics:</b> We use Umami analytics on our website to
-          better understand user interactions and improve our services. Umami
-          collects anonymized data, such as page views and visit durations, to
-          help us analyze user behavior. This data is not linked to any specific
-          individual and is used solely for analytical purposes.
+          Crash reports, if generated, are handled by the operating system or
+          app distribution platform and are not sent directly to Beaver servers.
         </p>
+
+        <p class="text-base text-gray-800 dark:text-white py-4">
+          <b>App Store & Platform Analytics:</b> We may receive aggregated and
+          anonymized statistics from app distribution platforms such as Google
+          Play or the Apple App Store (for example, install counts or crash
+          summaries). This data does not identify individual users and is
+          subject to the respective platform’s privacy policy.
+        </p>
+
+        <p class="text-base text-gray-800 dark:text-white py-4">
+          <b>Website Analytics:</b> Our website uses Umami Analytics, operated
+          by Umami. Umami does not use cookies and collects only anonymized,
+          aggregate data such as page views and visit duration. No personally
+          identifiable information is collected through website analytics.
+        </p>
+
+        <p class="text-base text-gray-800 dark:text-white py-4">
+          <b>Translation Platform (Beaver Traduora):</b> We operate a
+          self-hosted instance of the Traduora translation platform for managing
+          translations of Beaver apps and services. When you create an account,
+          we process your email address and authentication credentials. Account
+          data is stored on Beaver-controlled servers. Password handling and
+          security follow Traduora’s standard implementation.
+        </p>
+
+        <p class="text-base text-gray-800 dark:text-white py-4">
+          This platform is intended for contributors and collaborators. Account
+          data is retained for as long as the account remains active and is
+          deleted upon account removal.
+        </p>
+
         <p id="emails" class="text-base text-gray-800 dark:text-white py-4">
-          <b>Emails:</b> We collect your email upon signup on the download page
-          to join the Android closed beta. The backend is open source and can be
-          audited on
+          <b>Android Closed Beta Emails:</b> We collect email addresses solely
+          to manage access to the Android closed beta via Google Play. Emails
+          are not used for marketing or communications. They are exported once
+          to the Google Play Console and then deleted from our backend. No email
+          data is retained once the project exits closed beta. The backend
+          handling this process is open source and publicly auditable on
           <a
+            class="text-amber-500"
             href="https://github.com/Beaver-Notes/beaver-website/tree/main/backend"
             >GitHub</a
-          >. Emails are stored in an encrypted database and provided to the
-          Google Play Console, where Google's privacy policy applies. Emails are
-          deleted after being exported and will also be deleted once the project
-          moves to open beta.
+          >.
         </p>
+
         <p
           class="text-xl font-bold text-gray-800 dark:text-white"
           style="font-family: 'Arimo', sans-serif"
         >
-          Children's Privacy
+          Children’s Privacy
         </p>
+
         <p class="text-base text-gray-800 dark:text-white py-4">
-          Beaver Notes, Beaver Pocket and Beaver Traduora are not intended for
-          use by children under the age of 13. We do not knowingly collect
-          personal information from children. If you are a parent or guardian
-          and believe that your child has provided us with personal information,
-          please contact us, and we will promptly delete such information.
+          Beaver Notes, Beaver Pocket, and Beaver Traduora are not intended for
+          children under the age of 13. We do not knowingly collect personal
+          information from children. If such information is identified, it will
+          be deleted promptly.
         </p>
+
         <p
           class="text-xl font-bold text-gray-800 dark:text-white"
           style="font-family: 'Arimo', sans-serif"
         >
           Data Security
         </p>
+
         <p class="text-base text-gray-800 dark:text-white py-4">
-          We take strong measures to ensure the security of your data. Beaver
-          Notes, Beaver Pocket and Beaver Traduora employ industry-standard
-          encryption and security protocols to safeguard your information from
-          unauthorized access or disclosure. Any crash logs collected are
-          anonymized and used solely for identifying and resolving technical
-          issues.
+          We apply reasonable technical and organizational measures to protect
+          systems under our control. Since Beaver Notes and Beaver Pocket store
+          data locally on your device, you retain full control over your
+          content. No user note data is stored on Beaver servers.
         </p>
+
         <p
           class="text-xl font-bold text-gray-800 dark:text-white"
           style="font-family: 'Arimo', sans-serif"
         >
-          Your Choices
+          Your Rights and Choices
         </p>
+
         <p class="text-base text-gray-800 dark:text-white py-4">
-          As Beaver Notes and Beaver Pocket do not collect any personal
-          information or transmit data externally, you have full control over
-          your data. You can manage, export, or delete your notes and media
-          directly within the app.
+          You have full control over your local data within Beaver Notes and
+          Beaver Pocket. For services where we process personal data (such as
+          beta access emails or translation platform accounts), you may request
+          access, correction, or deletion by contacting us.
         </p>
+
         <p
           class="text-xl font-bold text-gray-800 dark:text-white"
           style="font-family: 'Arimo', sans-serif"
         >
           Changes to This Policy
         </p>
+
         <p class="text-base text-gray-800 dark:text-white py-4">
-          We may update this Privacy Policy from time to time to reflect changes
-          in our practices or for other operational, legal, or regulatory
-          reasons. Any updates will be provided within the app or on our
-          website.
+          We may update this Privacy Policy to reflect changes in functionality
+          or legal requirements. Updates will be published on our website or
+          within our applications with a revised effective date.
         </p>
+
         <p
           class="text-xl font-bold text-gray-800 dark:text-white"
           style="font-family: 'Arimo', sans-serif"
         >
-          Contact Us
+          Contact
         </p>
+
         <p class="text-base text-gray-800 dark:text-white py-4">
-          If you have any questions, concerns, or requests regarding this
-          Privacy Policy or your data privacy, please contact us at
-          <a class="text-base text-amber-500 py-4" href="danielerolli@proton.me"
+          If you have questions or requests regarding this Privacy Policy, you
+          may contact us at
+          <a class="text-amber-500" href="mailto:danielerolli@proton.me"
             >danielerolli@proton.me</a
           >.
         </p>
@@ -142,40 +177,3 @@
     </div>
   </div>
 </template>
-<script>
-import { onMounted, nextTick } from "vue";
-import { useRoute } from "vue-router";
-
-export default {
-  setup() {
-    const route = useRoute();
-
-    const highlightElement = (hash) => {
-      const el = document.querySelector(hash);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-        el.classList.add("highlight");
-
-        // Remove highlight after 3 seconds for smoother fade
-        setTimeout(() => el.classList.remove("highlight"), 3000);
-      }
-    };
-
-    onMounted(() => {
-      if (route.hash) {
-        // wait for DOM to be ready
-        nextTick(() => highlightElement(route.hash));
-      }
-    });
-
-    return { highlightElement };
-  },
-};
-</script>
-<style>
-.highlight {
-  color: #f5c856 !important;
-
-  transition: color 2s ease-out;
-}
-</style>
