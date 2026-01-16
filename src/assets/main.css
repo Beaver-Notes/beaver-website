@@ -24,10 +24,3 @@ body {
     scrollbar-width: none; /* Firefox */
   }
 }
-
-.pre {
-  @apply bg-black bg-opacity-5 rounded-lg dark:bg-neutral-600 dark:bg-opacity-30 text-neutral-700 dark:text-neutral-200 pt-6 !important;
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  tab-size: 2;
-  font-variant-ligatures: normal;
-}

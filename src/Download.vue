@@ -1,41 +1,62 @@
-<script>
+<script lang="jsx">
+import {
+  RiMicrosoftFill,
+  RiAppleFill,
+  RiArrowDownSLine,
+  RiArrowRightUpLine,
+} from "vue-remix-icons";
+import axios from "axios";
 import AppIcon1 from "@/assets/icons/AppIcon-1.webp";
 import AppIcon2 from "@/assets/icons/AppIcon-2.webp";
 import AppIcon3 from "@/assets/icons/AppIcon-3.webp";
 import AppIcon4 from "@/assets/icons/AppIcon-4.webp";
 import AppIcon5 from "@/assets/icons/AppIcon-5.webp";
 import AppIcon6 from "@/assets/icons/AppIcon-6.webp";
-import {
-  RiArrowDownCircleFill,
-  RiArrowRightUpLine,
-  RiTestTubeLine,
-} from "vue-remix-icons";
-import router from "./router";
-import axios from "axios";
+
+const LinuxIcon = {
+  render() {
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <path d="M316.9 187.3C317.9 187.8 318.7 189 319.9 189C321 189 322.7 188.6 322.8 187.5C323 186.1 320.9 185.2 319.6 184.6C317.9 183.9 315.7 183.6 314.1 184.5C313.7 184.7 313.3 185.2 313.5 185.6C313.8 186.9 315.8 186.7 316.9 187.3zM295 189C296.2 189 297 187.8 298 187.3C299.1 186.7 301.1 186.9 301.5 185.7C301.7 185.3 301.3 184.8 300.9 184.6C299.3 183.7 297.1 184 295.4 184.7C294.1 185.3 292 186.2 292.2 187.6C292.3 188.6 294 189.1 295 189zM516 467.8C512.4 463.8 510.7 456.2 508.8 448.1C507 440 504.9 431.3 498.3 425.7C497 424.6 495.7 423.6 494.3 422.8C493 422 491.6 421.3 490.2 420.8C499.4 393.5 495.8 366.3 486.5 341.7C475.1 311.6 455.2 285.3 440 267.3C422.9 245.8 406.3 225.4 406.6 195.3C407.1 149.4 411.7 64.1 330.8 64C228.4 63.8 254 167.4 252.9 199.2C251.2 222.6 246.5 241 230.4 263.9C211.5 286.4 184.9 322.7 172.3 360.6C166.3 378.5 163.5 396.7 166.1 413.9C159.6 419.7 154.7 428.6 149.5 434.1C145.3 438.4 139.2 440 132.5 442.4C125.8 444.8 118.5 448.4 114 456.9C111.9 460.8 111.2 465 111.2 469.3C111.2 473.2 111.8 477.2 112.4 481.1C113.6 489.2 114.9 496.8 113.2 501.9C108 516.3 107.3 526.3 111 533.6C114.8 540.9 122.4 544.1 131.1 545.9C148.4 549.5 171.9 548.6 190.4 558.4C210.2 568.8 230.3 572.5 246.3 568.8C257.9 566.2 267.4 559.2 272.2 548.6C284.7 548.5 298.5 543.2 320.5 542C335.4 540.8 354.1 547.3 375.6 546.1C376.2 548.4 377 550.7 378.1 552.8L378.1 552.9C386.4 569.6 401.9 577.2 418.4 575.9C435 574.6 452.5 564.9 466.7 548C480.3 531.6 502.7 524.8 517.6 515.8C525 511.3 531 505.7 531.5 497.5C531.9 489.3 527.1 480.2 516 467.8zM319.8 151.3C329.6 129.1 354 129.5 363.8 150.9C370.3 165.1 367.4 181.8 359.5 191.3C357.9 190.5 353.6 188.7 346.9 186.4C348 185.2 350 183.7 350.8 181.8C355.6 170 350.6 154.8 341.7 154.5C334.4 154 327.8 165.3 329.9 177.5C325.8 175.5 320.5 174 316.9 173.1C315.9 166.2 316.6 158.5 319.8 151.3zM279.1 139.8C289.2 139.8 299.9 154 298.2 173.3C294.7 174.3 291.1 175.8 288 177.9C289.2 169 284.7 157.8 278.4 158.3C270 159 268.6 179.5 276.6 186.4C277.6 187.2 278.5 186.2 270.7 191.9C255.1 177.3 260.2 139.8 279.1 139.8zM265.5 200.5C271.7 195.9 279.1 190.5 279.6 190C284.3 185.6 293.1 175.8 307.5 175.8C314.6 175.8 323.1 178.1 333.4 184.7C339.7 188.8 344.7 189.1 356 194C364.4 197.5 369.7 203.7 366.5 212.2C363.9 219.3 355.5 226.6 343.8 230.3C332.7 233.9 324 246.3 305.6 245.2C301.7 245 298.6 244.2 296 243.1C288 239.6 283.8 232.7 276 228.1C267.4 223.3 262.8 217.7 261.3 212.8C259.9 207.9 261.3 203.8 265.5 200.5zM268.8 534.5C266.1 569.6 224.9 568.9 193.5 552.5C163.6 536.7 124.9 546 117 530.6C114.6 525.9 114.6 517.9 119.6 504.2L119.6 504C122 496.4 120.2 488 119 480.1C117.8 472.3 117.2 465.1 119.9 460.1C123.4 453.4 128.4 451 134.7 448.8C145 445.1 146.5 445.4 154.3 438.9C159.8 433.2 163.8 426 168.6 420.9C173.7 415.4 178.6 412.8 186.3 414C194.4 415.2 201.4 420.8 208.2 430L227.8 465.6C237.3 485.5 270.9 514 268.8 534.5zM267.4 508.6C263.3 502 257.8 495 253 489C260.1 489 267.2 486.8 269.7 480.1C272 473.9 269.7 465.2 262.3 455.2C248.8 437 224 422.7 224 422.7C210.5 414.3 202.9 404 199.4 392.8C195.9 381.6 196.4 369.5 199.1 357.6C204.3 334.7 217.7 312.4 226.3 298.4C228.6 296.7 227.1 301.6 217.6 319.2C209.1 335.3 193.2 372.5 215 401.6C215.6 380.9 220.5 359.8 228.8 340.1C240.8 312.7 266.1 265.2 268.1 227.4C269.2 228.2 272.7 230.6 274.3 231.5C278.9 234.2 282.4 238.2 286.9 241.8C299.3 251.8 315.4 251 329.3 243C335.5 239.5 340.5 235.5 345.2 234C355.1 230.9 363 225.4 367.5 219C375.2 249.4 393.2 293.3 404.7 314.7C410.8 326.1 423 350.2 428.3 379.3C431.6 379.2 435.3 379.7 439.2 380.7C453 345 427.5 306.5 415.9 295.8C411.2 291.2 411 289.2 413.3 289.3C425.9 300.5 442.5 323 448.5 348.3C451.3 359.9 451.8 372 448.9 384C465.3 390.8 484.8 401.9 479.6 418.8C477.4 418.7 476.4 418.8 475.4 418.8C478.6 408.7 471.5 401.2 452.6 392.7C433 384.1 416.6 384.1 414.3 405.2C402.2 409.4 396 419.9 392.9 432.5C390.1 443.7 389.3 457.2 388.5 472.4C388 480.1 384.9 490.4 381.7 501.4C349.6 524.3 305 534.3 267.4 508.6zM524.8 497.1C523.9 513.9 483.6 517 461.6 543.6C448.4 559.3 432.2 568 418 569.1C403.8 570.2 391.5 564.3 384.3 549.8C379.6 538.7 381.9 526.7 385.4 513.5C389.1 499.3 394.6 484.7 395.3 472.9C396.1 457.7 397 444.4 399.5 434.2C402.1 423.9 406.1 417 413.2 413.1C413.5 412.9 413.9 412.8 414.2 412.6C415 425.8 421.5 439.2 433 442.1C445.6 445.4 463.7 434.6 471.4 425.8C480.4 425.5 487.1 424.9 494 430.9C503.9 439.4 501.1 461.2 511.1 472.5C521.7 484.1 525.1 492 524.8 497.1zM269.4 212.7C271.4 214.6 274.1 217.2 277.4 219.8C284 225 293.2 230.4 304.7 230.4C316.3 230.4 327.2 224.5 336.5 219.6C341.4 217 347.4 212.6 351.3 209.2C355.2 205.8 357.2 202.9 354.4 202.6C351.6 202.3 351.8 205.2 348.4 207.7C344 210.9 338.7 215.1 334.5 217.5C327.1 221.7 315 227.7 304.6 227.7C294.2 227.7 285.9 222.9 279.7 218C276.6 215.5 274 213 272 211.1C270.5 209.7 270.1 206.5 267.7 206.2C266.3 206.1 265.9 209.9 269.4 212.7z" />
+      </svg>
+    );
+  },
+};
 
 export default {
   components: {
-    RiArrowDownCircleFill,
+    LinuxIcon,
+    RiMicrosoftFill,
+    RiAppleFill,
+    RiArrowDownSLine,
     RiArrowRightUpLine,
-    RiTestTubeLine,
   },
   data() {
     return {
       version: "4.2.0",
-      versionpocket: "1.6.0",
-      showDropdown: false,
-      isWindows: false,
-      isLinux: false,
-      isMac: false,
-      isAndroid: false,
-      isiOS: false,
-      buttonText: "Download Now",
+      versionPocket: "1.6.0",
+      images: [],
+      currentImageIndex: 0,
+      intervalId: null,
+      // OS / Architecture selection
+      detectedOS: null,
+      selectedOS: null,
+      osOptions: [
+        { name: "Windows", icon: "RiMicrosoftFill" },
+        { name: "macOS", icon: "RiAppleFill" },
+        { name: "Linux", icon: "LinuxIcon" },
+      ],
+      archOptions: [],
+      selectedArch: null,
+      downloadLinks: {},
+      showOSDropdown: false,
+      showArchDropdown: false,
+      // Mobile
+      isMobile: false,
+      mobileOS: null,
       images: [AppIcon1, AppIcon2, AppIcon3, AppIcon4, AppIcon5, AppIcon6],
       currentImageIndex: 0,
       intervalId: null,
-      showEmailPrompt: false,
-      email: "",
-      statusMessage: "",
     };
   },
   mounted() {
@@ -46,68 +67,152 @@ export default {
     clearInterval(this.intervalId);
   },
   methods: {
-    goToEmails() {
-      router.push({ path: "/privacy", hash: "#emails" });
-    },
     startImageRotation() {
       this.intervalId = setInterval(() => {
         this.currentImageIndex =
           (this.currentImageIndex + 1) % this.images.length;
-      }, 2000); // Change every 5 seconds
+      }, 2000);
     },
+
+    copyCommand(text) {
+      if (!text) return;
+      navigator.clipboard.writeText(text);
+    },
+
     detectOS() {
-      const userAgent =
-        window.navigator.userAgent || window.navigator.vendor || window.opera;
+      const ua = navigator.userAgent || "";
 
-      if (/windows phone/i.test(userAgent)) {
-        this.isWindows = true;
-        this.buttonText = "Download for Windows";
-        this.windowsDownloadLink = `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver.Notes-Setup-${this.version}.exe`;
-      } else if (/android/i.test(userAgent)) {
-        console.log("isAndroid");
-        this.isAndroid = true;
-        this.buttonText = "Test it on Google Play";
-        this.androidLink =
-          "https://play.google.com/apps/internaltest/4698784723576585782";
-        this.showEmailPrompt = true;
-      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        this.isiOS = true;
-        this.buttonText = "Open on App Store";
-        this.iosLink = "https://apps.apple.com/app/idXXXXXXXXX";
-      } else if (navigator.platform.startsWith("Win")) {
-        this.isWindows = true;
-        this.buttonText = "Download for Windows";
-        this.windowsDownloadLink = `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver.Notes-Setup-${this.version}.exe`;
-      } else if (navigator.platform.startsWith("Linux")) {
-        this.isLinux = true;
-        this.buttonText = "Download for Linux";
-      } else if (navigator.platform.startsWith("Mac")) {
-        this.isMac = true;
-        this.buttonText = "Download for Mac";
-        this.macDownloadLink = `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-notes-${this.version}-universal.dmg`;
+      // Detect Desktop OS
+      if (/windows phone/i.test(ua) || /windows|win32|win64/i.test(ua)) {
+        this.detectedOS = "Windows";
+        this.selectedOS = "Windows";
+        this.setArchOptions();
+      } else if (/android/i.test(ua)) {
+        this.isMobile = true;
+        this.mobileOS = "Android";
+      } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+        this.isMobile = true;
+        this.mobileOS = "iOS";
+      } else if (/macintosh|mac os x/i.test(ua)) {
+        this.detectedOS = "macOS";
+        this.selectedOS = "macOS";
+        this.setArchOptions();
+      } else if (/linux/i.test(ua)) {
+        this.detectedOS = "Linux";
+        this.selectedOS = "Linux";
+        this.setArchOptions();
       }
+
+      // Default architecture selection
+      this.selectedArch = this.archOptions[0] || null;
+
+      // Set download links
+      this.downloadLinks = {
+        Windows: {
+          "Universal Setup": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver.Notes-Setup-${this.version}.exe`,
+          "Universal Portable": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver.Notes-${this.version}-portable.exe`,
+        },
+        macOS: {
+          Universal: `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-notes-${this.version}-universal.dmg`,
+        },
+        Linux: {
+          Flatpak: "https://flathub.org/en/apps/com.beavernotes.beavernotes",
+          "Debian x64": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-notes_${this.version}_amd64.deb`,
+          "Debian ARM64": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-notes_${this.version}_arm64.deb`,
+          "RPM x64": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-notes-${this.version}.x86_64.rpm`,
+          "RPM ARM64": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-notes-${this.version}.aarch64.rpm`,
+          "AppImage x64": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-notes-${this.version}.AppImage`,
+          "AppImage ARM64": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-notes-${this.version}-arm64.AppImage`,
+        },
+      };
     },
-    async submitEmail() {
-      if (!this.email) {
-        this.statusMessage = "Please enter your email.";
-        return;
+
+    setArchOptions() {
+      switch (this.selectedOS) {
+        case "Windows":
+          this.archOptions = ["Universal Setup", "Universal Portable"];
+          break;
+        case "macOS":
+          this.archOptions = ["Universal"];
+          break;
+        case "Linux":
+          this.archOptions = [
+            "Flatpak",
+            "Debian x64",
+            "Debian ARM64",
+            "RPM x64",
+            "RPM ARM64",
+            "AppImage x64",
+            "AppImage ARM64",
+          ];
+          break;
+      }
+      this.selectedArch = this.archOptions[0];
+    },
+
+    toggleOSDropdown() {
+      this.showOSDropdown = !this.showOSDropdown;
+    },
+
+    toggleArchDropdown() {
+      this.showArchDropdown = !this.showArchDropdown;
+    },
+
+    selectOS(os) {
+      this.selectedOS = os;
+      this.setArchOptions();
+      this.showOSDropdown = false;
+    },
+
+    selectArch(arch) {
+      this.selectedArch = arch;
+      this.showArchDropdown = false;
+    },
+
+    downloadFile() {
+      const link = this.downloadLinks[this.selectedOS][this.selectedArch];
+      if (link) window.open(link, "_blank");
+      this.$router.push("/welcome");
+    },
+  },
+  computed: {
+    cliCommand() {
+      if (this.selectedOS === "Windows") {
+        return "scoop install beaver-notes";
       }
 
-      try {
-        const response = await axios.post("https://db.beavernotes.com/signup", {
-          email: this.email,
-        });
+      if (this.selectedOS === "macOS") {
+        return "brew install beaver-notes";
+      }
 
-        if (response.data.success) {
-          this.statusMessage = "Email sent successfully!";
-          this.email = "";
-          this.showEmailPrompt = false;
-        } else {
-          this.statusMessage = "Failed to send email. Try again later.";
+      if (this.selectedOS === "Linux") {
+        if (this.selectedArch.includes("Flatpak")) {
+          return "flatpak install flathub com.beavernotes.beavernotes";
         }
-      } catch (error) {
-        console.error(error);
-        this.statusMessage = "An error occurred. Try again later.";
+        if (this.selectedArch.includes("Debian")) {
+          return `sudo dpkg -i Beaver-notes_${this.version}_${
+            this.selectedArch.includes("ARM") ? "arm64" : "amd64"
+          }.deb`;
+        }
+        if (this.selectedArch.includes("RPM")) {
+          return `sudo rpm -i Beaver-notes-${this.version}.rpm`;
+        }
+        return `chmod +x Beaver-notes-${this.version}.AppImage && ./Beaver-notes-${this.version}.AppImage`;
+      }
+
+      return "";
+    },
+    selectedOSIcon() {
+      console.log("Selected OS:", this.selectedOS);
+      switch (this.selectedOS) {
+        case "Windows":
+          return "RiMicrosoftFill";
+        case "macOS":
+          return "RiAppleFill";
+        case "Linux":
+          return "LinuxIcon";
+        default:
+          return "RiMicrosoftFill";
       }
     },
   },
@@ -115,604 +220,137 @@ export default {
 </script>
 
 <template>
-  <div class="mx-auto max-w-2xl pt-32 space-y-8 px-4">
-    <div class="flex flex-col items-center text-center">
+  <div class="min-h-screen mx-auto max-w-2xl pt-32 space-y-6 px-4 text-center">
+    <!-- Logo -->
+    <div class="w-48 h-48 mx-auto mb-4 relative">
       <img
-        :src="images[currentImageIndex]"
-        alt="Feature 1"
-        class="w-48 h-48 object-cover object-top rounded-[42px] shadow-lg mb-6"
+        v-for="(img, index) in images"
+        :key="index"
+        :src="img"
+        alt="Screenshot"
+        class="absolute inset-0 w-full h-full object-cover object-top rounded-[42px] shadow-lg transition-opacity duration-700"
+        :class="{
+          'opacity-100 z-10': currentImageIndex === index,
+          'opacity-0 z-0': currentImageIndex !== index,
+        }"
       />
-      <h1
-        v-if="!isiOS && !isAndroid"
-        class="text-4xl font-extrabold text-neutral-900 dark:text-white mb-1"
-      >
-        Beaver Notes
-      </h1>
-      <h1
-        v-else-if="isiOS || isAndroid"
-        class="text-4xl font-extrabold text-neutral-900 dark:text-white mb-1"
-      >
-        Beaver Pocket
-      </h1>
-      <p class="text-sm text-neutral-500 mb-6 tracking-wide">
-        Last updated Dec 5, 2025
-      </p>
+    </div>
 
-      <div
-        v-if="isMac"
-        class="group flex justify-center items-center relative overflow-hidden"
-      >
-        <a
-          :href="macDownloadLink"
-          download
-          class="rounded-md bg-amber-400 px-3.5 py-2.5 text-md font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
-          aria-label="Download for macOS"
-        >
-          {{ buttonText }}
-        </a>
-        <div
-          class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine"
-        ></div>
-      </div>
-      <div
-        v-else-if="isWindows"
-        class="group flex justify-center items-center relative overflow-hidden"
-      >
-        <a
-          :href="windowsDownloadLink"
-          download
-          class="rounded-md bg-amber-400 px-3.5 py-2.5 text-md font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
-          aria-label="Download for Windows"
-        >
-          {{ buttonText }}
-        </a>
-        <div
-          class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine"
-        ></div>
-      </div>
-      <div v-if="isWindows" class="mt-2">
-        <a
-          :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver.Notes-Setup-${version}.exe`"
-          class="text-xs p-2 text-neutral-700 hover:text-neutral-900 dark:text-white transition text-center"
-          aria-label="Looking for portable version?"
-        >
-          Looking for portable?
-        </a>
-      </div>
-      <div
-        v-if="isLinux"
-        class="group flex justify-center items-center relative overflow-hidden"
-      >
-        <button
-          class="rounded-md bg-amber-400 px-3.5 py-2.5 text-md font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
-          @click="showDropdown = !showDropdown"
-          aria-haspopup="true"
-          aria-expanded="showDropdown"
-        >
-          {{ buttonText }}
-        </button>
-        <div
-          class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine"
-        ></div>
-      </div>
-      <div v-if="showDropdown" class="dropdown-menu z-100">
-        <div
-          v-show="showDropdown"
-          class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-content bg-white rounded-md shadow-lg border border-neutral-200 dark:border-neutral-600 z-50 text-left"
-        >
-          <a
-            :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes-${version}.AppImage`"
-            class="block px-4 py-2 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 hover:text-amber-500 font-medium rounded"
-          >
-            AppImage x64
-          </a>
-          <a
-            :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes-${version}-arm64.AppImage`"
-            class="block px-4 py-2 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 hover:text-amber-500 font-medium rounded"
-          >
-            AppImage Arm (64-bit)
-          </a>
-          <a
-            :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes_${version}_amd64.deb`"
-            class="block px-4 py-2 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 hover:text-amber-500 font-medium rounded"
-          >
-            Deb x64
-          </a>
-          <a
-            :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes_${version}_arm64.deb`"
-            class="block px-4 py-2 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 hover:text-amber-500 font-medium rounded"
-          >
-            Deb Arm (64-bit)
-          </a>
-          <a
-            :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes-${version}.x86_64.rpm`"
-            class="block px-4 py-2 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 hover:text-amber-500 font-medium rounded"
-          >
-            Rpm x64
-          </a>
-          <a
-            :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes-${version}.aarch64.rpm`"
-            class="block px-4 py-2 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 hover:text-amber-500 font-medium rounded"
-          >
-            Rpm Arm (64-bit)
-          </a>
-        </div>
-        <div
-          v-if="isiOS"
-          class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-sm"
-        >
-          <a
-            type="button"
-            href="https://testflight.apple.com/join/dSsmsGLY"
-            class="flex items-center justify-center w-48 mt-3 text-black bg-transparent border border-black dark:border-white h-14 rounded-md"
-          >
-            <div class="mr-3">
-              <svg
-                width="30"
-                version="1.1"
-                id="Capa_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 52 52"
-                xml:space="preserve"
-                class="fill-black dark:fill-white"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <g>
-                    <path
-                      d="M52,26C52,11.727,40.438,0.108,26.189,0.005C26.173,0.005,26.157,0,26.141,0h-0.281c-0.017,0-0.032,0.005-0.049,0.005 C11.561,0.108,0,11.727,0,26c0,4.635,1.225,8.987,3.36,12.76c0.02,0.038,0.031,0.079,0.053,0.117l0.141,0.245 c0.021,0.037,0.05,0.066,0.073,0.102C8.16,46.864,16.49,52,26,52c9.51,0,17.84-5.135,22.373-12.776 c0.023-0.037,0.053-0.066,0.075-0.104l0.139-0.242c0.021-0.037,0.032-0.077,0.052-0.114C50.774,34.99,52,30.637,52,26z M50,26 c0,3.095-0.595,6.051-1.667,8.77c-0.333-0.435-0.755-0.804-1.264-1.066h0l-16.131-8.317c-0.17-1.372-0.887-2.566-1.938-3.361 l0.863-18.123c0.027-0.576-0.084-1.128-0.298-1.636C41.114,3.994,50,13.978,50,26z M46.644,38.22 c-0.244,0.366-0.597,0.626-1.016,0.727c-0.457,0.111-0.933,0.028-1.341-0.234l-14.481-9.307l1.046-1.813l15.299,7.888c0,0,0,0,0,0 c0.434,0.224,0.746,0.595,0.878,1.043c0.12,0.41,0.071,0.845-0.126,1.243C46.819,37.919,46.733,38.071,46.644,38.22z M7.712,38.712 c-0.411,0.265-0.889,0.35-1.342,0.238c-0.417-0.1-0.771-0.363-1.016-0.732c-0.089-0.15-0.175-0.301-0.261-0.453 c-0.193-0.394-0.242-0.829-0.121-1.24c0.132-0.451,0.443-0.821,0.875-1.044l15.299-7.888l1.046,1.813L7.712,38.712z M23,26 c0-1.654,1.346-3,3-3s3,1.346,3,3s-1.346,3-3,3S23,27.654,23,26z M24.954,21L24.135,3.807c-0.023-0.488,0.142-0.943,0.465-1.282 c0.311-0.326,0.74-0.507,1.209-0.52C25.873,2.004,25.936,2,26,2c0.064,0,0.127,0.004,0.19,0.005 c0.467,0.013,0.895,0.194,1.208,0.523c0.324,0.34,0.49,0.794,0.467,1.279L27.046,21H24.954z M22.432,2.266 c-0.213,0.508-0.323,1.059-0.295,1.635c0,0.001,0,0.001,0,0.001L23,22.026c-1.051,0.796-1.768,1.99-1.938,3.361L4.931,33.704 c-0.51,0.263-0.931,0.632-1.263,1.069C2.596,32.053,2,29.096,2,26C2,13.979,10.885,3.995,22.432,2.266z M26,50 c-7.578,0-14.342-3.534-18.744-9.036c0.537-0.072,1.06-0.262,1.537-0.568v-0.001l15.246-9.797C24.642,30.855,25.304,31,26,31 s1.358-0.145,1.961-0.403l15.246,9.797c0.477,0.307,1,0.495,1.539,0.567C40.344,46.465,33.579,50,26,50z"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <div class="dark:text-white">
-              <div class="text-xs">Test it on</div>
-              <div class="-mt-1 font-sans text-2xl font-semibold">
-                TestFlight
-              </div>
-            </div>
-          </a>
+    <!-- Version and Date -->
+    <div
+      class="flex justify-center items-center gap-2 text-neutral-600 dark:text-neutral-400"
+    >
+      <span class="font-semibold">{{ version }}</span>
+      <span class="mx-2">|</span>
+      <span>Dec 5, 2025</span>
+    </div>
+
+    <!-- Desktop Download (hide on mobile) -->
+    <div v-if="!isMobile" class="mt-8 flex justify-center">
+      <div class="relative w-full max-w-md">
+        <!-- OS Selector top-left -->
+        <div class="absolute top-0 left-0 flex items-center gap-1">
+          <component :is="selectedOSIcon" class="w-4 h-4" />
           <button
-            type="button"
-            class="flex items-center justify-center w-48 mt-3 text-white bg-black h-14 rounded-md hidden"
+            @click="toggleOSDropdown"
+            class="flex items-center gap-1 px-2 py-1 rounded-md text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
           >
-            <div class="mr-3">
-              <svg
-                width="30"
-                fill="#ffffff"
-                viewBox="-52.01 0 560.035 560.035"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M380.844 297.529c.787 84.752 74.349 112.955 75.164 113.314-.622 1.988-11.754 40.191-38.756 79.652-23.343 34.117-47.568 68.107-85.731 68.811-37.499.691-49.557-22.236-92.429-22.236-42.859 0-56.256 21.533-91.753 22.928-36.837 1.395-64.889-36.891-88.424-70.883-48.093-69.53-84.846-196.475-35.496-282.165 24.516-42.554 68.328-69.501 115.882-70.192 36.173-.69 70.315 24.336 92.429 24.336 22.1 0 63.59-30.096 107.208-25.676 18.26.76 69.517 7.376 102.429 55.552-2.652 1.644-61.159 35.704-60.523 106.559M310.369 89.418C329.926 65.745 343.089 32.79 339.498 0 311.308 1.133 277.22 18.785 257 42.445c-18.121 20.952-33.991 54.487-29.709 86.628 31.421 2.431 63.52-15.967 83.078-39.655"
-                  ></path>
-                </g>
-              </svg>
-            </div>
-            <div>
-              <div class="text-xs">Download on the</div>
-              <div class="-mt-1 font-sans text-2xl font-semibold">
-                App Store
-              </div>
-            </div>
+            {{ selectedOS }}
+            <RiArrowDownSLine class="w-3 h-3" />
+          </button>
+          <ul
+            v-if="showOSDropdown"
+            class="absolute mt-6 w-32 bg-white dark:bg-neutral-800 border rounded-md shadow-lg z-50"
+          >
+            <li
+              v-for="os in osOptions"
+              :key="os.name"
+              @click="selectOS(os.name)"
+              class="px-2 py-1 hover:bg-neutral-100 dark:hover:bg-neutral-700 cursor-pointer flex items-center gap-1 text-sm"
+            >
+              <component :is="os.icon || 'RiTerminalLine'" class="w-4 h-4" />
+              {{ os.name }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Architecture Selector top-right -->
+        <div class="absolute top-0 right-0 flex items-center gap-1">
+          <component
+            v-if="selectedOS === 'Linux'"
+            is="RiTerminalLine"
+            class="w-4 h-4"
+          />
+          <button
+            @click="toggleArchDropdown"
+            class="flex items-center gap-1 px-2 py-1 rounded-md text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
+          >
+            {{ selectedArch }}
+            <RiArrowDownSLine class="w-3 h-3" />
+          </button>
+          <ul
+            v-if="showArchDropdown"
+            class="absolute mt-6 right-0 w-32 bg-white dark:bg-neutral-800 rounded-md shadow-lg z-50 p-2"
+          >
+            <li
+              v-for="arch in archOptions"
+              :key="arch"
+              @click="selectArch(arch)"
+              class="text-start px-2 py-1 hover:bg-primary/20 cursor-pointer text-sm rounded-md"
+            >
+              {{ arch }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Download Button -->
+        <button
+          @click="downloadFile"
+          class="w-full mt-10 px-6 py-2.5 bg-amber-400 text-white font-semibold rounded-lg shadow hover:bg-amber-400/90 transition"
+        >
+          Download Now
+        </button>
+
+        <!-- Package Manager / CLI -->
+        <div
+          class="mt-2 flex items-center gap-2 rounded-md bg-neutral-100 dark:bg-neutral-800 p-2 text-sm font-mono text-neutral-700 dark:text-neutral-300"
+        >
+          <!-- Scrollable command -->
+          <div class="flex-1 overflow-x-auto whitespace-nowrap no-scrollbar">
+            {{ cliCommand }}
+          </div>
+
+          <!-- Copy button -->
+          <button
+            @click="copyCommand(cliCommand)"
+            class="shrink-0 px-2 py-1 rounded-md text-xs font-sans bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-300 dark:hover:bg-neutral-600 transition"
+            title="Copy command"
+          >
+            Copy
           </button>
         </div>
-        <div
-          v-if="isAndroid"
-          class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-sm"
-        >
-          <div v-if="statusMessage" class="mt-6 w-full max-w-sm mx-auto">
-            <p
-              class="text-sm text-center"
-              :class="
-                statusMessage.includes('successfully')
-                  ? 'text-green-600 dark:text-green-400'
-                  : 'text-red-600 dark:text-red-400'
-              "
-            >
-              {{ statusMessage }}
-            </p>
-          </div>
-
-          <!-- Only show form if no message OR not a success -->
-          <div
-            v-else-if="isAndroid && showEmailPrompt"
-            class="mt-6 w-full max-w-sm mx-auto"
-          >
-            <p
-              class="text-sm mb-6 text-center text-neutral-600 dark:text-neutral-300"
-            >
-              Enter your email to get early access to our closed beta on the
-              Play Store.
-            </p>
-            <div class="flex gap-2">
-              <input
-                v-model="email"
-                type="email"
-                placeholder="Your email"
-                class="flex-1 px-4 py-3 bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-300 dark:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-amber-500"
-              />
-              <button
-                @click="submitEmail"
-                class="bg-amber-500 text-white px-4 py-3 rounded-lg transition"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-          <a
-            type="button"
-            href="https://github.com/Beaver-Notes/Beaver-pocket/releases"
-            class="hidden flex items-center justify-center w-48 mt-3 text-white bg-black dark:bg-neutral-800 h-14 rounded-md"
-          >
-            <div class="mr-3">
-              <svg
-                fill="#ffffff"
-                width="30"
-                version="1.1"
-                id="Capa_1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                />
-              </svg>
-            </div>
-            <div>
-              <div class="text-xs">GET IT ON</div>
-              <div class="-mt-1 font-sans text-xl font-semibold">Github</div>
-            </div>
-          </a>
-          <a
-            type="button"
-            class="flex items-center justify-center w-48 mt-3 text-white bg-black rounded-lg h-14 hidden"
-            :href="androidLink"
-          >
-            <div class="mr-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="32"
-                height="32"
-                viewBox="0 0 48 48"
-              >
-                <linearGradient
-                  id="AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1"
-                  x1="18.102"
-                  x2="25.297"
-                  y1="3.244"
-                  y2="34.74"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0" stop-color="#35ab4a"></stop>
-                  <stop offset=".297" stop-color="#31a145"></stop>
-                  <stop offset=".798" stop-color="#288739"></stop>
-                  <stop offset="1" stop-color="#237a33"></stop>
-                </linearGradient>
-                <path
-                  fill="url(#AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1)"
-                  d="M13.488,4.012C10.794,2.508,7.605,3.778,6.45,6.323L24.126,24l9.014-9.014L13.488,4.012z"
-                ></path>
-                <linearGradient
-                  id="AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2"
-                  x1="19.158"
-                  x2="21.194"
-                  y1="23.862"
-                  y2="66.931"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0" stop-color="#f14e5d"></stop>
-                  <stop offset=".499" stop-color="#ea3d4f"></stop>
-                  <stop offset="1" stop-color="#e12138"></stop>
-                </linearGradient>
-                <path
-                  fill="url(#AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2)"
-                  d="M33.14,33.014L24.126,24L6.45,41.677 c1.156,2.546,4.345,3.815,7.038,2.312L33.14,33.014z"
-                ></path>
-                <linearGradient
-                  id="AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3"
-                  x1="32.943"
-                  x2="36.541"
-                  y1="14.899"
-                  y2="43.612"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0" stop-color="#ffd844"></stop>
-                  <stop offset=".519" stop-color="#ffc63f"></stop>
-                  <stop offset="1" stop-color="#ffb03a"></stop>
-                </linearGradient>
-                <path
-                  fill="url(#AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3)"
-                  d="M41.419,28.393 c1.72-0.96,2.58-2.676,2.581-4.393c-0.001-1.717-0.861-3.434-2.581-4.393l-8.279-4.621L24.126,24l9.014,9.014L41.419,28.393z"
-                ></path>
-                <linearGradient
-                  id="AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4"
-                  x1="13.853"
-                  x2="15.572"
-                  y1="5.901"
-                  y2="42.811"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset=".003" stop-color="#0090e6"></stop>
-                  <stop offset="1" stop-color="#0065a0"></stop>
-                </linearGradient>
-                <path
-                  fill="url(#AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4)"
-                  d="M6.45,6.323C6.168,6.948,6,7.652,6,8.408 v31.179c0,0.761,0.164,1.463,0.45,2.09l17.674-17.68L6.45,6.323z"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <div class="text-xs">TEST IT ON</div>
-              <div class="-mt-1 font-sans text-xl font-semibold">
-                Google Play
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <a
-          v-if="!isAndroid && !isiOS"
-          :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/tag/${version}`"
-          class="mt-8 text-sm text-amber-500 hover:text-amber-600 transition"
-        >
-          Check out the release notes
-        </a>
-        <button
-          @click="goToEmails"
-          v-if="isAndroid || isiOS"
-          class="mt-8 text-sm text-amber-500 hover:text-amber-600 transition"
-        >
-          Check out the privacy policy
-        </button>
-        <a
-          v-if="isAndroid || isiOS"
-          :href="`https://github.com/Beaver-Notes/Beaver-Pocket/releases/tag/${versionpocket}`"
-          class="mt-8 text-sm text-amber-500 hover:text-amber-600 transition"
-        >
-          Check out the release notes
-        </a>
       </div>
     </div>
-  </div>
 
-  <div class="py-10 sm:py-16 md:py-24 mx-4 space-y-20">
-    <!-- DESKTOP SECTION -->
-    <div class="max-w-5xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <!-- COLUMN 1 — Title -->
-        <div>
-          <h2
-            class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100"
-          >
-            Beaver Notes for Desktop
-          </h2>
-          <p class="text-neutral-600 dark:text-neutral-400">
-            Available on macOS, Windows, and Linux.
-          </p>
-        </div>
-
-        <!-- COLUMN 2 — Platforms -->
-        <div class="space-y-6">
-          <!-- macOS -->
-          <div>
-            <p class="font-medium text-neutral-900 dark:text-neutral-100">
-              macOS
-            </p>
-            <ul
-              class="mt-1 text-neutral-600 dark:text-neutral-400 text-sm space-y-1"
-            >
-              <li>Universal</li>
-            </ul>
-          </div>
-
-          <!-- Windows -->
-          <div>
-            <p class="font-medium text-neutral-900 dark:text-neutral-100">
-              Windows
-            </p>
-            <ul
-              class="mt-1 text-neutral-600 dark:text-neutral-400 text-sm space-y-1"
-            >
-              <li>Setup (64-bit)</li>
-              <li>Portable (64-bit)</li>
-            </ul>
-          </div>
-
-          <!-- Linux -->
-          <div>
-            <p class="font-medium text-neutral-900 dark:text-neutral-100">
-              Linux
-            </p>
-            <ul
-              class="mt-1 text-neutral-600 dark:text-neutral-400 text-sm space-y-1"
-            >
-              <li>AppImage x64</li>
-              <li>AppImage ARM64</li>
-              <li>.deb x64</li>
-              <li>.deb ARM64</li>
-              <li>.rpm x64</li>
-              <li>.rpm ARM64</li>
-              <li>Flathub</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- COLUMN 3 — Download Buttons -->
-        <div class="space-y-6">
-          <!-- macOS downloads -->
-          <div class="space-y-2">
-            <a
-              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes-${version}-universal.dmg`"
-              class="block w-fit px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              Download
-            </a>
-          </div>
-
-          <!-- Windows downloads -->
-          <div class="space-y-2">
-            <a
-              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver.Notes-Setup-${version}.exe`"
-              class="block w-fit px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              Windows Setup
-            </a>
-            <a
-              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver.Notes-${version}-portable.exe`"
-              class="block w-fit px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              Windows Portable
-            </a>
-          </div>
-
-          <!-- Linux downloads -->
-          <div class="space-y-2">
-            <a
-              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes-${version}.AppImage`"
-              class="block w-fit px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              AppImage (x64)
-            </a>
-            <a
-              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes-${version}-arm64.AppImage`"
-              class="block w-fit px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              AppImage (ARM64)
-            </a>
-            <a
-              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes_${version}_amd64.deb`"
-              class="block w-fit px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              .deb (x64)
-            </a>
-            <a
-              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes_${version}_arm64.deb`"
-              class="block w-fit px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              .deb (ARM64)
-            </a>
-            <a
-              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes-${version}.x86_64.rpm`"
-              class="block w-fit px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              .rpm (x64)
-            </a>
-            <a
-              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver-notes-${version}.aarch64.rpm`"
-              class="block w-fit px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              .rpm (ARM64)
-            </a>
-            <a
-              :href="`https://flathub.org/en/apps/com.beavernotes.beavernotes`"
-              class="flex w-fit items-center px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              Flathub
-              <RiArrowRightUpLine class="ml-2 w-6 h-6" />
-            </a>
-          </div>
-        </div>
+    <!-- Mobile Section -->
+    <div v-if="isMobile" class="mt-8 space-y-4">
+      <div v-if="mobileOS === 'iOS'">
+        <a
+          href="https://testflight.apple.com/join/dSsmsGLY"
+          class="flex w-full justify-center items-center px-4 py-3 border rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
+        >
+          TestFlight
+          <RiArrowRightUpLine class="ml-2 w-6 h-6" />
+        </a>
       </div>
-    </div>
-    <!-- MOBILE SECTION -->
-    <div class="max-w-5xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <!-- COLUMN 1 — Title -->
-        <div>
-          <h2
-            class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100"
-          >
-            Beaver Pocket for Mobile
-          </h2>
-          <p class="text-neutral-600 dark:text-neutral-400">
-            Available on iOS and Android.
-          </p>
-        </div>
-
-        <!-- COLUMN 2 — Platforms -->
-        <div class="space-y-6">
-          <!-- iOS -->
-          <div>
-            <p class="font-medium text-neutral-900 dark:text-neutral-100">
-              iOS
-            </p>
-            <ul
-              class="flex mt-1 text-neutral-600 dark:text-neutral-400 items-center text-sm space-y-1"
-            >
-              <RiTestTubeLine class="inline-block mr-1 w-4 h-4" />
-              <li>Beta</li>
-            </ul>
-          </div>
-
-          <!-- Android -->
-          <div>
-            <p class="font-medium text-neutral-900 dark:text-neutral-100">
-              Android
-            </p>
-            <ul
-              class="flex mt-1 text-neutral-600 dark:text-neutral-400 items-center text-sm space-y-1"
-            >
-              <RiTestTubeLine class="inline-block mr-1 w-4 h-4" />
-              <li>Beta</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- COLUMN 3 — Download Buttons -->
-        <div class="space-y-6">
-          <!-- iOS downloads -->
-          <div class="space-y-2">
-            <a
-              :href="`https://testflight.apple.com/join/dSsmsGLY`"
-              class="flex w-fit items-center px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              TestFlight
-              <RiArrowRightUpLine class="ml-2 w-6 h-6" />
-            </a>
-          </div>
-
-          <!-- Android downloads -->
-          <div class="space-y-2">
-            <a
-              :href="`https://github.com/Beaver-Notes/Beaver-pocket/releases`"
-              class="flex w-fit items-center px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              Github
-              <RiArrowRightUpLine class="ml-2 w-6 h-6" />
-            </a>
-            <a
-              :href="`https://play.google.com/store/apps/details?id=beaver.notes.pocket`"
-              class="flex w-fit items-center px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              Play Store
-              <RiArrowRightUpLine class="ml-2 w-6 h-6" />
-            </a>
-            <a
-              :href="`https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${version}/Beaver.Notes-${version}-portable.exe`"
-              class="hidden flex w-fit items-center px-4 py-2 border rounded-lg text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              F-Droid
-              <RiArrowRightUpLine class="ml-2 w-6 h-6" />
-            </a>
-          </div>
-        </div>
+      <div v-else-if="mobileOS === 'Android'">
+        <a
+          href="https://play.google.com/store/apps/details?id=beaver.notes.pocket"
+          class="flex w-full justify-center items-center px-4 py-3 border rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
+        >
+          Join the beta on the Play Store
+          <RiArrowRightUpLine class="ml-2 w-6 h-6" />
+        </a>
       </div>
     </div>
   </div>

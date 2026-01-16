@@ -3,7 +3,6 @@ import {
   RiMenuLine,
   RiCloseLine,
   RiTwitterFill,
-  RiThreadsFill,
   RiBlueskyFill,
   RiMastodonFill,
   RiRedditFill,
@@ -17,10 +16,10 @@ const mobileMenuOpen = ref(false);
 
 const navigation = [
   { name: "Download", path: "/Download" },
-  { name: "Github", href: "https://github.com/Beaver-Notes/Beaver-Notes" },
   { name: "Docs", href: "https://docs.beavernotes.com" },
   { name: "Pocket", path: "/Pocket" },
   { name: "Blog", href: "https://blog.beavernotes.com" },
+  { name: "GitHub", href: "https://github.com/Beaver-Notes/Beaver-Notes" },
 ];
 
 const socialLinks = [
@@ -215,7 +214,7 @@ const socialLinks = [
       </div>
 
       <p class="mt-8 text-base leading-6 text-center text-neutral-400">
-        © 2025 Beaver Notes. All rights reserved.
+        © 2026 Beaver Notes. Open-source, local-first, and user-owned.
       </p>
     </div>
   </section>

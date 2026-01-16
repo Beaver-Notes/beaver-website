@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "./Home.vue";
+import Welcome from "./Welcome.vue";
 import Download from "./Download.vue";
 import Pocket from "./Pocket.vue";
 import Packages from "./Packages.vue";
@@ -14,6 +15,7 @@ const routes = [
   { path: "/Packages", component: Packages },
   { path: "/Terms", component: Terms },
   { path: "/Privacy", component: Privacy },
+  { path: "/Welcome", component: Welcome },
   { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
 ];
 

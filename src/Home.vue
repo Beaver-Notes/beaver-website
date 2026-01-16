@@ -25,13 +25,12 @@
         <h1
           class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-6xl"
         >
-          Private Note Taking
+          Your notes never leave your device.
         </h1>
         <p
           class="mt-6 text-lg leading-8 text-neutral-600 dark:text-neutral-200"
         >
-          Beaver Notes is the open-source note taking app built for Privacy and
-          Efficiency
+          A local-first open-source notes app. No cloud. No AI. No tracking.
         </p>
         <div
           class="mt-5 flex flex-col sm:flex-row items-center justify-center gap-6"
@@ -41,19 +40,11 @@
           >
             <a
               href="#/Download"
-              class="rounded-md bg-amber-400 px-3.5 py-2.5 text-md font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
-              >Download now</a
+              class="rounded-lg bg-amber-400 px-4 py-2 text-md font-semibold text-white shadow-sm transition duration-200 hover:bg-amber-400/90 hover:shadow-md"
             >
-            <div
-              class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine"
-            ></div>
+              Download now
+            </a>
           </div>
-
-          <a
-            href="#/Packages"
-            class="text-md font-semibold leading-6 text-neutral-900 dark:text-white"
-            >Use a package manager <span aria-hidden="true">→</span></a
-          >
         </div>
       </div>
     </div>
@@ -61,9 +52,7 @@
   <div
     class="flex sm:justify-center sm:items-center space-x-4 overflow-hidden sm:overflow-visible mx-auto max-w-7xl px-6 lg:px-8"
   >
-    <div
-      class="w-[64rem] sm:w-full rounded-2xl"
-    >
+    <div class="w-[64rem] sm:w-full rounded-2xl">
       <img
         src="/src/assets/home/space-light.webp"
         class="w-[32rem] sm:w-full max-w-none rounded-lg md:rounded-xl ring-neutral-400/10 md:-ml-4 lg:-ml-0 dark:hidden"
@@ -84,13 +73,10 @@
       >
         <div class="lg:pr-8 lg:pt-4">
           <div class="lg:max-w-lg">
-            <h2 class="text-base font-semibold leading-7 text-amber-400">
-              Better Note taking
-            </h2>
             <p
               class="mt-2 text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl"
             >
-              Empowering Note Taking
+              Designed to stay out of your way
             </p>
             <dl
               class="mt-10 max-w-xl space-y-8 text-base leading-7 text-neutral-600 dark:text-neutral-200 lg:max-w-none"
@@ -116,9 +102,7 @@
             </dl>
           </div>
         </div>
-        <div
-          class="w-[64rem] rounded-2xl"
-        >
+        <div class="w-[64rem] rounded-2xl">
           <img
             src="/src/assets/home/app.webp"
             alt="Product screenshot"
@@ -141,7 +125,7 @@
     <h1
       class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-6xl"
     >
-      Batteries Included
+      Built to work your way
     </h1>
     <p class="mt-6 text-lg leading-8 text-neutral-600 dark:text-neutral-200">
       All the essential tools for taking, organizing, and sharing your notes,
@@ -150,81 +134,34 @@
     <Bento />
   </div>
 
-  <div class="text-center mt-64 mx-4">
-    <h1
-      class="text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-6xl"
-    >
-      Capture Brilliance. Start Now.
-    </h1>
-    <div
-      class="mt-5 flex flex-col sm:flex-row items-center justify-center gap-6"
-    >
-      <div
-        class="group flex justify-center items-center relative overflow-hidden"
+  <div class="relative py-24 sm:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <h2
+        class="text-4xl font-bold text-neutral-900 dark:text-white sm:text-5xl lg:text-6xl tracking-tight"
       >
-        <a
-          href="#/Download"
-          class="rounded-md bg-amber-400 px-3.5 py-2.5 text-md font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
-          >Download now</a
-        >
-        <div
-          class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine"
-        ></div>
-      </div>
+        Download Beaver Notes
+      </h2>
+      <p class="mt-4 text-lg text-neutral-600 dark:text-neutral-200 sm:text-xl">
+        Keep your notes private. All features local-first, no tracking.
+      </p>
 
-      <a
-        href="#/Packages"
-        class="text-md font-semibold leading-6 text-neutral-900 dark:text-white"
-        >Use a package manager <span aria-hidden="true">→</span></a
+      <div
+        class="mt-5 flex flex-col sm:flex-row items-center justify-center gap-6"
       >
-    </div>
-    <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto px-4 mt-20"
-    >
-      <a
-        href="https://github.com/Beaver-Notes/Beaver-Notes"
-        class="p-4 rounded-lg shadow border dark:border-neutral-600"
-      >
-        <p
-          class="text-3xl font-bold py-2 text-left text-neutral-800 dark:text-white"
+        <div
+          class="group flex justify-center items-center relative overflow-hidden"
         >
-          GitHub
-        </p>
-        <p class="text-neutral-700 dark:text-neutral-100 text-left mb-4">
-          Ask questions, report issues, get help, propose new ideas, and check
-          for updates on the roadmap.
-        </p>
-      </a>
-      <a
-        href="https://blog.beavernotes.com"
-        class="p-4 rounded-lg shadow border dark:border-neutral-600"
-      >
-        <p
-          class="text-3xl font-bold py-2 text-left text-neutral-800 dark:text-white"
-        >
-          Blog
-        </p>
-        <p class="text-neutral-700 dark:text-neutral-100 text-left mb-4">
-          Find updates on new releases and the direction of the project.
-          Subscribe to the RSS feed to stay up to date.
-        </p>
-      </a>
-      <a
-        href="https://docs.beavernotes.com"
-        class="p-4 rounded-lg shadow border dark:border-neutral-600"
-      >
-        <p
-          class="text-3xl font-bold py-2 text-left text-neutral-800 dark:text-white"
-        >
-          Docs
-        </p>
-        <p class="text-neutral-700 dark:text-neutral-100 text-left mb-4">
-          Learn how to set up and use Beaver, and discover how you can
-          contribute to its development.
-        </p>
-      </a>
+          <a
+            href="#/Download"
+            class="rounded-lg bg-amber-400 px-4 py-2 text-md font-semibold text-white shadow-sm transition duration-200 hover:bg-amber-400/90 hover:shadow-md"
+          >
+            Download now
+          </a>
+        </div>
+      </div>
     </div>
   </div>
+
   <Cookies />
 </template>
 
@@ -251,20 +188,20 @@ export default {
         {
           name: "Offline First.",
           description:
-            "Your ideas, projects, and thoughts are exclusively saved on your personal computer, giving you, the user, full control over your data.",
-          icon: markRaw(RiSignalWifiOffLine), // mark as raw here
+            "Your notes are stored locally. No accounts. No servers. You decide if and how they sync.",
+          icon: markRaw(RiSignalWifiOffLine),
         },
         {
           name: "Keyboard Friendly.",
           description:
-            "Blink and you’ve missed the convo? Format everything without ever leaving the keyboard with markdown and slash commands.",
+            "Markdown, commands, and shortcuts, no mouse gymnastics, no setup ritual.",
           icon: markRaw(RiKeyboardLine),
         },
         {
-          name: "Open to Everyone.",
+          name: "Open-source.",
           description:
-            "Built for the community, by the community. From translations to code and idea contributions, everyone is welcome to help.",
-          icon: markRaw(RiOpenSourceLine), // and here
+            "MIT-licensed. No telemetry. No growth hacks. Just software you can trust.",
+          icon: markRaw(RiOpenSourceLine),
         },
       ],
     };
