@@ -24,3 +24,7 @@ body {
     scrollbar-width: none; /* Firefox */
   }
 }
+
+.border {
+  @apply border-neutral-300 dark:border-neutral-700;
+}
