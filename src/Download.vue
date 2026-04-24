@@ -258,7 +258,7 @@ export default {
         >
             <span class="font-semibold">{{ version }}</span>
             <span class="mx-2">|</span>
-            <span>Feb 11, 2026</span>
+            <span>April 18, 2026</span>
         </div>
 
         <!-- Desktop Download (hide on mobile) -->
