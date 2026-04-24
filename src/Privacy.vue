@@ -41,10 +41,9 @@
         </p>
 
         <p class="text-base text-gray-800 dark:text-white py-4">
-          <b>Mobile App (Beaver Pocket):</b> Beaver Pocket follows the same
-          local-first approach. The app does not collect personal information,
-          does not include analytics SDKs, and does not transmit user data to
-          Beaver servers. All content is stored locally on your device.
+          <b>Mobile App:</b> We're currently reworking our mobile app and merging
+          it into Beaver Notes. Once released, it will follow the same
+          local-first approach - no analytics, no accounts, no cloud.
         </p>
 
         <p class="text-base text-gray-800 dark:text-white py-4">
@@ -91,17 +90,9 @@
         </p>
 
         <p id="emails" class="text-base text-gray-800 dark:text-white py-4">
-          <b>Android Closed Beta Emails:</b> We collect email addresses solely
-          to manage access to the Android closed beta via Google Play. Emails
-          are not used for marketing or communications. They are exported once
-          to the Google Play Console and then deleted from our backend. No email
-          data is retained once the project exits closed beta. The backend
-          handling this process is open source and publicly auditable on
-          <a
-            class="text-amber-500"
-            href="https://github.com/Beaver-Notes/beaver-website/tree/main/backend"
-            >GitHub</a
-          >.
+          <b>Mobile Beta:</b> We're currently reworking our mobile app.
+          Once it's ready, we'll open a beta program. No email data will be
+          retained - the app will be local-first like the desktop version.
         </p>
 
         <p
@@ -112,10 +103,9 @@
         </p>
 
         <p class="text-base text-gray-800 dark:text-white py-4">
-          Beaver Notes, Beaver Pocket, and Beaver Traduora are not intended for
-          children under the age of 13. We do not knowingly collect personal
-          information from children. If such information is identified, it will
-          be deleted promptly.
+          Beaver Notes is not intended for children under the age of 13. We do
+          not knowingly collect personal information from children. If such
+          information is identified, it will be deleted promptly.
         </p>
 
         <p
@@ -127,9 +117,9 @@
 
         <p class="text-base text-gray-800 dark:text-white py-4">
           We apply reasonable technical and organizational measures to protect
-          systems under our control. Since Beaver Notes and Beaver Pocket store
-          data locally on your device, you retain full control over your
-          content. No user note data is stored on Beaver servers.
+          systems under our control. Since Beaver Notes stores data locally on your device,
+          you retain full control over your content. No user note data is stored on
+          Beaver servers.
         </p>
 
         <p
@@ -140,10 +130,9 @@
         </p>
 
         <p class="text-base text-gray-800 dark:text-white py-4">
-          You have full control over your local data within Beaver Notes and
-          Beaver Pocket. For services where we process personal data (such as
-          beta access emails or translation platform accounts), you may request
-          access, correction, or deletion by contacting us.
+          You have full control over your local data within Beaver Notes.
+          Since we're local-first with no accounts, there's no personal
+          data stored on our servers that you can't already access on your device.
         </p>
 
         <p

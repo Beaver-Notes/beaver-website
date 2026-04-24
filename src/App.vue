@@ -17,7 +17,6 @@ const mobileMenuOpen = ref(false);
 const navigation = [
   { name: "Download", path: "/Download" },
   { name: "Docs", href: "https://docs.beavernotes.com" },
-  { name: "Pocket", path: "/Pocket" },
   { name: "Blog", href: "https://blog.beavernotes.com" },
   { name: "GitHub", href: "https://github.com/Beaver-Notes/Beaver-Notes" },
 ];

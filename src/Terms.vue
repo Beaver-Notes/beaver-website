@@ -13,12 +13,11 @@
           Effective Date: December 29, 2025
         </p>
 
-        <p class="text-base text-gray-800 dark:text-white py-4">
-          Welcome to Beaver. By accessing or using Beaver Notes, Beaver Pocket,
-          Beaver Traduora, or any related applications, websites, or services
-          provided by Beaver (collectively, the “Services”), you agree to be
-          bound by these Terms of Service. If you do not agree, do not use the
-          Services.
+<p class="text-base text-gray-800 dark:text-white py-4">
+          Welcome to Beaver. By accessing or using Beaver Notes, or any related
+          applications, websites, or services provided by Beaver (collectively,
+          the "Services"), you agree to be bound by these Terms of Service.
+          If you do not agree, do not use the Services.
         </p>
 
         <p
@@ -42,8 +41,7 @@
         </p>
 
         <p class="text-base text-gray-800 dark:text-white py-4">
-          The source code for Beaver Notes and Beaver Pocket is open source and
-          licensed under the
+          The source code for Beaver Notes is open source and licensed under the
           <a
             class="text-base text-amber-500 hover:text-amber-500"
             href="https://github.com/Beaver-Notes/Beaver-Notes/blob/main/LICENSE"
