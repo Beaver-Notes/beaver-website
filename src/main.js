@@ -1,4 +1,5 @@
 import "./assets/main.css";
+import "./assets/lights.css"; 
 import compsUi from "./lib/compos-ui";
 import { createApp } from "vue";
 import router from "./router";
