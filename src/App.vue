@@ -15,10 +15,10 @@ import { ref } from "vue";
 const mobileMenuOpen = ref(false);
 
 const navigation = [
-  { name: "Download", path: "/Download" },
   { name: "Docs", href: "https://docs.beavernotes.com" },
   { name: "Blog", href: "https://blog.beavernotes.com" },
   { name: "GitHub", href: "https://github.com/Beaver-Notes/Beaver-Notes" },
+  { name: "Download", path: "/Download" },
 ];
 
 const socialLinks = [

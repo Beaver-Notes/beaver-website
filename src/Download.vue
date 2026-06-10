@@ -119,8 +119,8 @@ export default {
             // Set download links
             this.downloadLinks = {
                 Windows: {
-                    "Universal Setup": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver.Notes.Setup.${this.version}.exe`,
-                    "Universal Portable": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver.Notes-${this.version}-portable.exe`,
+                    "Universal Setup": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-Notes-Setup-${this.version}.exe`,
+                    "Universal Portable": `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-Notes-${this.version}-portable.exe`,
                 },
                 macOS: {
                     Universal: `https://github.com/Beaver-Notes/Beaver-Notes/releases/download/${this.version}/Beaver-notes-${this.version}-universal.dmg`,
@@ -355,13 +355,15 @@ export default {
 
         <!-- Mobile Section -->
         <div v-if="isMobile" class="mt-8 space-y-4">
-            <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg">
+            <div
+                class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg"
+            >
                 <p class="text-amber-800 dark:text-amber-200 font-semibold">
                     🚧 Mobile App Coming Soon
                 </p>
                 <p class="text-amber-700 dark:text-amber-300 text-sm mt-2">
-                    We're reworking the mobile app and merging it into Beaver Notes.
-                    The beta will be available once ready.
+                    We're reworking the mobile app and merging it into Beaver
+                    Notes. The beta will be available once ready.
                 </p>
             </div>
         </div>
