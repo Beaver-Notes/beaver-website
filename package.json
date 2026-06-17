@@ -15,7 +15,7 @@
     "hast-util-to-html": "^9.0.5",
     "katex": "0.16.21",
     "lowlight": "^3.3.0",
-    "markdown-it": "^14.1.1",
+    "markdown-it": "^14.2.0",
     "marked": "^15.0.5",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
